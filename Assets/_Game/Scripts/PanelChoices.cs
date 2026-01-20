@@ -39,7 +39,7 @@ public class PanelChoices : MonoBehaviour
         partsC = chParts;
         Remplir();
         Title.text = t;
-        panelStartPos.DOAnchorPos(Vector3.zero+Vector3.up*64, 2);
+        panelStartPos.DOAnchorPos(Vector3.zero+Vector3.right* 890, 2);
         //PLAYER MOVE
         UiMnager.instance.OpenChoicePanel();
     }

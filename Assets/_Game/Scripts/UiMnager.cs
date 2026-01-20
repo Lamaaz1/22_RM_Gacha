@@ -36,7 +36,7 @@ public class UiMnager : MonoBehaviour
     public void OpenChoicePanel()
     {
         LeftPanel.SetActive(false);
-        PlayerPanel.GetComponent<RectTransform>().DOAnchorPos(Vector3.zero+Vector3.left*300,1);
+        //PlayerPanel.GetComponent<RectTransform>().DOAnchorPos(Vector3.zero+Vector3.left*300,1);
 
     }
     public void CloseChoicePanel()
