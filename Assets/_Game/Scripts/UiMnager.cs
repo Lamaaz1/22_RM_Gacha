@@ -12,17 +12,28 @@ public class UiMnager : MonoBehaviour
     public static UiMnager instance;
 
     public GameObject LeftPanel;
+    public GameObject LeftPanelLSCP;
     public GameObject RightPanel;
+    public GameObject RightPanelLSCP;
     public GameObject PlayerPanel;
+    //public GameObject PlayerPanelLSCP;
     public GameObject BackgroundImage;
+    public GameObject BackgroundImageLSCP;
     public GameObject SettingsPanel;
+    public GameObject SettingsPanelLSCP;
     public GameObject downp;
+    public GameObject downpLSCP;
     public GameObject BackgroundsP;
+    public GameObject BackgroundsPLSCP;
     public GameObject ScreenShotBtn;
+    public GameObject ScreenShotBtnLSCP;
     public GameObject SelectModBtn;
+    public GameObject SelectModBtnLSCP;
     public ColorPicker colorPicker;
+    public ColorPicker colorPickerLSCP;
     public int BckgdIndex;
     public List<BackgroundBtn> BackgrounButtons;
+    public List<BackgroundBtn> BackgrounButtonsLSCP;
     public bool AnimationMode=false;
     private void Awake()
     {
@@ -36,12 +47,14 @@ public class UiMnager : MonoBehaviour
     public void OpenChoicePanel()
     {
         LeftPanel.SetActive(false);
+        LeftPanelLSCP.SetActive(false);
         //PlayerPanel.GetComponent<RectTransform>().DOAnchorPos(Vector3.zero+Vector3.left*300,1);
 
     }
     public void CloseChoicePanel()
     {
         LeftPanel.SetActive(true);
+        LeftPanelLSCP.SetActive(true);
         PlayerPanel.GetComponent<RectTransform>().DOAnchorPos(Vector3.zero , 1);
 
     }
@@ -67,12 +80,19 @@ public class UiMnager : MonoBehaviour
     public void Init()
     {
         LeftPanel.SetActive(true );
+        LeftPanelLSCP.SetActive(true );
         RightPanel.SetActive(true );
+        RightPanelLSCP.SetActive(true );
         downp.SetActive(true );
+        downpLSCP.SetActive(true );
         SettingsPanel.SetActive(false );
+        SettingsPanelLSCP.SetActive(false );
         BackgroundsP.SetActive(false );
+        BackgroundsPLSCP.SetActive(false );
         ScreenShotBtn.SetActive(false);
+        ScreenShotBtnLSCP.SetActive(false);
         SelectModBtn.SetActive(false);
+        SelectModBtnLSCP.SetActive(false);
         AnimationMode = false;
         DressUpScript.instance.RePosPlayer();
         LoadBackground();
@@ -81,12 +101,19 @@ public class UiMnager : MonoBehaviour
     public void ShowSettings()
     {
         LeftPanel.SetActive(false);
+        LeftPanelLSCP.SetActive(false);
         RightPanel.SetActive(false);
+        RightPanelLSCP.SetActive(false);
         downp.SetActive(false);
+        downpLSCP.SetActive(false);
         SettingsPanel.SetActive(true);
+        SettingsPanelLSCP.SetActive(true);
         BackgroundsP.SetActive(false);
+        BackgroundsPLSCP.SetActive(false);
         ScreenShotBtn.SetActive(false);
+        ScreenShotBtnLSCP.SetActive(false);
         SelectModBtn.SetActive(false);
+        SelectModBtnLSCP.SetActive(false);
 
     }
     public void ChooseBackGroundP()
@@ -98,6 +125,13 @@ public class UiMnager : MonoBehaviour
         BackgroundsP.SetActive(true);
         ScreenShotBtn.SetActive(false);
         SelectModBtn.SetActive(false);
+        LeftPanelLSCP.SetActive(false);
+        RightPanelLSCP.SetActive(false);
+        downpLSCP.SetActive(false);
+        SettingsPanelLSCP.SetActive(false);
+        BackgroundsPLSCP.SetActive(true);
+        ScreenShotBtnLSCP.SetActive(false);
+        SelectModBtnLSCP.SetActive(false);
 
     }
     public void SeeViews()
@@ -109,6 +143,13 @@ public class UiMnager : MonoBehaviour
         BackgroundsP.SetActive(false);
         ScreenShotBtn.SetActive(true);
         SelectModBtn.SetActive(false);
+        LeftPanelLSCP.SetActive(false);
+        RightPanelLSCP.SetActive(false);
+        downpLSCP.SetActive(false);
+        SettingsPanelLSCP.SetActive(false);
+        BackgroundsPLSCP.SetActive(false);
+        ScreenShotBtnLSCP.SetActive(true);
+        SelectModBtnLSCP.SetActive(false);
 
     }
     public void AnimationPanel()
@@ -121,6 +162,14 @@ public class UiMnager : MonoBehaviour
         ScreenShotBtn.SetActive(false);
         SelectModBtn.SetActive(true);
         AnimationMode = true;
+        LeftPanelLSCP.SetActive(false);
+        RightPanelLSCP.SetActive(false);
+        downpLSCP.SetActive(false);
+        SettingsPanelLSCP.SetActive(false);
+        BackgroundsPLSCP.SetActive(false);
+        ScreenShotBtnLSCP.SetActive(false);
+        SelectModBtnLSCP.SetActive(true);
+       
     }
     public void ChangeBG(Image IMG)
     {
