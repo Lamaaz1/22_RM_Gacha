@@ -307,23 +307,42 @@ public class DressUpScript : MonoBehaviour
     {
         PlayerTransform.GetComponent<RectTransform>().SetParent(PortraitPlayerParent);
         CopyRectTransform(PortraitPlayerTransform,PlayerTransform.GetComponent<RectTransform>());
+        CopyChildZeroToAll(PortraitPlayerTransform,PlayerTransform.GetComponent<RectTransform>());
 
     }
     public void LandscapSwitch()
     {
         PlayerTransform.GetComponent<RectTransform>().SetParent(LandscapPlayerParent);
         CopyRectTransform(LandscapPlayerTransform,PlayerTransform.GetComponent<RectTransform>());
+        CopyChildZeroToAll(LandscapPlayerTransform,PlayerTransform.GetComponent<RectTransform>());
 
     }
     public static void CopyRectTransform(RectTransform from, RectTransform to)
     {
         to.anchorMin = from.anchorMin;
         to.anchorMax = from.anchorMax;
+        to.pivot = from.pivot;
+
         to.anchoredPosition = from.anchoredPosition;
         to.sizeDelta = from.sizeDelta;
-        to.pivot = from.pivot;
+
+        to.offsetMin = from.offsetMin;
+        to.offsetMax = from.offsetMax;
+
         to.localScale = from.localScale;
         to.localRotation = from.localRotation;
+    }
+    public static void CopyChildZeroToAll(RectTransform from, RectTransform to)
+    {
+        if (from.childCount == 0) return;
+
+        RectTransform source = from.GetChild(0) as RectTransform;
+
+        for (int i = 0; i < to.childCount; i++)
+        {
+            RectTransform target = to.GetChild(i) as RectTransform;
+            CopyRectTransform(source, target);
+        }
     }
 
 }
