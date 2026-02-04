@@ -174,6 +174,7 @@ public class UiMnager : MonoBehaviour
     public void ChangeBG(Image IMG)
     {
         BackgroundImage.GetComponent<Image>().sprite= IMG.sprite;
+        BackgroundImageLSCP.GetComponent<Image>().sprite= IMG.sprite;
       
     }
     public void TakeScreenshot()
