@@ -34,6 +34,7 @@ public class SettingsMngr : MonoBehaviour
     void Start()
     {
         Init();
+        Debug.Log(gameObject.name);
     }
     public void Init()
     {

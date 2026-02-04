@@ -64,7 +64,7 @@ public class DressUpScript : MonoBehaviour
         for (int i = 0; i < PlayerTransform.transform.childCount; i++)
         {
             ActivePlayer(i);
-            Debug.Log(i);
+          
             foreach (Transform child in PlayerTransform.transform.GetChild(i).transform)
             {
                 if(child.gameObject.name!="0" && child.gameObject.name != "Hand")
@@ -74,16 +74,16 @@ public class DressUpScript : MonoBehaviour
                     SavePanel.instance.LoadCharacter(i, part, out SpritName);
 
                     SavePanel.instance.LoadColors(i, part, out ColorIndex);
-                    Debug.Log(ColorIndex); //here 44
+                    //Debug.Log(ColorIndex); //here 44
                     if (ColorIndex != 11111)
                     {
-                        Debug.Log(SpritName);
+                        //Debug.Log(SpritName);
                     }
                     if (SpritName != "")
                     {
-                        Debug.Log(ColorIndex); // here 11111
+                        //Debug.Log(ColorIndex); // here 11111
                         Sprite s = Resources.Load<Sprite>("Sprites/" + child.gameObject.name + "/" + SpritName);
-                        Debug.Log(ColorIndex + 111111111111);
+                        //Debug.Log(ColorIndex + 111111111111);
                         DressUpp(s, child.gameObject.name);
                     }
                 }
@@ -135,7 +135,7 @@ public class DressUpScript : MonoBehaviour
        
         foreach (Transform child in BtnActivdPlayer.transform)
         {
-            Debug.Log("ok find");
+           
             //BtnActivdPlayer.SetActive(false);
             if (child.name == PartName)
             {
@@ -161,7 +161,7 @@ public class DressUpScript : MonoBehaviour
         }
         foreach (Transform child in PlayerVdIcon.transform)
         {
-            Debug.Log("ok find");
+            //Debug.Log("ok find");
             //BtnActivdPlayer.SetActive(false);
             if (child.name == PartName)
             {
@@ -205,7 +205,7 @@ public class DressUpScript : MonoBehaviour
 
                 child.GetComponent<Image>().color = c;
                 child.GetComponent<Image>().sprite = s;
-                Debug.Log(ColorIndex);
+               
                 if (ColorIndex != 11111)
                 {
                     child.GetComponent<Image>().color = UiMnager.instance.colorPicker.ColoratItem(ColorIndex);
@@ -216,7 +216,7 @@ public class DressUpScript : MonoBehaviour
 
         foreach (Transform child in BtnActivdPlayer.transform)
         {
-            Debug.Log("ok find");
+           
             //BtnActivdPlayer.SetActive(false);
             if (child.name == PartName)
             {
@@ -234,7 +234,7 @@ public class DressUpScript : MonoBehaviour
 
                 child.GetComponent<Image>().color = c;
                 child.GetComponent<Image>().sprite = s;
-                Debug.Log(ColorIndex);
+                //Debug.Log(ColorIndex);
                 if (ColorIndex != 11111)
                 {
                     child.GetComponent<Image>().color = UiMnager.instance.colorPicker.ColoratItem(ColorIndex);
@@ -244,7 +244,7 @@ public class DressUpScript : MonoBehaviour
         }
         foreach (Transform child in PlayerVdIcon.transform)
         {
-            Debug.Log("ok find");
+           
             //BtnActivdPlayer.SetActive(false);
             if (child.name == PartName)
             {
@@ -263,7 +263,7 @@ public class DressUpScript : MonoBehaviour
                 child.GetComponent<Image>().color = c;
                 child.GetComponent<Image>().sprite = s;
 
-                Debug.Log(ColorIndex);
+                //Debug.Log(ColorIndex);
                 if (ColorIndex != 11111)
                 {
                     child.GetComponent<Image>().color = UiMnager.instance.colorPicker.ColoratItem(ColorIndex);
