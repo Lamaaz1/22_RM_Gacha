@@ -6,13 +6,19 @@ public class SettingsMngr : MonoBehaviour
     public static SettingsMngr Instance;
     public Button MusicBtn;
     public Button SoundBtn;
+    public Button MusicBtnLdscp;
+    public Button SoundBtnLdscp;
     public bool ActiveM;
     public bool ActiveS;
     public GameObject ActiveImgM;
     public GameObject DesactiveImgM;
+    public GameObject ActiveImgMLdscp;
+    public GameObject DesactiveImgMLdscp;
 
     public GameObject ActiveImgS;
     public GameObject DesactiveImgS;
+    public GameObject ActiveImgSLdscp;
+    public GameObject DesactiveImgSLdscp;
     public AudioSource myMusic;
 
     public AudioClip clickSound;
@@ -33,17 +39,25 @@ public class SettingsMngr : MonoBehaviour
     {
         MusicBtn.onClick.AddListener(OnclickM);
         SoundBtn.onClick.AddListener(OnclickS);
+        MusicBtnLdscp.onClick.AddListener(OnclickM);
+        SoundBtnLdscp.onClick.AddListener(OnclickS);
         if (PlayerPrefs.GetInt("Music") == 0)
         {
             ActiveImgM.SetActive(true);
             DesactiveImgM.SetActive(false);
+
+            ActiveImgMLdscp.SetActive(true);
+            DesactiveImgMLdscp.SetActive(false);
             myMusic.Play();
+
             ActiveM = true;
         }
         else
         {
             ActiveImgM.SetActive(false);
             DesactiveImgM.SetActive(true);
+            ActiveImgMLdscp.SetActive(false);
+            DesactiveImgMLdscp.SetActive(true);
             myMusic.Stop();
             ActiveM = false;
         }
@@ -51,12 +65,16 @@ public class SettingsMngr : MonoBehaviour
         {
             ActiveImgS.SetActive(true);
             DesactiveImgS.SetActive(false);
+            ActiveImgSLdscp.SetActive(true);
+            DesactiveImgSLdscp.SetActive(false);
             ActiveS = true;
         }
         else
         {
             ActiveImgS.SetActive(false);
             DesactiveImgS.SetActive(true);
+            ActiveImgSLdscp.SetActive(false);
+            DesactiveImgSLdscp.SetActive(true);
             ActiveS = false;
         }
 
@@ -68,6 +86,8 @@ public class SettingsMngr : MonoBehaviour
         {
             ActiveImgM.SetActive(false);
             DesactiveImgM.SetActive(true);
+            ActiveImgMLdscp.SetActive(false);
+            DesactiveImgMLdscp.SetActive(true);
             PlayerPrefs.SetInt("Music",1);
             myMusic.Stop();
             ActiveM = false; return;
@@ -76,6 +96,8 @@ public class SettingsMngr : MonoBehaviour
         {
             ActiveImgM.SetActive(true);
             DesactiveImgM.SetActive(false);
+            ActiveImgMLdscp.SetActive(true);
+            DesactiveImgMLdscp.SetActive(false);
             PlayerPrefs.SetInt("Music", 0);
             myMusic.Play();
             ActiveM = true; return;
@@ -87,6 +109,8 @@ public class SettingsMngr : MonoBehaviour
         {
             ActiveImgS.SetActive(false);
             DesactiveImgS.SetActive(true);
+            ActiveImgSLdscp.SetActive(false);
+            DesactiveImgSLdscp.SetActive(true);
             PlayerPrefs.SetInt("Sound", 1);
             ActiveS = false; return;
         }
@@ -94,6 +118,8 @@ public class SettingsMngr : MonoBehaviour
         {
             ActiveImgS.SetActive(true);
             DesactiveImgS.SetActive(false);
+            ActiveImgSLdscp.SetActive(true);
+            DesactiveImgSLdscp.SetActive(false);
             PlayerPrefs.SetInt("Sound", 0);
             ActiveS = true; return;
         }
