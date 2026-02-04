@@ -67,6 +67,13 @@ public class UiMnager : MonoBehaviour
                 bg.OnclickM();
             }
         }
+      foreach(BackgroundBtn bg in BackgrounButtonsLSCP)
+        {
+            if(bg.i==PlayerPrefs.GetInt("Background"))
+            {
+                bg.OnclickM();
+            }
+        }
     }
     // Update is called once per frame
     void Update()

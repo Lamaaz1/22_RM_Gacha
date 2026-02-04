@@ -30,6 +30,23 @@ public class DressUpScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bool isLandscape = Screen.width > Screen.height;
+        Lndscap = isLandscape;
+        if (isLandscape)
+        {
+            PlayerTransform.GetComponent<RectTransform>().SetParent(LandscapPlayerParent);
+            CopyRectTransform(LandscapPlayerTransform, PlayerTransform.GetComponent<RectTransform>());
+            CopyChildZeroToAll(LandscapPlayerTransform, PlayerTransform.GetComponent<RectTransform>());
+            Lndscap = true;
+           
+        }
+        else
+        {
+            PlayerTransform.GetComponent<RectTransform>().SetParent(PortraitPlayerParent);
+            CopyRectTransform(PortraitPlayerTransform, PlayerTransform.GetComponent<RectTransform>());
+            CopyChildZeroToAll(PortraitPlayerTransform, PlayerTransform.GetComponent<RectTransform>());
+            Lndscap = false;
+        }
         ActivePlayer(0);
         init();
     }
@@ -305,16 +322,26 @@ public class DressUpScript : MonoBehaviour
     }
     public void PortraiSwitch()
     {
-        PlayerTransform.GetComponent<RectTransform>().SetParent(PortraitPlayerParent);
-        CopyRectTransform(PortraitPlayerTransform,PlayerTransform.GetComponent<RectTransform>());
-        CopyChildZeroToAll(PortraitPlayerTransform,PlayerTransform.GetComponent<RectTransform>());
+        //if (Lndscap)
+        //{
+            PlayerTransform.GetComponent<RectTransform>().SetParent(PortraitPlayerParent);
+            CopyRectTransform(PortraitPlayerTransform, PlayerTransform.GetComponent<RectTransform>());
+            CopyChildZeroToAll(PortraitPlayerTransform, PlayerTransform.GetComponent<RectTransform>());
+            Lndscap = false;
+        //}
 
     }
+     public bool Lndscap;
     public void LandscapSwitch()
     {
-        PlayerTransform.GetComponent<RectTransform>().SetParent(LandscapPlayerParent);
-        CopyRectTransform(LandscapPlayerTransform,PlayerTransform.GetComponent<RectTransform>());
-        CopyChildZeroToAll(LandscapPlayerTransform,PlayerTransform.GetComponent<RectTransform>());
+        //if(!Lndscap)
+        //{
+            PlayerTransform.GetComponent<RectTransform>().SetParent(LandscapPlayerParent);
+            CopyRectTransform(LandscapPlayerTransform, PlayerTransform.GetComponent<RectTransform>());
+            CopyChildZeroToAll(LandscapPlayerTransform, PlayerTransform.GetComponent<RectTransform>());
+            Lndscap = true;
+        //}
+        
 
     }
     public static void CopyRectTransform(RectTransform from, RectTransform to)

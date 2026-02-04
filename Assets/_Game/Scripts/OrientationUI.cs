@@ -11,13 +11,15 @@ public class OrientationUI : MonoBehaviour
       
         portraitLayout.SetActive(!isLandscape);
         landscapeLayout.SetActive(isLandscape);
-        if(isLandscape)
+        if (isLandscape)
         {
-            DressUpScript.instance.LandscapSwitch();
+            //if (!DressUpScript.instance.Lndscap)
+                DressUpScript.instance.LandscapSwitch();
         }
         else
         {
-            DressUpScript.instance.PortraiSwitch();
+            //if (DressUpScript.instance.Lndscap)
+                DressUpScript.instance.PortraiSwitch();
 
         }
     }

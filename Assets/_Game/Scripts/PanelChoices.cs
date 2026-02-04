@@ -34,8 +34,6 @@ public class PanelChoices : MonoBehaviour
     public void ShowPanel(string t,List<ChildrenParts> chParts)
     {
         currentPage = 0;
-      
-        
         partsC = chParts;
         Remplir();
         Title.text = t;
