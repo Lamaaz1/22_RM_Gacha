@@ -8,8 +8,17 @@ public class OrientationUI : MonoBehaviour
     void Update()
     {
         bool isLandscape = Screen.width > Screen.height;
-
+      
         portraitLayout.SetActive(!isLandscape);
         landscapeLayout.SetActive(isLandscape);
+        if(isLandscape)
+        {
+            DressUpScript.instance.LandscapSwitch();
+        }
+        else
+        {
+            DressUpScript.instance.PortraiSwitch();
+
+        }
     }
 }

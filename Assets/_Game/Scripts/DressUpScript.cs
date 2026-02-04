@@ -10,6 +10,10 @@ public class DressUpScript : MonoBehaviour
 {
     public static DressUpScript instance;
     public GameObject PlayerTransform;
+    public RectTransform PortraitPlayerTransform;
+    public RectTransform PortraitPlayerParent;
+    public RectTransform LandscapPlayerTransform;
+    public RectTransform LandscapPlayerParent;
     public GameObject ActivdPlayer;
     public GameObject BtnActivdPlayer;
     public GameObject PlayerVdIcon;
@@ -299,4 +303,27 @@ public class DressUpScript : MonoBehaviour
             child.transform.parent.GetComponent<CharacterButtonScrpt>().Unlock();
         }
     }
+    public void PortraiSwitch()
+    {
+        PlayerTransform.GetComponent<RectTransform>().SetParent(PortraitPlayerParent);
+        CopyRectTransform(PortraitPlayerTransform,PlayerTransform.GetComponent<RectTransform>());
+
+    }
+    public void LandscapSwitch()
+    {
+        PlayerTransform.GetComponent<RectTransform>().SetParent(LandscapPlayerParent);
+        CopyRectTransform(LandscapPlayerTransform,PlayerTransform.GetComponent<RectTransform>());
+
+    }
+    public static void CopyRectTransform(RectTransform from, RectTransform to)
+    {
+        to.anchorMin = from.anchorMin;
+        to.anchorMax = from.anchorMax;
+        to.anchoredPosition = from.anchoredPosition;
+        to.sizeDelta = from.sizeDelta;
+        to.pivot = from.pivot;
+        to.localScale = from.localScale;
+        to.localRotation = from.localRotation;
+    }
+
 }
