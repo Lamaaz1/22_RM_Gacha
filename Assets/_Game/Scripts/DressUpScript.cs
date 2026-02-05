@@ -18,8 +18,8 @@ public class DressUpScript : MonoBehaviour
     public GameObject BtnActivdPlayer;
     public GameObject PlayerVdIcon;
     //public Vector2 PlayerPosition;
-    Vector3 portraitPlayerPos;
-    Vector3 landscapePlayerPos;
+    RectTransform portraitPlayerPos;
+    RectTransform landscapePlayerPos;
 
     public List<GameObject> PlatersButtons;
     public List<GameObject> IconsVdButtons;
@@ -27,8 +27,8 @@ public class DressUpScript : MonoBehaviour
     public ChildrenParts ActualPart;
     private void Awake()
     {
-        portraitPlayerPos = PortraitPlayerTransform.GetChild(0).localPosition;
-        landscapePlayerPos = LandscapPlayerTransform.GetChild(0).localPosition;
+        portraitPlayerPos = PortraitPlayerTransform.GetChild(0).GetComponent<RectTransform>();
+        landscapePlayerPos = LandscapPlayerTransform.GetChild(0).GetComponent<RectTransform>();
         //PlayerPosition= PlayerTransform.transform.GetChild(0).localPosition;
         instance = this;
     }
@@ -67,19 +67,20 @@ public class DressUpScript : MonoBehaviour
     {
         bool isLandscape = Screen.width > Screen.height;
 
-        Vector3 targetPos = isLandscape
+        RectTransform targetPos = isLandscape
             ? landscapePlayerPos
             : portraitPlayerPos;
 
         foreach (RectTransform child in PlayerTransform.GetComponent<RectTransform>())
         {
-            child.localPosition = targetPos;
+            CopyRectTransform(targetPos, child);
+           
         }
     }
 
     public void init()
     {
-        RePosPlayer();
+       
         for (int i = 0; i < PlayerTransform.transform.childCount; i++)
         {
             ActivePlayer(i);
@@ -110,7 +111,8 @@ public class DressUpScript : MonoBehaviour
             }
         }
         ActivePlayer(0);
-       
+        RePosPlayer();
+
     }
     public void ActivePlayer(int i)
     {
