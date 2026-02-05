@@ -17,14 +17,19 @@ public class DressUpScript : MonoBehaviour
     public GameObject ActivdPlayer;
     public GameObject BtnActivdPlayer;
     public GameObject PlayerVdIcon;
-    public Vector2 PlayerPosition;
+    //public Vector2 PlayerPosition;
+    Vector3 portraitPlayerPos;
+    Vector3 landscapePlayerPos;
+
     public List<GameObject> PlatersButtons;
     public List<GameObject> IconsVdButtons;
     public int ActivePlayerIndex=0;
     public ChildrenParts ActualPart;
     private void Awake()
     {
-        PlayerPosition= PlayerTransform.transform.GetChild(0).localPosition;
+        portraitPlayerPos = PortraitPlayerTransform.GetChild(0).localPosition;
+        landscapePlayerPos = LandscapPlayerTransform.GetChild(0).localPosition;
+        //PlayerPosition= PlayerTransform.transform.GetChild(0).localPosition;
         instance = this;
     }
     // Start is called before the first frame update
@@ -51,13 +56,27 @@ public class DressUpScript : MonoBehaviour
         init();
     }
     int ColorIndex;
+    //public void RePosPlayer()
+    //{
+    //    foreach (RectTransform child in PlayerTransform.transform)
+    //    {
+    //        child.localPosition = PlayerPosition;
+    //    }
+    //}
     public void RePosPlayer()
     {
-        foreach (RectTransform child in PlayerTransform.transform)
+        bool isLandscape = Screen.width > Screen.height;
+
+        Vector3 targetPos = isLandscape
+            ? landscapePlayerPos
+            : portraitPlayerPos;
+
+        foreach (RectTransform child in PlayerTransform.GetComponent<RectTransform>())
         {
-            child.localPosition = PlayerPosition;
+            child.localPosition = targetPos;
         }
     }
+
     public void init()
     {
         RePosPlayer();
@@ -328,6 +347,8 @@ public class DressUpScript : MonoBehaviour
             CopyRectTransform(PortraitPlayerTransform, PlayerTransform.GetComponent<RectTransform>());
             CopyChildZeroToAll(PortraitPlayerTransform, PlayerTransform.GetComponent<RectTransform>());
             Lndscap = false;
+
+        //RePosPlayer();
         //}
 
     }
@@ -340,8 +361,11 @@ public class DressUpScript : MonoBehaviour
             CopyRectTransform(LandscapPlayerTransform, PlayerTransform.GetComponent<RectTransform>());
             CopyChildZeroToAll(LandscapPlayerTransform, PlayerTransform.GetComponent<RectTransform>());
             Lndscap = true;
+
+
+        //RePosPlayer();
         //}
-        
+
 
     }
     public static void CopyRectTransform(RectTransform from, RectTransform to)

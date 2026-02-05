@@ -37,6 +37,7 @@ public class OrientationUI : MonoBehaviour
 
     void ApplyOrientation(bool isLandscape)
     {
+        UiMnager.instance.Init();
         portraitLayout.SetActive(!isLandscape);
         landscapeLayout.SetActive(isLandscape);
 
@@ -44,5 +45,12 @@ public class OrientationUI : MonoBehaviour
             DressUpScript.instance.LandscapSwitch();
         else
             DressUpScript.instance.PortraiSwitch();
+
+       //StartCoroutine(INITI());
+    }
+    IEnumerator INITI()
+    {
+        yield return new WaitForSeconds(1);
+        UiMnager.instance.Init();
     }
 }
