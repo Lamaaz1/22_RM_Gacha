@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 
 public class PanelChoices : MonoBehaviour
 {
-    public static PanelChoices Instance;
+    //public static PanelChoices Instance;
     public ColorBtn colorPicker;
     public List<GameObject> choices = new List<GameObject>();
     [SerializeField] Text Title;
@@ -16,10 +16,10 @@ public class PanelChoices : MonoBehaviour
     Vector3 StartPos;
     public Text IndexPage;
 
-    private void Awake()
-    {
-        Instance = this;
-    }
+    //private void Awake()
+    //{
+    //    Instance = this;
+    //}
 
     
     // Start is called before the first frame update
@@ -37,7 +37,7 @@ public class PanelChoices : MonoBehaviour
         partsC = chParts;
         Remplir();
         Title.text = t;
-        panelStartPos.DOAnchorPos(Vector3.zero+Vector3.up*64, 2);
+        //panelStartPos.DOAnchorPos(Vector3.zero+Vector3.up*64, 2);
         //PLAYER MOVE
         UiMnager.instance.OpenChoicePanel();
     }
@@ -149,4 +149,14 @@ public class PanelChoices : MonoBehaviour
       
 
     }
+    public void SetCharacterImages(
+    Image img,
+    Image imgPnl,
+    Image iconImg)
+    {
+        CharacterSelectedImg = img;
+        CharacterSelectedImgPnl = imgPnl;
+        CharacterIconImgPnl = iconImg;
+    }
+
 }

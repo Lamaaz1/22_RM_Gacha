@@ -17,6 +17,7 @@ public class BodyParts : MonoBehaviour
     Button mybtn;
     [SerializeField] Text mytext;
     [SerializeField] List<ChildrenParts> ChildresnP;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class BodyParts : MonoBehaviour
 
     public void OnclickB()
     {
-        PanelChoices.Instance.ShowPanel(mytext.text, ChildresnP);
+        PanelChoicesManager.Instance.ShowPanel(mytext.text, ChildresnP);
     }
   
 }

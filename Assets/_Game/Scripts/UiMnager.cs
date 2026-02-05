@@ -44,10 +44,16 @@ public class UiMnager : MonoBehaviour
     {
         Init();
     }
+    public RectTransform ChoicePanelPortrait;
+    public RectTransform ChoicePanelPortraitFnl;
+    public RectTransform ChoicePanelLandscap;
+    public RectTransform ChoicePanelLandscapFnl;
     public void OpenChoicePanel()
     {
         LeftPanel.SetActive(false);
-        LeftPanelLSCP.SetActive(false);
+        ChoicePanelLandscap.DOAnchorPos(Vector3.zero + Vector3.up * 64, 2);
+        ChoicePanelPortrait.DOAnchorPos(ChoicePanelPortraitFnl.anchoredPosition,2);
+        //LeftPanelLSCP.SetActive(false);
         //PlayerPanel.GetComponent<RectTransform>().DOAnchorPos(Vector3.zero+Vector3.left*300,1);
 
     }

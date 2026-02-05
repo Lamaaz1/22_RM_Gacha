@@ -19,7 +19,7 @@ public class ColorBtn : MonoBehaviour
     public void ChangeColor(Image ImgColor)
     {
         //SelectedImg.color = ImgColor.color;
-        PanelChoices.Instance.ChangeColor(ImgColor.color);
+        PanelChoicesManager.Instance.ChangeColor(ImgColor.color);
         SavePanel.instance.SaveColorPart(DressUpScript.instance.ActivePlayerIndex, DressUpScript.instance.ActualPart, i);
     }
     
