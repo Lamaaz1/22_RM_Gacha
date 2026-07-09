@@ -267,7 +267,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: '{dedicated}: Downloads/frameflow_studio.jks'
-  AndroidKeyaliasName: Debug
+  AndroidKeyaliasName: frameflowstudio
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidEnableArm64MTE: 0
   AndroidBuildApkPerCpuArchitecture: 0
