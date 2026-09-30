@@ -1,0 +1,3 @@
+PASS: 4 panels, 12 choices, no missing scripts, selection gating, Next/Back, retained selections, world preview, single completion, preference persistence.
+Four previews rendered by Unity at 1920x1080.
+9/30/2026 1:56:15 PM

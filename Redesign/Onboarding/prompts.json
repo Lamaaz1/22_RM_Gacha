@@ -1,0 +1,30 @@
+{
+  "mode": "Built-in ImageGen",
+  "images": [
+    {
+      "file": "world-music-studio.png",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-b8e09e17-8f97-4023-b458-ec28b2fe69b8.png",
+      "prompt": "Use case: stylized-concept. Asset: landscape 3:2 selection card artwork for Gacha Nox game. A dreamy kawaii anime MUSIC STUDIO, pastel violet recording room with pink DJ turntables, cyan glowing speakers, cat ear headphones on desk, tiny stars and crescent motifs, musical note neon wall decorations. Centered balanced composition, cozy playful cel shaded 2D game art, clean plum outlines, pink lavender ice cyan, no characters, no written text, no logos, no UI frame. Opaque full bleed image."
+    },
+    {
+      "file": "style-cute-pastel.png",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-c7265747-9a53-45b2-a3cc-5169ad32629a.png",
+      "prompt": "Use case: stylized-concept. Game selection card, landscape 3:2. Gacha Nox CUTE PASTEL fashion style. One charming coordinated outfit display: pink oversized bunny hoodie, lavender pleated skirt, ice cyan high-top boots and cat-ear headphones floating in neat fashion arrangement, tiny hearts and stars. Clean cel shaded anime illustration, crisp plum outlines and glossy accents, simple pale pink dreamy background, no person, no text, no UI frame, full bleed."
+    },
+    {
+      "file": "style-dark-gothic.png",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-c43d7832-88a2-4ec6-b234-27194db59c0b.png",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 Gacha Nox fashion selection card for DARK AND GOTHIC. One coordinated anime outfit arrangement: elegant black violet frilled dress with pink ribbon, chunky black boots, small bat-wing handbag and black headphones with tiny crescent ornaments. Clean crisp cel shaded 2D art with deep plum outlines, glossy purple highlights, pink accents. Soft dark lavender background with sparse moons and tiny stars, clear readable composition, no person, no written text, no UI frame, full bleed."
+    },
+    {
+      "file": "style-neon-pop.png",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-ceab75f1-c630-4367-a0ab-c757e28c7edd.png",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 Gacha Nox NEON POP fashion style selection card. Coordinated anime streetwear outfit arrangement: electric purple and hot pink cropped varsity jacket over cyan tee, violet shorts, chunky cyan-pink high top sneakers, purple baseball cap and neon headphones. Crisp polished cel shaded anime illustration, clean plum outlines, bright cyan magenta highlights. Background dark violet with simple neon music and star motifs. No person, no written text, no UI frame, full bleed. Keep all outfit items visible with breathing room."
+    },
+    {
+      "file": "character-nox-bunny.png",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-0149879c-9b47-43b9-bb53-6627aaed0d21.png",
+      "prompt": "Use case: stylized-concept. Full body Gacha Nox pink bunny mascot for character selection card, portrait 2:3 on true transparent background. Cute compact chibi rabbit, tall ears cyan inner ears, black bow with small pink plus emblem on one ear, tiny cyan angel wings, magenta eyes, black and purple coat with pink heart buttons, chunky little boots. Friendly smile, waves one paw, full body including ears and feet centered with 8 percent transparent margin. Polished cel shaded anime sticker art with clean deep plum outlines, lavender pink cyan accents. NO sign, no placard, no lettering, no props in hands, no glow outside silhouette."
+    }
+  ]
+}
