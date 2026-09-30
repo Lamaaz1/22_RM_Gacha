@@ -1,0 +1,62 @@
+[
+  [
+    "bg2.png",
+    "Use case: stylized-concept. Final landscape 16:9 game UI background, Gacha Nox pastel anime magical neon city at twilight. Dreamy lavender and pink sky, cyan holographic windows, distant low skyline along bottom, tiny musical notes and stars at edges. Keep middle 65 percent quiet pale lavender gradient for overlaid interface. Full bleed, no text, no characters, no buttons.",
+    false
+  ],
+  [
+    "bear1.png",
+    "Use case: stylized-concept. Final production sprite for a Gacha Nox kawaii anime game UI. Polished 2D cel shaded sticker art with clean deep-plum outlines, pearlescent lavender, candy pink, ice cyan, small heart/star accents, high contrast readable at small size. Centered entire subject with small safe margin, no clipping, no cast shadow outside sticker, no watermark. Real transparent background. Portrait full-body pink bunny mascot, tall ears with cyan inner ears, black bow with a small pink plus, tiny cyan angel wings, black violet coat and pink eyes. Smiling holding a lavender placard with EXACT readable text '30% OFF' and underneath 'ALL 5 GAMES'.",
+    true
+  ],
+  [
+    "bear2.png",
+    "Use case: stylized-concept. Final production sprite for a Gacha Nox kawaii anime game UI. Polished 2D cel shaded sticker art with clean deep-plum outlines, pearlescent lavender, candy pink, ice cyan, small heart/star accents, high contrast readable at small size. Centered entire subject with small safe margin, no clipping, no cast shadow outside sticker, no watermark. Real transparent background. Portrait full-body chibi girl with long lavender twin tails, black cat-ear headphones, black and white short dress, blue tie, cyan crystal wings, tall black boots. Holding a painter palette and stylus, joyful wink. No text.",
+    true
+  ],
+  [
+    "bear3.png",
+    "Use case: stylized-concept. Final production sprite for a Gacha Nox kawaii anime game UI. Polished 2D cel shaded sticker art with clean deep-plum outlines, pearlescent lavender, candy pink, ice cyan, small heart/star accents, high contrast readable at small size. Centered entire subject with small safe margin, no clipping, no cast shadow outside sticker, no watermark. Real transparent background. Full-body dynamic chibi DJ girl, short blue-purple bob hair, purple baseball cap, pink hoodie, violet shorts and high top boots, holding a glowing cyan star wand. Cheerful pose, entire character, no text.",
+    true
+  ],
+  [
+    "bear4.png",
+    "Use case: stylized-concept. Final production sprite for a Gacha Nox kawaii anime game UI. Polished 2D cel shaded sticker art with clean deep-plum outlines, pearlescent lavender, candy pink, ice cyan, small heart/star accents, high contrast readable at small size. Centered entire subject with small safe margin, no clipping, no cast shadow outside sticker, no watermark. Real transparent background. Portrait full-body chibi gothic girl, pink hair with black twin-tail ribbons, black and lavender dress, chunky black boots, holding a tablet with stylus and little violet handbag. Friendly cute wink. No text.",
+    true
+  ],
+  [
+    "calculator.png",
+    "Use case: stylized-concept. Final production sprite for a Gacha Nox kawaii anime game UI. Polished 2D cel shaded sticker art with clean deep-plum outlines, pearlescent lavender, candy pink, ice cyan, small heart/star accents, high contrast readable at small size. Centered entire subject with small safe margin, no clipping, no cast shadow outside sticker, no watermark. Real transparent background. Landscape 3:2 sticker vignette: pink winged bunny in black violet coat next to a large cute lavender calculator with pink and cyan keys and small heart button, calculator screen reads '10 + 20 = 30'. No title text.",
+    true
+  ],
+  [
+    "coloring.png",
+    "Use case: stylized-concept. Final production sprite for a Gacha Nox kawaii anime game UI. Polished 2D cel shaded sticker art with clean deep-plum outlines, pearlescent lavender, candy pink, ice cyan, small heart/star accents, high contrast readable at small size. Centered entire subject with small safe margin, no clipping, no cast shadow outside sticker, no watermark. Real transparent background. Landscape 3:2 sticker vignette: lavender twin-tail anime girl with cat-ear headphones presenting an open coloring book with bold simple line art of stars, cute bunny and magical castle; cyan, pink and lavender coloring pencils and palette beside it. No text.",
+    true
+  ],
+  [
+    "jigsaw.png",
+    "Use case: stylized-concept. Final production sprite for a Gacha Nox kawaii anime game UI. Polished 2D cel shaded sticker art with clean deep-plum outlines, pearlescent lavender, candy pink, ice cyan, small heart/star accents, high contrast readable at small size. Centered entire subject with small safe margin, no clipping, no cast shadow outside sticker, no watermark. Real transparent background. Landscape 5:3 sticker vignette: blue-purple bob hair chibi girl in pink hoodie and purple cap beside a big jigsaw puzzle board showing a pastel neon city and crescent moon. Several clearly interlocking pieces, two loose pink cyan puzzle pieces, cute clean composition. No text.",
+    true
+  ],
+  [
+    "maze.png",
+    "Use case: stylized-concept. Final production sprite for a Gacha Nox kawaii anime game UI. Polished 2D cel shaded sticker art with clean deep-plum outlines, pearlescent lavender, candy pink, ice cyan, small heart/star accents, high contrast readable at small size. Centered entire subject with small safe margin, no clipping, no cast shadow outside sticker, no watermark. Real transparent background. Landscape 3:2 sticker vignette: magical maze board viewed nearly overhead, thick violet maze walls, pastel cyan paths, pink heart destination, star tokens, and a small pink bunny at the entrance. Self contained rounded board. No text.",
+    true
+  ],
+  [
+    "memory.png",
+    "Use case: stylized-concept. Final production sprite for a Gacha Nox kawaii anime game UI. Polished 2D cel shaded sticker art with clean deep-plum outlines, pearlescent lavender, candy pink, ice cyan, small heart/star accents, high contrast readable at small size. Centered entire subject with small safe margin, no clipping, no cast shadow outside sticker, no watermark. Real transparent background. Landscape 3:2 sticker vignette: chibi pink haired gothic girl in black violet dress beside neatly arranged 3 by 3 memory cards on a lavender tray. Face-up cards show matching heart pair and star pair, backs have crescent moon. Clear cute large shapes. No text.",
+    true
+  ],
+  [
+    "back button icon.png",
+    "Use case: stylized-concept. Final production sprite for a Gacha Nox kawaii anime game UI. Polished 2D cel shaded sticker art with clean deep-plum outlines, pearlescent lavender, candy pink, ice cyan, small heart/star accents, high contrast readable at small size. Centered entire subject with small safe margin, no clipping, no cast shadow outside sticker, no watermark. Real transparent background. Single compact pink bunny face icon with short upright ears, cyan inner ears, friendly pink eyes, tiny black bow with pink plus. Head only, fills square, no text.",
+    true
+  ],
+  [
+    "loading bar handle.png",
+    "Use case: stylized-concept. Final production sprite for a Gacha Nox kawaii anime game UI. Polished 2D cel shaded sticker art with clean deep-plum outlines, pearlescent lavender, candy pink, ice cyan, small heart/star accents, high contrast readable at small size. Centered entire subject with small safe margin, no clipping, no cast shadow outside sticker, no watermark. Real transparent background. Single compact chibi pink bunny head, long ears with cyan inner ears, black bow pink plus, pink eyes, cute smile, small cyan wings attached below cheeks. Pearl white sticker border, no text.",
+    true
+  ]
+]

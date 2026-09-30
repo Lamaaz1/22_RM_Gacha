@@ -1,0 +1,370 @@
+{
+  "images": 45,
+  "allDimensionsMatch": true,
+  "allImagesReplaced": true,
+  "nonImageFilesUnchanged": 57,
+  "unityPlayModeTested": false,
+  "checkedFolder": "D:\\UnityProjects\\22_RM_Gacha\\Assets\\Scenes\\ui",
+  "assets": [
+    {
+      "file": "30%off.png",
+      "width": 298,
+      "height": 286,
+      "alpha": true,
+      "sha256": "26dee774411c1624f5f4f85d627d00f5c1980c4154186028d2f27fad6e9d7534",
+      "sizeMatches": true
+    },
+    {
+      "file": "BACK.png",
+      "width": 76,
+      "height": 30,
+      "alpha": true,
+      "sha256": "b6544a8e359770fc17fddbd4ec1cbb52b60f14d5b04673444efd1c4e9a8fd650",
+      "sizeMatches": true
+    },
+    {
+      "file": "Calculator Game.png",
+      "width": 472,
+      "height": 62,
+      "alpha": true,
+      "sha256": "11c675dec72f9825bb1f10aa4a05d26b9d8f9aa7322fc2f468074fa0f0662a3a",
+      "sizeMatches": true
+    },
+    {
+      "file": "Coloring Book.png",
+      "width": 452,
+      "height": 82,
+      "alpha": true,
+      "sha256": "865a88fd8fb2c1df4dc2ac2a355a870adf4c8cd225be01d9ca146d8fa642c876",
+      "sizeMatches": true
+    },
+    {
+      "file": "GET BUNDLE.png",
+      "width": 269,
+      "height": 42,
+      "alpha": true,
+      "sha256": "4bd02e930fd99a77072dc4bab5bbcffd0e6d1f6cf9025762eef885e9d57a9a58",
+      "sizeMatches": true
+    },
+    {
+      "file": "Jigsaw Puzzle.png",
+      "width": 427,
+      "height": 43,
+      "alpha": true,
+      "sha256": "a9fb9e7101f6acddada39cc339878d5b24ac4403c19adea971ee85e6117a80ce",
+      "sizeMatches": true
+    },
+    {
+      "file": "LIMITED OFFER.png",
+      "width": 156,
+      "height": 105,
+      "alpha": true,
+      "sha256": "c1b968ea1ad7d9a751fe0dbec85d0cd47657987fc19c5d29e2d4e1f6bb9cd922",
+      "sizeMatches": true
+    },
+    {
+      "file": "Maze Game.png",
+      "width": 335,
+      "height": 27,
+      "alpha": true,
+      "sha256": "949be359dfdde5317b81637403d1e6181078eb530eeedf024d743de574e65def",
+      "sizeMatches": true
+    },
+    {
+      "file": "Memory Match.png",
+      "width": 475,
+      "height": 50,
+      "alpha": true,
+      "sha256": "4c34b2dcc8006d571abeb568e72f055ee635647a186d8945153b7731ffc67a99",
+      "sizeMatches": true
+    },
+    {
+      "file": "Star bg.png",
+      "width": 1711,
+      "height": 1080,
+      "alpha": true,
+      "sha256": "9a918760236c232c9cfd3c8d5da22dfed4ef88d75d9f459af916a63e9e91d147",
+      "sizeMatches": true
+    },
+    {
+      "file": "back arrow.png",
+      "width": 24,
+      "height": 40,
+      "alpha": true,
+      "sha256": "ed3d40f705e36799656b75558dd509ce725bb89786a5edfa6c0f0437dcad22f6",
+      "sizeMatches": true
+    },
+    {
+      "file": "back button bg.png",
+      "width": 255,
+      "height": 115,
+      "alpha": true,
+      "sha256": "daa8562e589fca2267dff3a5ffb7ed404ee6bd2ef6b99dd176ba5f6443423d35",
+      "sizeMatches": true
+    },
+    {
+      "file": "back button icon.png",
+      "width": 58,
+      "height": 54,
+      "alpha": true,
+      "sha256": "eae9161d3ef31faabb0247242c972ca9be204c2e3b47bdfc46b442ff0ee9b883",
+      "sizeMatches": true
+    },
+    {
+      "file": "bear1.png",
+      "width": 198,
+      "height": 324,
+      "alpha": true,
+      "sha256": "4cde052d0911821c4ef5d70d482cb642465b3a053f4be804d4e5277d55e09a53",
+      "sizeMatches": true
+    },
+    {
+      "file": "bear2.png",
+      "width": 242,
+      "height": 317,
+      "alpha": true,
+      "sha256": "8c786283a567f586be45d49ed3f89910daf8e872586b14ed854ccb151bdf18eb",
+      "sizeMatches": true
+    },
+    {
+      "file": "bear3.png",
+      "width": 359,
+      "height": 410,
+      "alpha": true,
+      "sha256": "15b560bbf9164a4ef724e7382c030d77a61aa9125fa1172cd8fc26d3d1cba315",
+      "sizeMatches": true
+    },
+    {
+      "file": "bear4.png",
+      "width": 203,
+      "height": 296,
+      "alpha": true,
+      "sha256": "875902246ccd9e050f2b4a7a19d67e8145e11a24db5067dd4db0e5b8e7fa58ca",
+      "sizeMatches": true
+    },
+    {
+      "file": "bg1.png",
+      "width": 1920,
+      "height": 1080,
+      "alpha": true,
+      "sha256": "1145c48a2ec0800d0961515737b9e7f12b0e24194840c3e3a36821dfdd81e964",
+      "sizeMatches": true
+    },
+    {
+      "file": "bg2.png",
+      "width": 1920,
+      "height": 1080,
+      "alpha": true,
+      "sha256": "8f170d31c575c701c06a4d62f006fd0cebc8e0389027ee20bfa37448896b94de",
+      "sizeMatches": true
+    },
+    {
+      "file": "calculator arrow.png",
+      "width": 45,
+      "height": 90,
+      "alpha": true,
+      "sha256": "94b373b58a3a86034838ceec11a53bc610dc5a0cdfaa8ccb0ac3655c5bb96b55",
+      "sizeMatches": true
+    },
+    {
+      "file": "calculator.png",
+      "width": 442,
+      "height": 302,
+      "alpha": true,
+      "sha256": "3f88f29d87a25d50925344f9ce4c1e7011d6c0313aa42c8080f597346304b181",
+      "sizeMatches": true
+    },
+    {
+      "file": "coloring arrow.png",
+      "width": 79,
+      "height": 116,
+      "alpha": true,
+      "sha256": "e17be3a0dc49c68e651b2bfb161cb2451ae244d599742f3c362545a732a29a98",
+      "sizeMatches": true
+    },
+    {
+      "file": "coloring.png",
+      "width": 513,
+      "height": 343,
+      "alpha": true,
+      "sha256": "91dbde56f516352dc340aac8e31232572953735c1b69931a283b29c0b7a7d53c",
+      "sizeMatches": true
+    },
+    {
+      "file": "confetti.png",
+      "width": 973,
+      "height": 565,
+      "alpha": true,
+      "sha256": "0ef38442e85117a731b3b5267eab335f80e48693d2f6c9d488e6ef728d526723",
+      "sizeMatches": true
+    },
+    {
+      "file": "get bundle home button.png",
+      "width": 536,
+      "height": 160,
+      "alpha": true,
+      "sha256": "8f023bc7043831a4f810a21e606c592dfc0c6b6b0a38b414b65c019d9b18571f",
+      "sizeMatches": true
+    },
+    {
+      "file": "img1.png",
+      "width": 481,
+      "height": 424,
+      "alpha": true,
+      "sha256": "7ba7048cd5658659b30d77185e25d4824450d53029f1e465facfa77116363e5f",
+      "sizeMatches": true
+    },
+    {
+      "file": "img2.png",
+      "width": 481,
+      "height": 424,
+      "alpha": true,
+      "sha256": "e2b0203c9b17a151234d323953df468faed5f8cb2cfd80e5370f98fa6b9b6537",
+      "sizeMatches": true
+    },
+    {
+      "file": "img3.png",
+      "width": 481,
+      "height": 424,
+      "alpha": true,
+      "sha256": "b4fc0b2fd727a915cef1acfe00c9838e72e612b9446c85c6b4a3a1ed2a4997bc",
+      "sizeMatches": true
+    },
+    {
+      "file": "img4.png",
+      "width": 481,
+      "height": 424,
+      "alpha": true,
+      "sha256": "d4f5df5ded7fd65549b9757f1f1b14c39ce41a7c720ebcdc77d065deccd8acb4",
+      "sizeMatches": true
+    },
+    {
+      "file": "img5.png",
+      "width": 481,
+      "height": 432,
+      "alpha": true,
+      "sha256": "bf53d56e44c71cdba1e9284e86dd015d979eaa31481dc5a878b4fe50a2d312ae",
+      "sizeMatches": true
+    },
+    {
+      "file": "img6.png",
+      "width": 481,
+      "height": 449,
+      "alpha": true,
+      "sha256": "5f710a2af2eecef2b1b0ea05f42ca1c17ac07601e4ec3673f8498f4b80095a55",
+      "sizeMatches": true
+    },
+    {
+      "file": "img7.png",
+      "width": 481,
+      "height": 587,
+      "alpha": true,
+      "sha256": "6a1929f2d9883de037dbcf57558b5e517227a449d3f59a7326701a049b729722",
+      "sizeMatches": true
+    },
+    {
+      "file": "jigsaw arrow.png",
+      "width": 55,
+      "height": 97,
+      "alpha": true,
+      "sha256": "c7be5ac74a4c81c3b9267d29218db64883339876ba88380c93244f8207171075",
+      "sizeMatches": true
+    },
+    {
+      "file": "jigsaw.png",
+      "width": 524,
+      "height": 312,
+      "alpha": true,
+      "sha256": "a802c40192844995170944168325e6b6e0b1da5cc6ae8c8290ededece40cdf4b",
+      "sizeMatches": true
+    },
+    {
+      "file": "loading bar bg.png",
+      "width": 1675,
+      "height": 107,
+      "alpha": true,
+      "sha256": "a6c8fc08286846aeec87843e01d4507807e3038db1b387155efd89dda48ade37",
+      "sizeMatches": true
+    },
+    {
+      "file": "loading bar fill.png",
+      "width": 1630,
+      "height": 74,
+      "alpha": true,
+      "sha256": "a2d452f69470231a6578eec8c9051d05e8f03c5aed99c0acaacde5e7b7166c4b",
+      "sizeMatches": true
+    },
+    {
+      "file": "loading bar handle.png",
+      "width": 181,
+      "height": 195,
+      "alpha": true,
+      "sha256": "1349ce6eeaf16dfa51b86a1ea55cda024f7a74e1f95f31b3237a0cb6d9edcf9e",
+      "sizeMatches": true
+    },
+    {
+      "file": "maze arrow.png",
+      "width": 58,
+      "height": 161,
+      "alpha": true,
+      "sha256": "6d1a94e609692895a83c99acfcfa410130acbcb4469cc468ad6ee3ee6ac9b0d4",
+      "sizeMatches": true
+    },
+    {
+      "file": "maze.png",
+      "width": 444,
+      "height": 292,
+      "alpha": true,
+      "sha256": "a7b4e66bedff0ac68e438189f0a3ca6f20a85c42e0ab240dfc70d88c908c1560",
+      "sizeMatches": true
+    },
+    {
+      "file": "memory arrow.png",
+      "width": 60,
+      "height": 119,
+      "alpha": true,
+      "sha256": "825b07960d35baa183ed72caf487b93cbd54dc8477decee3d26060c320ea0d72",
+      "sizeMatches": true
+    },
+    {
+      "file": "memory.png",
+      "width": 462,
+      "height": 301,
+      "alpha": true,
+      "sha256": "34b8e1f3a6b68dfe8dcc610b538f159f39744bcde68be313a74e081ceaf4ac78",
+      "sizeMatches": true
+    },
+    {
+      "file": "offer.png",
+      "width": 199,
+      "height": 223,
+      "alpha": true,
+      "sha256": "2657ec7ad3ffdf72358898d9426804818410d6a6e0bf45266c29ae14ec61083b",
+      "sizeMatches": true
+    },
+    {
+      "file": "paper bg.png",
+      "width": 1667,
+      "height": 950,
+      "alpha": true,
+      "sha256": "2155fb9fea177629f6329566e294d25624b7f7eb08e690f0193da37b9fb2b199",
+      "sizeMatches": true
+    },
+    {
+      "file": "title bg.png",
+      "width": 1238,
+      "height": 146,
+      "alpha": true,
+      "sha256": "5b90fe2ef1deb1888b687024dc2ccd1cca3184761e7f1f7ed5f8f06a4cb80247",
+      "sizeMatches": true
+    },
+    {
+      "file": "title.png",
+      "width": 1122,
+      "height": 77,
+      "alpha": true,
+      "sha256": "81bb9a24498f380df48aa5aa8cee9cbbc5a55a40176037059e0f10fbc9fa60ed",
+      "sizeMatches": true
+    }
+  ]
+}

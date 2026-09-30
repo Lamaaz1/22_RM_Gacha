@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: 5f927980eb037ec4ab68455945434636
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1867771097396597424
+    second: Coloring Book_0
+  - first:
+      213: 8139055583668726132
+    second: Coloring Book_1
+  - first:
+      213: -3404691792622849752
+    second: Coloring Book_2
+  - first:
+      213: 644741579976891236
+    second: Coloring Book_3
+  - first:
+      213: -576877510763531791
+    second: Coloring Book_4
+  - first:
+      213: 6951130451863672607
+    second: Coloring Book_5
+  - first:
+      213: -2208513628056064666
+    second: Coloring Book_6
+  - first:
+      213: 8621940943834188642
+    second: Coloring Book_7
+  - first:
+      213: -1391874236120072370
+    second: Coloring Book_8
+  - first:
+      213: 7278499538460917221
+    second: Coloring Book_9
+  - first:
+      213: -2956375151866876553
+    second: Coloring Book_10
+  - first:
+      213: 8182012722077199075
+    second: Coloring Book_11
+  - first:
+      213: -510408389903742840
+    second: Coloring Book_12
+  - first:
+      213: 8522963751139833138
+    second: Coloring Book_13
+  - first:
+      213: -1584854145075365546
+    second: Coloring Book_14
+  - first:
+      213: 6476488266245603506
+    second: Coloring Book_15
+  - first:
+      213: 4959901869994034582
+    second: Coloring Book_16
+  - first:
+      213: 1892867885936775056
+    second: Coloring Book_17
+  - first:
+      213: -2025130207065996501
+    second: Coloring Book_18
+  - first:
+      213: 7515390733466634490
+    second: Coloring Book_19
+  - first:
+      213: -8605131057212359399
+    second: Coloring Book_20
+  - first:
+      213: -7940751952622432986
+    second: Coloring Book_21
+  - first:
+      213: 1415621254592897424
+    second: Coloring Book_22
+  - first:
+      213: -3968118370485640806
+    second: Coloring Book_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Coloring Book_0
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 26
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d2fe135185416e0800000000000000
+      internalID: -1867771097396597424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_1
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 30
+        width: 9
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479ebb74eebb3f070800000000000000
+      internalID: 8139055583668726132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_2
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 31
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 821f60b7ada10c0d0800000000000000
+      internalID: -3404691792622849752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_3
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 36
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b527e0d0592f800800000000000000
+      internalID: 644741579976891236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_4
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 38
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1370cd5f48ef7f0800000000000000
+      internalID: -576877510763531791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_5
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 41
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f171cba3150677060800000000000000
+      internalID: 6951130451863672607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_6
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 43
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66deb167e88c951e0800000000000000
+      internalID: -2208513628056064666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_7
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 45
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b02af7b9947a770800000000000000
+      internalID: 8621940943834188642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_8
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 47
+        width: 49
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f7b08b1c11face0800000000000000
+      internalID: -1391874236120072370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_9
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 52
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5edbecf54cc620560800000000000000
+      internalID: 7278499538460917221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_10
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 55
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77dee228678d8f6d0800000000000000
+      internalID: -2956375151866876553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 4
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea632778395c8170800000000000000
+      internalID: 8182012722077199075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_12
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 28
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 888886d064aaae8f0800000000000000
+      internalID: -510408389903742840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_13
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 4
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23578340066a74670800000000000000
+      internalID: 8522963751139833138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_14
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 14
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6593afd4d87710ae0800000000000000
+      internalID: -1584854145075365546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_15
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 20
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b00e85a3cb11e950800000000000000
+      internalID: 6476488266245603506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_16
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 31
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6954ac9d87c15d440800000000000000
+      internalID: 4959901869994034582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_17
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 28
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f810c3051d44a10800000000000000
+      internalID: 1892867885936775056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b230be76eca45e3e0800000000000000
+      internalID: -2025130207065996501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_19
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af88a88cd080c4860800000000000000
+      internalID: 7515390733466634490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_20
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 5
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91dfc2935ee649880800000000000000
+      internalID: -8605131057212359399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_21
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 6
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d4376cb28ccc190800000000000000
+      internalID: -7940751952622432986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_22
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 8
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091a080e70c45a310800000000000000
+      internalID: 1415621254592897424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coloring Book_23
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 9
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a916084bd596ee8c0800000000000000
+      internalID: -3968118370485640806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Coloring Book_0: -1867771097396597424
+      Coloring Book_1: 8139055583668726132
+      Coloring Book_10: -2956375151866876553
+      Coloring Book_11: 8182012722077199075
+      Coloring Book_12: -510408389903742840
+      Coloring Book_13: 8522963751139833138
+      Coloring Book_14: -1584854145075365546
+      Coloring Book_15: 6476488266245603506
+      Coloring Book_16: 4959901869994034582
+      Coloring Book_17: 1892867885936775056
+      Coloring Book_18: -2025130207065996501
+      Coloring Book_19: 7515390733466634490
+      Coloring Book_2: -3404691792622849752
+      Coloring Book_20: -8605131057212359399
+      Coloring Book_21: -7940751952622432986
+      Coloring Book_22: 1415621254592897424
+      Coloring Book_23: -3968118370485640806
+      Coloring Book_3: 644741579976891236
+      Coloring Book_4: -576877510763531791
+      Coloring Book_5: 6951130451863672607
+      Coloring Book_6: -2208513628056064666
+      Coloring Book_7: 8621940943834188642
+      Coloring Book_8: -1391874236120072370
+      Coloring Book_9: 7278499538460917221
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
