@@ -16,7 +16,7 @@ public class AdsController : MonoBehaviour
 
     private void Start()
     {
-        StartDelayedAction();
+        //StartDelayedAction();
     }
     void Awake()
     {

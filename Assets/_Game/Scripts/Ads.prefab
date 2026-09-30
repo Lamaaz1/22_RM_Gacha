@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9888584133dc846a7f0afe2671d48e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  appKey: 
-  rewardedAdUnitId: 
-  interstitialAdUnitId: 
-  bannerAdUnitId: 
+  appKey: 26fa29135
+  rewardedAdUnitId: 6fx9yvwoq00flwg1
+  interstitialAdUnitId: 3v61no8b2uceldho
+  bannerAdUnitId: ivy1ava9n8p4l766

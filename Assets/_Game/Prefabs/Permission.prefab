@@ -306,10 +306,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 147435985240313817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 131.57898}
-  m_SizeDelta: {x: 1082.3325, y: 290.752}
+  m_AnchorMin: {x: 0.026, y: 0.46571895}
+  m_AnchorMax: {x: 0.97950363, y: 0.9697059}
+  m_AnchoredPosition: {x: -2, y: 4.5789795}
+  m_SizeDelta: {x: 4.3325195, y: -3.2479858}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4759189427176692302
 CanvasRenderer:
@@ -377,20 +377,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -442,10 +445,10 @@ RectTransform:
   - {fileID: 6859341505809614325}
   m_Father: {fileID: 147435985240313817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -408.24103, y: -226.40363}
-  m_SizeDelta: {x: 273.5179, y: 119.1926}
+  m_AnchorMin: {x: 0.094841875, y: 0.052576784}
+  m_AnchorMax: {x: 0.34619418, y: 0.27029747}
+  m_AnchoredPosition: {x: -2, y: -2.5}
+  m_SizeDelta: {x: -10.482086, y: -7.8074036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7488823832163059798
 CanvasRenderer:
@@ -575,10 +578,10 @@ RectTransform:
   - {fileID: 1550169082131025777}
   m_Father: {fileID: 147435985240313817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 247, y: -226.40363}
-  m_SizeDelta: {x: 273.5179, y: 119.1926}
+  m_AnchorMin: {x: 0.66, y: 0.052576784}
+  m_AnchorMax: {x: 0.89984894, y: 0.27029747}
+  m_AnchoredPosition: {x: -5.5, y: -2.5}
+  m_SizeDelta: {x: 2.5179138, y: -7.8074036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1219259186146188273
 CanvasRenderer:

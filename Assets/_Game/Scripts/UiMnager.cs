@@ -42,6 +42,10 @@ public class UiMnager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(AdsController.Instance!= null)
+        {
+            AdsController.Instance.StartDelayedAction();
+        }
         Init();
     }
     public RectTransform ChoicePanelPortrait;
