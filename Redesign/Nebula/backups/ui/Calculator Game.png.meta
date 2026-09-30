@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: 6cd4902f1190c034e9577eb1ee11f482
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7277379075175072706
+    second: Calculator Game_0
+  - first:
+      213: 5024011877291314951
+    second: Calculator Game_1
+  - first:
+      213: -3045771361450384216
+    second: Calculator Game_2
+  - first:
+      213: -2214576785952728640
+    second: Calculator Game_3
+  - first:
+      213: 7457742974471806860
+    second: Calculator Game_4
+  - first:
+      213: 4787848245596848303
+    second: Calculator Game_5
+  - first:
+      213: -5914787623190732541
+    second: Calculator Game_6
+  - first:
+      213: -5035813470211854064
+    second: Calculator Game_7
+  - first:
+      213: 6905738175164947691
+    second: Calculator Game_8
+  - first:
+      213: 2377116693907929318
+    second: Calculator Game_9
+  - first:
+      213: 2376659139445402645
+    second: Calculator Game_10
+  - first:
+      213: -3812443494207653945
+    second: Calculator Game_11
+  - first:
+      213: -7490851138065295844
+    second: Calculator Game_12
+  - first:
+      213: 2092768386459625409
+    second: Calculator Game_13
+  - first:
+      213: -7541403929238905133
+    second: Calculator Game_14
+  - first:
+      213: -2180971167237951446
+    second: Calculator Game_15
+  - first:
+      213: 1936737061907060332
+    second: Calculator Game_16
+  - first:
+      213: 4923777452983656944
+    second: Calculator Game_17
+  - first:
+      213: -6690902576675985936
+    second: Calculator Game_18
+  - first:
+      213: -3943359861610883269
+    second: Calculator Game_19
+  - first:
+      213: 9215224700417203292
+    second: Calculator Game_20
+  - first:
+      213: 5099707476412131095
+    second: Calculator Game_21
+  - first:
+      213: -2978425123372317782
+    second: Calculator Game_22
+  - first:
+      213: -570080322641212159
+    second: Calculator Game_23
+  - first:
+      213: 8866141927565812086
+    second: Calculator Game_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Calculator Game_0
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 10
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3cbaf26b17ef460800000000000000
+      internalID: 7277379075175072706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_1
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 13
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70fca4d1f20e8b540800000000000000
+      internalID: 5024011877291314951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_2
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 15
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a421bd751f3bb5d0800000000000000
+      internalID: -3045771361450384216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_3
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 19
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c91671852e3441e0800000000000000
+      internalID: -2214576785952728640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_4
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 20
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f9e83f8b93f7760800000000000000
+      internalID: 7457742974471806860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 21
+        width: 8
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0074dbc9ad17240800000000000000
+      internalID: 4787848245596848303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_6
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 22
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301e6dd9ef37aeda0800000000000000
+      internalID: -5914787623190732541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_7
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 23
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01135e864523d1ab0800000000000000
+      internalID: -5035813470211854064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_8
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 25
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec9f8a384c16df50800000000000000
+      internalID: 6905738175164947691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_9
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 26
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e87802e9073df020800000000000000
+      internalID: 2377116693907929318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_10
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 27
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51c24de25e69bf020800000000000000
+      internalID: 2376659139445402645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 29
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7f08957da771bc0800000000000000
+      internalID: -3812443494207653945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_12
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 31
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16994204962b0890800000000000000
+      internalID: -7490851138065295844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_13
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 31
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c7e71072c10b0d10800000000000000
+      internalID: 2092768386459625409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_14
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 33
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dedaf9151d875790800000000000000
+      internalID: -7541403929238905133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_15
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 35
+        width: 7
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a20b9675742abb1e0800000000000000
+      internalID: -2180971167237951446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66dd46b81ca0ea10800000000000000
+      internalID: 1936737061907060332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_17
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1
+        width: 8
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f12b269185c45440800000000000000
+      internalID: 4923777452983656944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_18
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 2
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f56b727e832523a0800000000000000
+      internalID: -6690902576675985936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_19
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 5
+        width: 8
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b375623491f5649c0800000000000000
+      internalID: -3943359861610883269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_20
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 5
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5cd5c96a0e03ef70800000000000000
+      internalID: 9215224700417203292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 7
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717e2fd2eecc5c640800000000000000
+      internalID: 5099707476412131095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_22
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 9
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa34b4371228aa6d0800000000000000
+      internalID: -2978425123372317782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_23
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 12
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10dc78b87faa618f0800000000000000
+      internalID: -570080322641212159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calculator Game_24
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 25
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 671e1c8bb1dda0b70800000000000000
+      internalID: 8866141927565812086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Calculator Game_0: 7277379075175072706
+      Calculator Game_1: 5024011877291314951
+      Calculator Game_10: 2376659139445402645
+      Calculator Game_11: -3812443494207653945
+      Calculator Game_12: -7490851138065295844
+      Calculator Game_13: 2092768386459625409
+      Calculator Game_14: -7541403929238905133
+      Calculator Game_15: -2180971167237951446
+      Calculator Game_16: 1936737061907060332
+      Calculator Game_17: 4923777452983656944
+      Calculator Game_18: -6690902576675985936
+      Calculator Game_19: -3943359861610883269
+      Calculator Game_2: -3045771361450384216
+      Calculator Game_20: 9215224700417203292
+      Calculator Game_21: 5099707476412131095
+      Calculator Game_22: -2978425123372317782
+      Calculator Game_23: -570080322641212159
+      Calculator Game_24: 8866141927565812086
+      Calculator Game_3: -2214576785952728640
+      Calculator Game_4: 7457742974471806860
+      Calculator Game_5: 4787848245596848303
+      Calculator Game_6: -5914787623190732541
+      Calculator Game_7: -5035813470211854064
+      Calculator Game_8: 6905738175164947691
+      Calculator Game_9: 2377116693907929318
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

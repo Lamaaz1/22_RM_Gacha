@@ -1,0 +1,216 @@
+[
+  {
+    "key": "bg1",
+    "file": "bg1.png",
+    "source": "Redesign/masters/bg1.png",
+    "transparent": false,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks. Make the whole sky a rich dark violet cosmic nebula, darker quiet center for white UI text. Full bleed opaque background, no UI or text.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-d250fbf9-dde2-4a02-aae8-506dea6aadb5.png"
+  },
+  {
+    "key": "back-icon",
+    "file": "back button icon.png",
+    "source": "Redesign/masters/back button icon.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks. Same bunny icon, lilac fur instead of pink, amethyst eyes, dark purple bow, luminous cyan inner ears. Transparent outside icon.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-e10c510f-2b70-421c-af06-47ba466d5d40.png"
+  },
+  {
+    "key": "img1",
+    "file": "img1.png",
+    "source": "Redesign/masters/img1.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks. This is animation frame 1: closed box. Keep EXACT geometry and no new objects; deep amethyst walls, purple lid, cyan edges, dark violet plaque with crisp white text GACHA NEBULA above BUNDLE. Transparent outside original shape.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-37e3d725-5767-4754-8724-938b963d9547.png"
+  },
+  {
+    "key": "img7",
+    "file": "img7.png",
+    "source": "Redesign/masters/img7.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks. Finale frame. Same five figures, banner and confetti. Banner dark amethyst with white-lilac text GACHA NEBULA then BUNDLE UNLOCKED! Preserve every pose and group placement. Transparent outside original shape.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-7f17a13a-b6b6-4ab1-be70-3bfc12f8682c.png"
+  },
+  {
+    "key": "bg2",
+    "file": "bg2.png",
+    "source": "Redesign/masters/bg2.png",
+    "transparent": false,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks. Make the whole city and sky night-time deep violet and indigo with glowing purple-cyan windows and nebula clouds. Keep middle quiet and dark for white UI. Opaque full bleed, no text.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-cdb3f2a6-5ddf-488e-bcad-898977450707.png"
+  },
+  {
+    "key": "bear1",
+    "file": "bear1.png",
+    "source": "Redesign/masters/bear1.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks. Mascot fur lilac, black amethyst outfit with silver stars and purple eyes. Keep placard text exactly 30% OFF then ALL 5 GAMES, dark amethyst placard white text. Transparent outside the same silhouette.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-b545803a-26cb-4387-8b3a-eccdbde44f9c.png"
+  },
+  {
+    "key": "bear2",
+    "file": "bear2.png",
+    "source": "Redesign/masters/bear2.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks. Same cute girl's identity and full pose, convert pale outfit panels to deep violet velvet and midnight purple, glowing silver star accessories, purple-blue gradient hair and bright lilac rim light. Preserve light natural face. No text. True transparent outside subject, no background or dark haze.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-b5084096-b6e1-44c7-817c-a86645813780.png"
+  },
+  {
+    "key": "bear3",
+    "file": "bear3.png",
+    "source": "Redesign/masters/bear3.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks. Same cute girl's identity and full pose, convert pale outfit panels to deep violet velvet and midnight purple, glowing silver star accessories, purple-blue gradient hair and bright lilac rim light. Preserve light natural face. No text. True transparent outside subject, no background or dark haze.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-3370daa8-3b76-4277-bbc4-3802878ec95c.png"
+  },
+  {
+    "key": "bear4",
+    "file": "bear4.png",
+    "source": "Redesign/masters/bear4.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Keep the exact original layout and art cutout. Deep purple clothing and amethyst/cyan game objects, silver celestial details; retain white coloring pages if present. Genuine transparent background outside objects, no gradient backdrop or haze. No new text.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-c0896482-0d0d-4079-b56e-d7a8ce712176.png"
+  },
+  {
+    "key": "calculator",
+    "file": "calculator.png",
+    "source": "Redesign/masters/calculator.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Keep the exact original layout and art cutout. Deep purple clothing and amethyst/cyan game objects, silver celestial details; retain white coloring pages if present. Genuine transparent background outside objects, no gradient backdrop or haze. No new text.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-e063e94c-2a0d-4571-9297-6b60be70adc5.png"
+  },
+  {
+    "key": "coloring",
+    "file": "coloring.png",
+    "source": "Redesign/masters/coloring.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Keep the exact original layout and art cutout. Deep purple clothing and amethyst/cyan game objects, silver celestial details; retain white coloring pages if present. Genuine transparent background outside objects, no gradient backdrop or haze. No new text.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-44765ef2-485c-43b2-870c-e362c34d95a0.png"
+  },
+  {
+    "key": "jigsaw",
+    "file": "jigsaw.png",
+    "source": "Redesign/masters/jigsaw.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Keep the exact original layout and art cutout. Deep purple clothing and amethyst/cyan game objects, silver celestial details; retain white coloring pages if present. Genuine transparent background outside objects, no gradient backdrop or haze. No new text.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-68f45f0f-9353-4d68-80b0-574d5980ec7a.png"
+  },
+  {
+    "key": "maze",
+    "file": "maze.png",
+    "source": "Redesign/masters/maze.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Rich deep purple and violet, lilac bunny, glowing cyan accents and silver celestial details. Keep all object positions and silhouette, readable maze paths and card icons. Genuine transparent background outside objects, no gradient backdrop or haze.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-c51a3f47-4c95-410d-9f74-4ca8ae39c48a.png"
+  },
+  {
+    "key": "memory",
+    "file": "memory.png",
+    "source": "Redesign/masters/memory.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Rich deep purple and violet, lilac bunny, glowing cyan accents and silver celestial details. Keep all object positions and silhouette, readable maze paths and card icons. Genuine transparent background outside objects, no gradient backdrop or haze.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-8ac20f47-d6c0-4633-8d3b-fc3c87408678.png"
+  },
+  {
+    "key": "loading-bar-handle",
+    "file": "loading bar handle.png",
+    "source": "Redesign/masters/loading bar handle.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Rich deep purple and violet, lilac bunny, glowing cyan accents and silver celestial details. Keep all object positions and silhouette, readable maze paths and card icons. Genuine transparent background outside objects, no gradient backdrop or haze.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-ea91b25a-8d52-4f4a-9107-0c51da9a948a.png"
+  },
+  {
+    "key": "img2",
+    "file": "img2.png",
+    "source": "Redesign/masters/img2.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Animation frame2, keep torn tape and box shape. Dark amethyst walls, purple lid, cyan edges, deep violet plaque white text GACHA NEBULA above BUNDLE. Genuine transparent background outside objects, no gradient backdrop or haze.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-bb3ce8fc-8403-45d5-8861-e7047250f9b0.png"
+  },
+  {
+    "key": "img3",
+    "file": "img3.png",
+    "source": "Redesign/masters/img3.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Animation frame img3. Change only theme: identical box perspective, flaps, character count and expressions. Dark amethyst walls, purple lid and flaps, cyan edges, dark violet plaque with crisp white text GACHA NEBULA above BUNDLE. Same characters, deep purple clothing, silver stars, purple gradient hair. True transparent outside shape, no background haze.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-6415760b-e63b-4ce4-9261-6e3c8e11de53.png"
+  },
+  {
+    "key": "img4",
+    "file": "img4.png",
+    "source": "Redesign/masters/img4.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Animation frame img4. Change only theme: identical box perspective, flaps, character count and expressions. Dark amethyst walls, purple lid and flaps, cyan edges, dark violet plaque with crisp white text GACHA NEBULA above BUNDLE. Same characters, deep purple clothing, silver stars, purple gradient hair. True transparent outside shape, no background haze.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-7623d9a2-505b-4f82-b613-8d1763513d2a.png"
+  },
+  {
+    "key": "img5",
+    "file": "img5.png",
+    "source": "Redesign/masters/img5.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Animation frame img5. Change only theme: identical box perspective, flaps, character count and expressions. Dark amethyst walls, purple lid and flaps, cyan edges, dark violet plaque with crisp white text GACHA NEBULA above BUNDLE. Same characters, deep purple clothing, silver stars, purple gradient hair. True transparent outside shape, no background haze.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-684300d8-29b9-4e14-bef2-c3599ce6292f.png"
+  },
+  {
+    "key": "img6",
+    "file": "img6.png",
+    "source": "Redesign/masters/img6.png",
+    "transparent": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Animation frame img6. Change only theme: identical box perspective, flaps, character count and expressions. Dark amethyst walls, purple lid and flaps, cyan edges, dark violet plaque with crisp white text GACHA NEBULA above BUNDLE. Same characters, deep purple clothing, silver stars, purple gradient hair. True transparent outside shape, no background haze.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-6d5a83fb-8fef-468d-95ee-e1d5daafee25.png"
+  },
+  {
+    "key": "character-nox-bunny",
+    "file": "character-nox-bunny.png",
+    "source": "Assets/Scenes/ui/Onboarding/character-nox-bunny.png",
+    "transparent": true,
+    "onboarding": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Lilac bunny fur and purple eyes, dark amethyst outfit. Genuine transparent background, no haze.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-04eb9574-f82e-480f-b0b9-793308a3fd4b.png"
+  },
+  {
+    "key": "style-cute-pastel",
+    "file": "style-cute-pastel.png",
+    "source": "Assets/Scenes/ui/Onboarding/style-cute-pastel.png",
+    "transparent": false,
+    "onboarding": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Celestial chic outfit board: lilac-and-violet bunny hoodie, silver accents, purple skirt and blue-lilac shoes, dark amethyst nebula backdrop. Retain cute softness through light lilac highlights, no pink backdrop.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-fcaffbb5-d4a9-4f5b-a0a9-e7e0c5452672.png"
+  },
+  {
+    "key": "style-dark-gothic",
+    "file": "style-dark-gothic.png",
+    "source": "Assets/Scenes/ui/Onboarding/style-dark-gothic.png",
+    "transparent": false,
+    "onboarding": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Deep amethyst gothic dress with rich royal purple satin ribbons and silver crescent jewelry. Dark moonlit violet backdrop, readable rim-lit edges.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-7739fde5-d971-4864-8672-6ad509dde0a6.png"
+  },
+  {
+    "key": "style-neon-pop",
+    "file": "style-neon-pop.png",
+    "source": "Assets/Scenes/ui/Onboarding/style-neon-pop.png",
+    "transparent": false,
+    "onboarding": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Dark purple varsity jacket with lilac sleeves, glowing cyan stars, indigo shorts, silver buckles, purple-cyan shoes. Less pink, more electric violet. Deep indigo neon backdrop.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-1a6a8a8c-9a1d-44ef-a0b6-179f4e5f9f8c.png"
+  },
+  {
+    "key": "world-music-studio",
+    "file": "world-music-studio.png",
+    "source": "Assets/Scenes/ui/Onboarding/world-music-studio.png",
+    "transparent": false,
+    "onboarding": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Night-time cosmic purple music studio, dark violet furniture and indigo sky with luminous purple cyan console lights, silver hanging moons and stars. Full-bleed opaque background, same room and furniture.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-6c25b7ee-8593-4850-aa21-d377efeb96a9.png"
+  },
+  {
+    "key": "activity-dressing",
+    "file": "activity-dressing.png",
+    "source": "Assets/Scenes/ui/Onboarding/activity-dressing.png",
+    "transparent": true,
+    "onboarding": true,
+    "prompt": "Use case: style-transfer. Edit target is the provided existing Unity game sprite. Convert its art direction to GACHA NEBULA: dominant dark amethyst, midnight indigo and deep violet (#160E2B, #281545, #5B2EA0), luminous lilac highlights, restrained electric cyan and magenta accents, silver celestial stars and tiny crescent motifs. Polished 2D chibi anime game illustration. Preserve the existing subject, pose, object count, silhouette, camera angle, scale, canvas proportions, clear padding, face readability, and exactly the same composition. Skin remains naturally light and faces expressive; dark purple clothing and hair gradients should still have bright readable details. Replace visible brand text GACHA NOX with exactly GACHA NEBULA, keep all other existing words correctly spelled. Avoid pale candy backgrounds, no new labels or watermarks.  Same dressing vignette with girl and clothing rack, deep violet and amethyst dresses and bag, silver buckles and crescent charms, lilac and cyan highlights, girl's hair purple with glowing lavender edges. True transparent background outside vignette, no haze.",
+    "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-3087ea4f-68cf-4f0f-927d-0c2bbee36d57.png"
+  }
+]

@@ -11,11 +11,11 @@ using UnityEngine.UI;
 
 public static class GachaOnboardingValidation
 {
-    [MenuItem("Tools/Gacha Nox/Validate and Export Panel Previews %#&v")]
+    [MenuItem("Tools/Gacha Nebula/Validate and Export Panel Previews %#&v")]
     public static void Validate()
     {
         if (EditorApplication.isPlayingOrWillChangePlaymode) throw new Exception("Exit Play Mode first.");
-        string directory = "Redesign/Onboarding";
+        string directory = "Redesign/Nebula";
         Directory.CreateDirectory(directory);
         var prior = new Dictionary<string, string>();
         var existed = new HashSet<string>();
@@ -38,6 +38,8 @@ public static class GachaOnboardingValidation
             Require(flow != null && flow.pages.Length == 4, "Four serialized panels exist");
             foreach (Transform child in root.transform) child.gameObject.SetActive(child == flow.transform);
             Require(flow.pages.All(p => p.choices.Length == 3), "Each panel has three choices");
+            Require(flow.pages[3].choices[1].label == "Gacha Nebula (Dressing)", "Dressing has Nebula branding");
+            Require(flow.pages[0].choices[0].button.transform.Find("Face").GetComponent<Image>().color.r < .3f, "Cards use the dark Nebula palette");
             Require(root.GetComponentsInChildren<MonoBehaviour>(true).All(m => m != null), "No missing scripts");
             int completions = 0;
             flow.onCompleted = new UnityEvent();
@@ -108,7 +110,7 @@ public static class GachaOnboardingValidation
                 if (p < 3) flow.nextButton.onClick.Invoke();
             }
             File.WriteAllText(directory + "/validation.txt", "PASS: 4 panels, 12 choices, no missing scripts, selection gating, Next/Back, retained selections, world preview, single completion, preference persistence.\nDressing is the only available activity; both padlocks are visible, locked buttons and direct events are blocked, and old unavailable preferences are rejected.\nFour previews rendered by Unity at 1920x1080.\n" + DateTime.Now);
-            Debug.Log("Gacha Nox: flow checks passed; four Unity panel previews exported.");
+            Debug.Log("Gacha Nebula: flow checks passed; four Unity panel previews exported.");
         }
         finally
         {

@@ -1,0 +1,2 @@
+Nebula theme applied to BaseScene and StartScene, preserving layout and callbacks.
+9/30/2026 2:41:59 PM

@@ -1,0 +1,22 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
+const sharp=require('C:/Users/desig/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');
+const root=path.resolve('Redesign/Nebula');
+const layers=[];
+for(let p=1;p<=4;p++)layers.push({input:await sharp(path.join(root,`panel-${p}.png`)).resize(960,540).png().toBuffer(),left:16+(p-1)%2*976,top:16+Math.floor((p-1)/2)*556});
+await sharp({create:{width:1968,height:1128,channels:4,background:'#10081e'}}).composite(layers).png().toFile(path.join(root,'four-panels-preview.png'));
+function documents(s,type){return s.replaceAll('\r\n','\n').split(/(?=^--- !u!)/m).filter(x=>x.startsWith('--- !u!'+type+' '));}
+const oldPrefab=await fs.readFile(path.join(root,'backups/BaseScene.prefab'),'utf8');
+const newPrefab=await fs.readFile('Assets/TMP_RM/Prefabs/BaseScene.prefab','utf8');
+const oldTransforms=documents(oldPrefab,224),newTransforms=documents(newPrefab,224);
+if(JSON.stringify(oldTransforms)!==JSON.stringify(newTransforms))throw Error('RectTransform layout changed.');
+const oldObjects=documents(oldPrefab,1),newObjects=documents(newPrefab,1);
+if(JSON.stringify(oldObjects)!==JSON.stringify(newObjects))throw Error('Hierarchy, active states or names changed.');
+const oldScene=await fs.readFile(path.join(root,'backups/StartScene.unity'),'utf8');
+const newScene=await fs.readFile('Assets/_Game/Scenes/StartScene.unity','utf8');
+const overrides=s=>s.replaceAll('\r\n','\n').split(/(?=    - target:)/).filter(x=>/propertyPath: (m_Anchor|m_Pivot|m_SizeDelta|m_Local|m_IsActive|onCompleted)/.test(x)).map(x=>x.split(/\n    (?!  |-|$)/)[0]);
+if(JSON.stringify(overrides(oldScene))!==JSON.stringify(overrides(newScene)))throw Error('StartScene layout, activation or completion callback changed.');
+await fs.writeFile(path.join(root,'layout-validation.json'),JSON.stringify({prefabRectTransformsPreserved:oldTransforms.length,prefabObjectsAndActiveStatesPreserved:oldObjects.length,sceneLayoutAndCompletionOverridesPreserved:true},null,2));
+console.log('PASS: Layout, object IDs, active states and completion callback preserved. Preview composed.');

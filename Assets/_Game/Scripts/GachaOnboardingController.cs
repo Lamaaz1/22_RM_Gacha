@@ -134,8 +134,8 @@ public sealed class GachaOnboardingController : MonoBehaviour
 
     private void Refresh()
     {
-        Color pink = new Color(0.96f, 0.47f, 0.75f);
-        Color ink = new Color(0.23f, 0.15f, 0.34f);
+        Color pink = new Color32(166, 111, 242, 255);
+        Color ink = new Color32(221, 204, 250, 255);
         for (int p = 0; p < pages.Length; p++)
         {
             pages[p].panel.SetActive(p == currentPage);
@@ -146,7 +146,7 @@ public sealed class GachaOnboardingController : MonoBehaviour
                 choice.selectedVisual.SetActive(!choice.locked && selections[p] == c);
                 if (choice.lockedVisual != null) choice.lockedVisual.SetActive(choice.locked);
             }
-            stepMarkers[p].color = p <= currentPage ? pink : new Color(0.79f, 0.74f, 0.89f);
+            stepMarkers[p].color = p <= currentPage ? pink : new Color32(65, 42, 100, 255);
             stepNumbers[p].color = p <= currentPage ? Color.white : ink;
         }
         backButton.interactable = currentPage > 0;
@@ -154,7 +154,7 @@ public sealed class GachaOnboardingController : MonoBehaviour
         nextLabel.text = currentPage == 3 ? "Let's Play!" : "Next  >";
         progressLabel.text = $"{currentPage + 1} / 4";
         selectionLabel.text = !HasAvailableSelection(currentPage)
-            ? (currentPage == 3 ? "Choose Gacha Nox to start dressing" : "Pick one card to continue")
+            ? (currentPage == 3 ? "Choose Gacha Nebula to start dressing" : "Pick one card to continue")
             : pages[currentPage].choices[selections[currentPage]].label + " selected";
         string summary = "";
         for (int p = 0; p < pages.Length; p++)
@@ -167,9 +167,9 @@ public sealed class GachaOnboardingController : MonoBehaviour
         if (background != null)
             background.sprite = selections[2] >= 0 && selections[2] < worldBackgrounds.Length ? worldBackgrounds[selections[2]] : defaultBackground;
         if (backgroundWash != null)
-            backgroundWash.color = selections[1] == 1 ? new Color(0.88f, 0.82f, 0.95f, 0.86f)
-                : selections[1] == 2 ? new Color(0.82f, 0.94f, 1f, 0.82f)
-                : new Color(0.94f, 0.90f, 1f, 0.78f);
+            backgroundWash.color = selections[1] == 1 ? new Color(0.06f, 0.025f, 0.12f, 0.80f)
+                : selections[1] == 2 ? new Color(0.06f, 0.04f, 0.17f, 0.67f)
+                : new Color(0.09f, 0.035f, 0.18f, 0.65f);
     }
 
     private bool HasAvailableSelection(int page)

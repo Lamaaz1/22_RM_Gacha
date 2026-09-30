@@ -1,0 +1,845 @@
+fileFormatVersion: 2
+guid: 88c206365a0c6084fb9634de193ef73c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6116574367567286316
+    second: Jigsaw Puzzle_0
+  - first:
+      213: 795288728734795582
+    second: Jigsaw Puzzle_1
+  - first:
+      213: 6187240128410879231
+    second: Jigsaw Puzzle_2
+  - first:
+      213: 2932685728612056987
+    second: Jigsaw Puzzle_3
+  - first:
+      213: 5088994228111845431
+    second: Jigsaw Puzzle_4
+  - first:
+      213: 7851043973952000119
+    second: Jigsaw Puzzle_5
+  - first:
+      213: -818862854694746571
+    second: Jigsaw Puzzle_6
+  - first:
+      213: 5695662090403408215
+    second: Jigsaw Puzzle_7
+  - first:
+      213: -4003754925730221155
+    second: Jigsaw Puzzle_8
+  - first:
+      213: -5007011692305331522
+    second: Jigsaw Puzzle_9
+  - first:
+      213: 8164313878141508038
+    second: Jigsaw Puzzle_10
+  - first:
+      213: -8889627471679130419
+    second: Jigsaw Puzzle_11
+  - first:
+      213: -4436798409875914186
+    second: Jigsaw Puzzle_12
+  - first:
+      213: 3781503989395538099
+    second: Jigsaw Puzzle_13
+  - first:
+      213: 7957433647566654927
+    second: Jigsaw Puzzle_14
+  - first:
+      213: -1570433667792998508
+    second: Jigsaw Puzzle_15
+  - first:
+      213: -2535001716481276500
+    second: Jigsaw Puzzle_16
+  - first:
+      213: -8901795083264143777
+    second: Jigsaw Puzzle_17
+  - first:
+      213: 9073301618129761018
+    second: Jigsaw Puzzle_18
+  - first:
+      213: -6168794718764602556
+    second: Jigsaw Puzzle_19
+  - first:
+      213: 9088841784885032932
+    second: Jigsaw Puzzle_20
+  - first:
+      213: -7540632127949796365
+    second: Jigsaw Puzzle_21
+  - first:
+      213: 4497416426003359150
+    second: Jigsaw Puzzle_22
+  - first:
+      213: 3417012920461166058
+    second: Jigsaw Puzzle_23
+  - first:
+      213: 6330893956239119582
+    second: Jigsaw Puzzle_24
+  - first:
+      213: 6266213822778622035
+    second: Jigsaw Puzzle_25
+  - first:
+      213: -8564841033572914987
+    second: Jigsaw Puzzle_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c209b15faff62e450800000000000000
+      internalID: 6116574367567286316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 16
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e370c1a92ee690b00800000000000000
+      internalID: 795288728734795582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 37
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff409f98d1e7dd550800000000000000
+      internalID: 6187240128410879231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 12
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f77c3d12ef2b820800000000000000
+      internalID: 2932685728612056987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_4
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 9
+        width: 8
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 738ae9ea94dbf9640800000000000000
+      internalID: 5088994228111845431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_5
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 8
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770516fc5e284fc60800000000000000
+      internalID: 7851043973952000119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_6
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 14
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536482a7290d2a4f0800000000000000
+      internalID: -818862854694746571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_7
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 14
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 759672b8e7e0b0f40800000000000000
+      internalID: 5695662090403408215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 13
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93312c9b1ecf68c0800000000000000
+      internalID: -4003754925730221155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_9
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 11
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebac9e5e465838ab0800000000000000
+      internalID: -5007011692305331522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_10
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 11
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c99a6d37387d4170800000000000000
+      internalID: 8164313878141508038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_11
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 10
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4f20de9e2b1a480800000000000000
+      internalID: -8889627471679130419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_12
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 8
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63204577a535d62c0800000000000000
+      internalID: -4436798409875914186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_13
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 7
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0c4a4d7d99a7430800000000000000
+      internalID: 3781503989395538099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_14
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 6
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd83fefdbb7e6e60800000000000000
+      internalID: 7957433647566654927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_15
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 27
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f62ef46e2b43ae0800000000000000
+      internalID: -1570433667792998508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_16
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 6
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5c020be5dd1dcd0800000000000000
+      internalID: -2535001716481276500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_17
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 4
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ec8b61988767480800000000000000
+      internalID: -8901795083264143777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_18
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 3
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2f990dfb7daed70800000000000000
+      internalID: 9073301618129761018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_19
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 23
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44beabf03e9046aa0800000000000000
+      internalID: -6168794718764602556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_20
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 5
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7bcc7d27d022e70800000000000000
+      internalID: 9088841784885032932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 16
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb87a7180b4a5790800000000000000
+      internalID: -7540632127949796365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_22
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 3
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5efee39680a6e30800000000000000
+      internalID: 4497416426003359150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_23
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 2
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae50205a52bab6f20800000000000000
+      internalID: 3417012920461166058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_24
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed4dc4cb28adbd750800000000000000
+      internalID: 6330893956239119582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_25
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 0
+        width: 49
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350cc51a54016f650800000000000000
+      internalID: 6266213822778622035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jigsaw Puzzle_26
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d8623c5572932980800000000000000
+      internalID: -8564841033572914987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Jigsaw Puzzle_0: 6116574367567286316
+      Jigsaw Puzzle_1: 795288728734795582
+      Jigsaw Puzzle_10: 8164313878141508038
+      Jigsaw Puzzle_11: -8889627471679130419
+      Jigsaw Puzzle_12: -4436798409875914186
+      Jigsaw Puzzle_13: 3781503989395538099
+      Jigsaw Puzzle_14: 7957433647566654927
+      Jigsaw Puzzle_15: -1570433667792998508
+      Jigsaw Puzzle_16: -2535001716481276500
+      Jigsaw Puzzle_17: -8901795083264143777
+      Jigsaw Puzzle_18: 9073301618129761018
+      Jigsaw Puzzle_19: -6168794718764602556
+      Jigsaw Puzzle_2: 6187240128410879231
+      Jigsaw Puzzle_20: 9088841784885032932
+      Jigsaw Puzzle_21: -7540632127949796365
+      Jigsaw Puzzle_22: 4497416426003359150
+      Jigsaw Puzzle_23: 3417012920461166058
+      Jigsaw Puzzle_24: 6330893956239119582
+      Jigsaw Puzzle_25: 6266213822778622035
+      Jigsaw Puzzle_26: -8564841033572914987
+      Jigsaw Puzzle_3: 2932685728612056987
+      Jigsaw Puzzle_4: 5088994228111845431
+      Jigsaw Puzzle_5: 7851043973952000119
+      Jigsaw Puzzle_6: -818862854694746571
+      Jigsaw Puzzle_7: 5695662090403408215
+      Jigsaw Puzzle_8: -4003754925730221155
+      Jigsaw Puzzle_9: -5007011692305331522
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

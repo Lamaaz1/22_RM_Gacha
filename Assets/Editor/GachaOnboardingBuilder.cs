@@ -21,7 +21,7 @@ public static class GachaOnboardingBuilder
     static Sprite rounded, circle;
     static TMP_FontAsset font, brandFont;
 
-    [MenuItem("Tools/Gacha Nox/Update Dressing and Locked Games %#&g")]
+    [MenuItem("Tools/Gacha Nebula/Update Dressing and Locked Games %#&g")]
     public static void UpdateActivities()
     {
         if (EditorApplication.isPlayingOrWillChangePlaymode)
@@ -50,7 +50,7 @@ public static class GachaOnboardingBuilder
         Debug.Log("Gacha Nox: Dressing is ready; the other two activities are locked.");
     }
 
-    [MenuItem("Tools/Gacha Nox/Build Choice Panels")]
+    [MenuItem("Tools/Gacha Nebula/Build Choice Panels")]
     public static void Build()
     {
         if (EditorApplication.isPlayingOrWillChangePlaymode)
@@ -211,15 +211,15 @@ public static class GachaOnboardingBuilder
         if (flow == null || flow.pages.Length != 4 || flow.pages[3].choices.Length != 3)
             throw new InvalidOperationException("Expected three activity cards in the fourth panel.");
         string[] ids = { "coloring", "dressing", "jigsaw" };
-        string[] names = { "Coloring Book", "Gacha Nox", "Jigsaw Puzzle" };
+        string[] names = { "Coloring Book", "Gacha Nebula", "Jigsaw Puzzle" };
         string[] captions = { "Coming soon", "Dressing - Create your look", "Coming soon" };
         string[] sprites = { "activity-coloring.png", "activity-dressing.png", "activity-jigsaw.png" };
-        flow.pages[3].panel.transform.Find("Description").GetComponent<TMP_Text>().text = "Dress up with Gacha Nox. More games coming soon!";
+        flow.pages[3].panel.transform.Find("Description").GetComponent<TMP_Text>().text = "Dress up with Gacha Nebula. More games coming soon!";
         for (int c = 0; c < 3; c++)
         {
             var choice = flow.pages[3].choices[c];
             Transform card = choice.button.transform;
-            choice.id = ids[c]; choice.label = c == 1 ? "Gacha Nox (Dressing)" : names[c]; choice.locked = c != 1;
+            choice.id = ids[c]; choice.label = c == 1 ? "Gacha Nebula (Dressing)" : names[c]; choice.locked = c != 1;
             card.name = names[c];
             card.Find("Choice Name").GetComponent<TMP_Text>().text = names[c];
             card.Find("Choice Description").GetComponent<TMP_Text>().text = captions[c];
@@ -240,6 +240,7 @@ public static class GachaOnboardingBuilder
             choice.lockedVisual = existing.gameObject;
             choice.lockedVisual.SetActive(choice.locked);
         }
+        GachaNebulaTheme.ApplyToFlow(flow);
     }
 
     static GachaOnboardingController.Choice Card(Transform page, float x, string id, string label, string caption, Sprite art)
