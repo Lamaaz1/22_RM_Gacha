@@ -17,6 +17,8 @@ public sealed class GachaOnboardingController : MonoBehaviour
         public string label;
         public Button button;
         public GameObject selectedVisual;
+        public bool locked;
+        public GameObject lockedVisual;
     }
 
     [Serializable]
@@ -69,7 +71,7 @@ public sealed class GachaOnboardingController : MonoBehaviour
             if (!restorePreferences) continue;
             string id = PlayerPrefs.GetString(PreferencePrefix + PreferenceKeys[p], "");
             for (int c = 0; c < pages[p].choices.Length; c++)
-                if (pages[p].choices[c].id == id) selections[p] = c;
+                if (!pages[p].choices[c].locked && pages[p].choices[c].id == id) selections[p] = c;
         }
         Refresh();
         FitToSafeArea();
@@ -91,7 +93,7 @@ public sealed class GachaOnboardingController : MonoBehaviour
 
     public void SelectChoice(int page, int choice)
     {
-        if (completed || page != currentPage || choice < 0 || choice >= pages[page].choices.Length) return;
+        if (completed || page != currentPage || page < 0 || page >= pages.Length || choice < 0 || choice >= pages[page].choices.Length || pages[page].choices[choice].locked) return;
         selections[page] = choice;
         Refresh();
     }
@@ -105,7 +107,7 @@ public sealed class GachaOnboardingController : MonoBehaviour
 
     public void Next()
     {
-        if (completed || selections[currentPage] < 0) return;
+        if (completed || !HasAvailableSelection(currentPage)) return;
         if (currentPage < pages.Length - 1)
         {
             currentPage++;
@@ -114,7 +116,7 @@ public sealed class GachaOnboardingController : MonoBehaviour
         }
         for (int p = 0; p < pages.Length; p++)
         {
-            if (selections[p] >= 0) continue;
+            if (HasAvailableSelection(p)) continue;
             currentPage = p;
             Refresh();
             return;
@@ -138,15 +140,22 @@ public sealed class GachaOnboardingController : MonoBehaviour
         {
             pages[p].panel.SetActive(p == currentPage);
             for (int c = 0; c < pages[p].choices.Length; c++)
-                pages[p].choices[c].selectedVisual.SetActive(selections[p] == c);
+            {
+                Choice choice = pages[p].choices[c];
+                choice.button.interactable = !choice.locked;
+                choice.selectedVisual.SetActive(!choice.locked && selections[p] == c);
+                if (choice.lockedVisual != null) choice.lockedVisual.SetActive(choice.locked);
+            }
             stepMarkers[p].color = p <= currentPage ? pink : new Color(0.79f, 0.74f, 0.89f);
             stepNumbers[p].color = p <= currentPage ? Color.white : ink;
         }
         backButton.interactable = currentPage > 0;
-        nextButton.interactable = selections[currentPage] >= 0;
+        nextButton.interactable = HasAvailableSelection(currentPage);
         nextLabel.text = currentPage == 3 ? "Let's Play!" : "Next  >";
         progressLabel.text = $"{currentPage + 1} / 4";
-        selectionLabel.text = selections[currentPage] < 0 ? "Pick one card to continue" : pages[currentPage].choices[selections[currentPage]].label + " selected";
+        selectionLabel.text = !HasAvailableSelection(currentPage)
+            ? (currentPage == 3 ? "Choose Gacha Nox to start dressing" : "Pick one card to continue")
+            : pages[currentPage].choices[selections[currentPage]].label + " selected";
         string summary = "";
         for (int p = 0; p < pages.Length; p++)
         {
@@ -161,6 +170,12 @@ public sealed class GachaOnboardingController : MonoBehaviour
             backgroundWash.color = selections[1] == 1 ? new Color(0.88f, 0.82f, 0.95f, 0.86f)
                 : selections[1] == 2 ? new Color(0.82f, 0.94f, 1f, 0.82f)
                 : new Color(0.94f, 0.90f, 1f, 0.78f);
+    }
+
+    private bool HasAvailableSelection(int page)
+    {
+        int choice = selections[page];
+        return choice >= 0 && choice < pages[page].choices.Length && !pages[page].choices[choice].locked;
     }
 
     private void LateUpdate()

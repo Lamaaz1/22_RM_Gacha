@@ -21,6 +21,35 @@ public static class GachaOnboardingBuilder
     static Sprite rounded, circle;
     static TMP_FontAsset font, brandFont;
 
+    [MenuItem("Tools/Gacha Nox/Update Dressing and Locked Games %#&g")]
+    public static void UpdateActivities()
+    {
+        if (EditorApplication.isPlayingOrWillChangePlaymode)
+            throw new InvalidOperationException("Exit Play Mode before updating the activity cards.");
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.path != StartPath)
+            throw new InvalidOperationException("Open StartScene before updating the activity cards.");
+        Directory.CreateDirectory("Redesign/Onboarding/backups");
+        string stamp = DateTime.Now.ToString("yyyyMMdd-HHmmss");
+        File.Copy(PrefabPath, "Redesign/Onboarding/backups/BaseScene-before-dressing-" + stamp + ".prefab");
+        File.Copy(StartPath, "Redesign/Onboarding/backups/StartScene-before-dressing-" + stamp + ".unity");
+        ImportArt(new[] { "activity-dressing.png", "ui-lock.png" });
+        rounded = SpriteAt("ui-rounded.png");
+        circle = SpriteAt("ui-circle.png");
+        font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>("Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset");
+        GameObject contents = PrefabUtility.LoadPrefabContents(PrefabPath);
+        try
+        {
+            ConfigureActivities(contents.GetComponentInChildren<GachaOnboardingController>(true));
+            PrefabUtility.SaveAsPrefabAsset(contents, PrefabPath);
+        }
+        finally { PrefabUtility.UnloadPrefabContents(contents); }
+        AssetDatabase.SaveAssets();
+        EditorSceneManager.SaveScene(scene);
+        File.WriteAllText("Redesign/Onboarding/dressing-update.txt", "Dressing is available. Coloring Book and Jigsaw Puzzle are locked.\n" + DateTime.Now);
+        Debug.Log("Gacha Nox: Dressing is ready; the other two activities are locked.");
+    }
+
     [MenuItem("Tools/Gacha Nox/Build Choice Panels")]
     public static void Build()
     {
@@ -69,11 +98,12 @@ public static class GachaOnboardingBuilder
         Debug.Log("Gacha Nox: four choice panels saved inside BaseScene in StartScene.");
     }
 
-    static void ImportArt()
+    static void ImportArt(string[] filenames = null)
     {
         AssetDatabase.Refresh();
         foreach (string path in Directory.GetFiles(Art, "*.png"))
         {
+            if (filenames != null && !filenames.Contains(Path.GetFileName(path))) continue;
             string asset = path.Replace('\\', '/');
             var importer = AssetImporter.GetAtPath(asset) as TextureImporter;
             if (importer == null) throw new InvalidOperationException("Could not import " + asset);
@@ -173,6 +203,43 @@ public static class GachaOnboardingBuilder
         flow.nextLabel = nextText;
         Label("Footer", content, "A world made by you", 0, -630, 1200, 45, 26, Ink);
         flow.worldBackgrounds = new[] { SpriteAt("world-neon-city.png"), SpriteAt("world-dream-galaxy.png"), SpriteAt("world-music-studio.png") };
+        ConfigureActivities(flow);
+    }
+
+    static void ConfigureActivities(GachaOnboardingController flow)
+    {
+        if (flow == null || flow.pages.Length != 4 || flow.pages[3].choices.Length != 3)
+            throw new InvalidOperationException("Expected three activity cards in the fourth panel.");
+        string[] ids = { "coloring", "dressing", "jigsaw" };
+        string[] names = { "Coloring Book", "Gacha Nox", "Jigsaw Puzzle" };
+        string[] captions = { "Coming soon", "Dressing - Create your look", "Coming soon" };
+        string[] sprites = { "activity-coloring.png", "activity-dressing.png", "activity-jigsaw.png" };
+        flow.pages[3].panel.transform.Find("Description").GetComponent<TMP_Text>().text = "Dress up with Gacha Nox. More games coming soon!";
+        for (int c = 0; c < 3; c++)
+        {
+            var choice = flow.pages[3].choices[c];
+            Transform card = choice.button.transform;
+            choice.id = ids[c]; choice.label = c == 1 ? "Gacha Nox (Dressing)" : names[c]; choice.locked = c != 1;
+            card.name = names[c];
+            card.Find("Choice Name").GetComponent<TMP_Text>().text = names[c];
+            card.Find("Choice Description").GetComponent<TMP_Text>().text = captions[c];
+            card.Find("Artwork Well/Artwork").GetComponent<Image>().sprite = SpriteAt(sprites[c]);
+            choice.button.interactable = !choice.locked;
+            choice.selectedVisual.SetActive(false);
+            Transform existing = card.Find("Locked");
+            if (existing == null)
+            {
+                RectTransform locked = Full("Locked", card);
+                Panel("Artwork Dim", locked, 0, 43, 610, 430, new Color(0.83f, 0.79f, 0.88f, 0.74f));
+                var badge = Panel("Lock Badge", locked, 0, 73, 168, 168, new Color32(103, 80, 128, 255), circle);
+                var icon = Rect("Padlock", badge.transform, 0, 5, 90, 90).gameObject.AddComponent<Image>();
+                icon.sprite = SpriteAt("ui-lock.png"); icon.raycastTarget = false;
+                Label("Locked Label", locked, "LOCKED", 0, -43, 400, 60, 34, Ink);
+                existing = locked;
+            }
+            choice.lockedVisual = existing.gameObject;
+            choice.lockedVisual.SetActive(choice.locked);
+        }
     }
 
     static GachaOnboardingController.Choice Card(Transform page, float x, string id, string label, string caption, Sprite art)

@@ -58,12 +58,26 @@ public static class GachaOnboardingValidation
             flow.pages[2].choices[2].button.onClick.Invoke();
             Require(flow.background.sprite == flow.worldBackgrounds[2], "The selected world updates the backdrop");
             flow.nextButton.onClick.Invoke();
+            Require(flow.pages[3].choices.Count(c => !c.locked) == 1 && flow.pages[3].choices[1].id == "dressing", "Only Dressing is available");
+            foreach (int lockedIndex in new[] { 0, 2 })
+            {
+                var locked = flow.pages[3].choices[lockedIndex];
+                Require(!locked.button.interactable && locked.lockedVisual.activeSelf, "Locked activities show a padlock and disable input");
+                locked.button.onClick.Invoke();
+                Require(flow.GetSelection(3) == -1 && !flow.nextButton.interactable, "Locked activities cannot be selected, even through their event");
+            }
             flow.pages[3].choices[1].button.onClick.Invoke();
             Require(flow.nextLabel.text == "Let's Play!", "Last page shows the play action");
             flow.nextButton.onClick.Invoke(); flow.nextButton.onClick.Invoke();
             Require(completions == 1 && flow.IsComplete, "Completion runs once");
             flow.Begin();
             Require(flow.GetSelection(0) == 1 && flow.GetSelection(1) == 2 && flow.GetSelection(2) == 2 && flow.GetSelection(3) == 1, "All four preferences survive reopening");
+            foreach (string oldActivity in new[] { "coloring", "jigsaw", "memory" })
+            {
+                PlayerPrefs.SetString(GachaOnboardingController.PreferencePrefix + "Activity", oldActivity);
+                flow.Begin();
+                Require(flow.GetSelection(3) == -1, "Previously saved unavailable activities cannot bypass the lock");
+            }
 
             var cameraObject = new GameObject("Preview Camera", typeof(Camera));
             UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(cameraObject, scene);
@@ -79,7 +93,7 @@ public static class GachaOnboardingValidation
             flow.Begin(false);
             for (int p = 0; p < 4; p++)
             {
-                flow.pages[p].choices[0].button.onClick.Invoke();
+                flow.pages[p].choices[p == 3 ? 1 : 0].button.onClick.Invoke();
                 Canvas.ForceUpdateCanvases();
                 flow.FitToSafeArea();
                 foreach (var text in root.GetComponentsInChildren<TMP_Text>()) text.ForceMeshUpdate();
@@ -93,7 +107,7 @@ public static class GachaOnboardingValidation
                 UnityEngine.Object.DestroyImmediate(capture); RenderTexture.active = previous;
                 if (p < 3) flow.nextButton.onClick.Invoke();
             }
-            File.WriteAllText(directory + "/validation.txt", "PASS: 4 panels, 12 choices, no missing scripts, selection gating, Next/Back, retained selections, world preview, single completion, preference persistence.\nFour previews rendered by Unity at 1920x1080.\n" + DateTime.Now);
+            File.WriteAllText(directory + "/validation.txt", "PASS: 4 panels, 12 choices, no missing scripts, selection gating, Next/Back, retained selections, world preview, single completion, preference persistence.\nDressing is the only available activity; both padlocks are visible, locked buttons and direct events are blocked, and old unavailable preferences are rejected.\nFour previews rendered by Unity at 1920x1080.\n" + DateTime.Now);
             Debug.Log("Gacha Nox: flow checks passed; four Unity panel previews exported.");
         }
         finally
