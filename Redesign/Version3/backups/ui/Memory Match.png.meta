@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: fc70b38e484e2664ea09b5d902c21a28
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1161286859081989379
+    second: Memory Match_0
+  - first:
+      213: 4760616887427643114
+    second: Memory Match_1
+  - first:
+      213: 6783803016917664583
+    second: Memory Match_2
+  - first:
+      213: -1809069396280505228
+    second: Memory Match_3
+  - first:
+      213: -616056033871014935
+    second: Memory Match_4
+  - first:
+      213: -8500569623227337439
+    second: Memory Match_5
+  - first:
+      213: -4592302413306616149
+    second: Memory Match_6
+  - first:
+      213: 3376123643655674168
+    second: Memory Match_7
+  - first:
+      213: -6747331312646794621
+    second: Memory Match_8
+  - first:
+      213: -8015014043748222541
+    second: Memory Match_9
+  - first:
+      213: -1996238112310504506
+    second: Memory Match_10
+  - first:
+      213: 4500105096292291311
+    second: Memory Match_11
+  - first:
+      213: -3346585064244409832
+    second: Memory Match_12
+  - first:
+      213: 3963348373145442213
+    second: Memory Match_13
+  - first:
+      213: -6424213071495517268
+    second: Memory Match_14
+  - first:
+      213: 7986020717906717304
+    second: Memory Match_15
+  - first:
+      213: -1376518611334216925
+    second: Memory Match_16
+  - first:
+      213: -4405386809248439475
+    second: Memory Match_17
+  - first:
+      213: 5188778545015189194
+    second: Memory Match_18
+  - first:
+      213: 6660836041328098023
+    second: Memory Match_19
+  - first:
+      213: 8048220227327414435
+    second: Memory Match_20
+  - first:
+      213: 2147228531577223093
+    second: Memory Match_21
+  - first:
+      213: 3366617940359593365
+    second: Memory Match_22
+  - first:
+      213: 7995515817134422463
+    second: Memory Match_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Memory Match_0
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 20
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d39edde38bd1010800000000000000
+      internalID: 1161286859081989379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_1
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 42
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6b9d616db111240800000000000000
+      internalID: 4760616887427643114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_2
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 21
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743c999d6e8e42e50800000000000000
+      internalID: 6783803016917664583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_3
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 21
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47c8bac08f4e4e6e0800000000000000
+      internalID: -1809069396280505228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_4
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 22
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e3d16b1d445377f0800000000000000
+      internalID: -616056033871014935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_5
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 23
+        width: 6
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 125fe0337f8e70a80800000000000000
+      internalID: -8500569623227337439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba6a0b1494dd440c0800000000000000
+      internalID: -4592302413306616149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2
+        width: 42
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839d4e101966ade20800000000000000
+      internalID: 3376123643655674168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_8
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 4
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38251d78be9ac52a0800000000000000
+      internalID: -6747331312646794621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_9
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 0
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9be9c4133f4c090800000000000000
+      internalID: -8015014043748222541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_10
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 6
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c3d2ac6300fb44e0800000000000000
+      internalID: -1996238112310504506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_11
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 7
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe25d641eb5937e30800000000000000
+      internalID: 4500105096292291311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_12
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 8
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a85137d9a8e81d0800000000000000
+      internalID: -3346585064244409832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_13
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 9
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a7d47eb854a00730800000000000000
+      internalID: 3963348373145442213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_14
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 19
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caba6189f3c98d6a0800000000000000
+      internalID: -6424213071495517268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_15
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 12
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a6dbbf78b04de60800000000000000
+      internalID: 7986020717906717304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_16
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 12
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323c5b8bd9f95ece0800000000000000
+      internalID: -1376518611334216925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_17
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 13
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d432e88a90cecd2c0800000000000000
+      internalID: -4405386809248439475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_18
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 14
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace6cc9689e320840800000000000000
+      internalID: 5188778545015189194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_19
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 7
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eafa76c61b007c50800000000000000
+      internalID: 6660836041328098023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_20
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 16
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0d6fbc7a501bf60800000000000000
+      internalID: 8048220227327414435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_21
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 11
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b77e3419fc7ccd10800000000000000
+      internalID: 2147228531577223093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_22
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 19
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d379dfd21a8be20800000000000000
+      internalID: 3366617940359593365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Memory Match_23
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 19
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9705c0647c5fe60800000000000000
+      internalID: 7995515817134422463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Memory Match_0: 1161286859081989379
+      Memory Match_1: 4760616887427643114
+      Memory Match_10: -1996238112310504506
+      Memory Match_11: 4500105096292291311
+      Memory Match_12: -3346585064244409832
+      Memory Match_13: 3963348373145442213
+      Memory Match_14: -6424213071495517268
+      Memory Match_15: 7986020717906717304
+      Memory Match_16: -1376518611334216925
+      Memory Match_17: -4405386809248439475
+      Memory Match_18: 5188778545015189194
+      Memory Match_19: 6660836041328098023
+      Memory Match_2: 6783803016917664583
+      Memory Match_20: 8048220227327414435
+      Memory Match_21: 2147228531577223093
+      Memory Match_22: 3366617940359593365
+      Memory Match_23: 7995515817134422463
+      Memory Match_3: -1809069396280505228
+      Memory Match_4: -616056033871014935
+      Memory Match_5: -8500569623227337439
+      Memory Match_6: -4592302413306616149
+      Memory Match_7: 3376123643655674168
+      Memory Match_8: -6747331312646794621
+      Memory Match_9: -8015014043748222541
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -147,8 +147,8 @@ public sealed class GachaOnboardingController : MonoBehaviour
 
     private void Refresh()
     {
-        Color accent = new Color32(39, 150, 156, 255);
-        Color ink = new Color32(41, 72, 91, 255);
+        Color pink = new Color(0.96f, 0.47f, 0.75f);
+        Color ink = new Color(0.23f, 0.15f, 0.34f);
         for (int p = 0; p < pages.Length; p++)
         {
             pages[p].panel.SetActive(p == currentPage);
@@ -159,7 +159,7 @@ public sealed class GachaOnboardingController : MonoBehaviour
                 choice.selectedVisual.SetActive(!choice.locked && selections[p] == c);
                 if (choice.lockedVisual != null) choice.lockedVisual.SetActive(choice.locked);
             }
-            stepMarkers[p].color = p <= currentPage ? accent : new Color32(176, 214, 223, 255);
+            stepMarkers[p].color = p <= currentPage ? pink : new Color(0.79f, 0.74f, 0.89f);
             stepNumbers[p].color = p <= currentPage ? Color.white : ink;
         }
         backButton.interactable = currentPage > 0;
@@ -180,9 +180,9 @@ public sealed class GachaOnboardingController : MonoBehaviour
         if (background != null)
             background.sprite = selections[2] >= 0 && selections[2] < worldBackgrounds.Length ? worldBackgrounds[selections[2]] : defaultBackground;
         if (backgroundWash != null)
-            backgroundWash.color = selections[1] == 1 ? new Color(0.84f, 0.91f, 0.96f, 0.86f)
-                : selections[1] == 2 ? new Color(0.82f, 0.97f, 0.96f, 0.82f)
-                : new Color(0.91f, 0.98f, 0.96f, 0.74f);
+            backgroundWash.color = selections[1] == 1 ? new Color(0.88f, 0.82f, 0.95f, 0.86f)
+                : selections[1] == 2 ? new Color(0.82f, 0.94f, 1f, 0.82f)
+                : new Color(0.94f, 0.90f, 1f, 0.78f);
     }
 
     private bool HasAvailableSelection(int page)
