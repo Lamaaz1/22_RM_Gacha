@@ -266,8 +266,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/desig/OneDrive/Desktop/Keystores/frameflow_studio
-    (1).jks
+  AndroidKeystoreName: C:/Users/desig/OneDrive/Desktop/Keystores/Gacha/frameflow_studio.jks
   AndroidKeyaliasName: frameflowstudio
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidEnableArm64MTE: 0
