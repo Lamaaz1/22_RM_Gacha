@@ -378,6 +378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseScene
       objectReference: {fileID: 0}
+    - target: {fileID: 2543059761455134224, guid: ba9ff65387a9f0f4ebdc3374f97b4906, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.0974121
+      objectReference: {fileID: 0}
     - target: {fileID: 2779580906482813592, guid: ba9ff65387a9f0f4ebdc3374f97b4906, type: 3}
       propertyPath: m_fontStyle
       value: 1
@@ -445,6 +449,10 @@ PrefabInstance:
     - target: {fileID: 3162594454391177035, guid: ba9ff65387a9f0f4ebdc3374f97b4906, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877026524675800029, guid: ba9ff65387a9f0f4ebdc3374f97b4906, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.4799805
       objectReference: {fileID: 0}
     - target: {fileID: 4313199463440672159, guid: ba9ff65387a9f0f4ebdc3374f97b4906, type: 3}
       propertyPath: m_IsActive
@@ -520,7 +528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7413395843030673677, guid: ba9ff65387a9f0f4ebdc3374f97b4906, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000061035156
+      value: -0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 7413395843030673677, guid: ba9ff65387a9f0f4ebdc3374f97b4906, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1288,6 +1296,22 @@ PrefabInstance:
     - target: {fileID: 3014790696562212235, guid: 52feddbe17d51214882fa81a5ae94ad1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767376091040202773, guid: 52feddbe17d51214882fa81a5ae94ad1, type: 3}
+      propertyPath: appKey
+      value: 265877575
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767376091040202773, guid: 52feddbe17d51214882fa81a5ae94ad1, type: 3}
+      propertyPath: bannerAdUnitId
+      value: pkl4kd0ct12fhurm
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767376091040202773, guid: 52feddbe17d51214882fa81a5ae94ad1, type: 3}
+      propertyPath: rewardedAdUnitId
+      value: v6wh9x059wepde5u
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767376091040202773, guid: 52feddbe17d51214882fa81a5ae94ad1, type: 3}
+      propertyPath: interstitialAdUnitId
+      value: chcbspyavdmigagz
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
