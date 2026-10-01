@@ -1,0 +1,4 @@
+PASS: 4 panels, 12 choices, no missing scripts, selection gating, Next/Back, retained selections, world preview, single completion, preference persistence.
+Dressing is the only available activity; both padlocks are visible, locked buttons and direct events are blocked, and old unavailable preferences are rejected.
+Four previews rendered by Unity at 1920x1080.
+10/1/2026 1:02:59 PM

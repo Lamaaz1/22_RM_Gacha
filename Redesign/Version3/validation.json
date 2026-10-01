@@ -1,0 +1,479 @@
+{
+  "images": 58,
+  "dimensionsMatch": true,
+  "assets": [
+    {
+      "file": "30%off.png",
+      "width": 298,
+      "height": 286,
+      "sha256": "cdca831f79b35bce86d464c5c0390d20f422dd3af19c9dc73eb09e22f5b87760",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "BACK.png",
+      "width": 76,
+      "height": 30,
+      "sha256": "8e55771aaf1ad393b04a58b97f1da1cd6f83141e919e32e2a668ae03582436db",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Calculator Game.png",
+      "width": 472,
+      "height": 62,
+      "sha256": "4ef8182d32665740acf3481c7780649aca6753a43e0fc882dab93e84a4b89ab2",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Coloring Book.png",
+      "width": 452,
+      "height": 82,
+      "sha256": "823fa0452cab75925f0b2fdc77573f6e7a10b227cd09575a654d5be15f4b89e0",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "GET BUNDLE.png",
+      "width": 269,
+      "height": 42,
+      "sha256": "507d1f3ab88ff55f56dc88ede18baceb488da483423ab8473213bf5bdac3f5a2",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Jigsaw Puzzle.png",
+      "width": 427,
+      "height": 43,
+      "sha256": "8112bd5cebb9f716c5f0719f5840aec32b5b39734bb51c0a6ad45ee293914551",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "LIMITED OFFER.png",
+      "width": 156,
+      "height": 105,
+      "sha256": "047ef0ab1285ea222288d6c890ed11a92b235732af6932383187ed8e3b8921f3",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Maze Game.png",
+      "width": 335,
+      "height": 27,
+      "sha256": "1b317d56467e518b3fa0151a0aad083e0b6f4b57288d4ae6a9b5a504f86b3778",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Memory Match.png",
+      "width": 475,
+      "height": 50,
+      "sha256": "fea12d433534479b591274f8c51c051c14d113ead58ba43ce9e5ff5b502f3855",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Onboarding/activity-coloring.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "e989873835577a940019a0c35045023378a8a8f92876a8ee74210d5a2c073d84",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Onboarding/activity-dressing.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "bad274fc7706efae1e892aa8ff98b74e58ebd336a5c8295cf86f6dbb424a1e4a",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Onboarding/activity-jigsaw.png",
+      "width": 1619,
+      "height": 971,
+      "sha256": "9d1e77f8be6d3d5ed16fd4ccc6feb2eff029893d434c44d5ea13ce46d52ac59d",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Onboarding/activity-memory.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "801e2eee3384eb82c3964bb7c6bacda4d5e64750720e886d189f260fe752f3fa",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Onboarding/character-gacha-dj.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "5d038d518b40a3b6d348af2a3f0cf6f5d95c85646effcb247dcb89c0cabccc83",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Onboarding/character-lavender.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "90382367cb13fa8f3258550a5a2f065bc43a86ea7a993b61e6a49606bef5321c",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Onboarding/character-nox-bunny.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "71ffe942cf2bb49de3f31a7eee889ee0a23a7d4eaec163d679482e7f15805036",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "Onboarding/style-cute-pastel.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "a1c8b5c42bbf5de9f8d111ff0122fbbfcd412a790fc37a53de4d919099db9188",
+      "hasAlpha": true,
+      "isOpaque": true
+    },
+    {
+      "file": "Onboarding/style-dark-gothic.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "d6fbf90be0d1d6c8cd2aea2ec1c6444aa2b6b8e57cb6146431bbba58913e3a14",
+      "hasAlpha": true,
+      "isOpaque": true
+    },
+    {
+      "file": "Onboarding/style-neon-pop.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1e7e7b319bb26980c2238a638a70e325e40fd00361bf012ccac684dfb38ef01e",
+      "hasAlpha": true,
+      "isOpaque": true
+    },
+    {
+      "file": "Onboarding/world-dream-galaxy.png",
+      "width": 1672,
+      "height": 940,
+      "sha256": "582fb44e629f11e28401f6e49b867b8934240d951a13ded091ce4f065a08f079",
+      "hasAlpha": true,
+      "isOpaque": true
+    },
+    {
+      "file": "Onboarding/world-music-studio.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ff75e1b403b5c0a38c5d30b3df487339a0deeeac43eda22922bd7b1f35844274",
+      "hasAlpha": true,
+      "isOpaque": true
+    },
+    {
+      "file": "Onboarding/world-neon-city.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "c4d875ada81dba4537a380ecfdba64d89f4a383cb892e828c22fab8ff49c081c",
+      "hasAlpha": true,
+      "isOpaque": true
+    },
+    {
+      "file": "Star bg.png",
+      "width": 1711,
+      "height": 1080,
+      "sha256": "c2bd394cbdefb6273b8bf03dad4581ce0ce83f58f147771af51b6bb245b80d9a",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "back arrow.png",
+      "width": 24,
+      "height": 40,
+      "sha256": "022f96cbfa4132b629178bc08883a05a0a29defb325d03cf65d66c65d7067945",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "back button bg.png",
+      "width": 255,
+      "height": 115,
+      "sha256": "1bd6c92312c67dc3b2e20a019d619f4add5510088ff9dd749261d97f36ce7d17",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "back button icon.png",
+      "width": 58,
+      "height": 54,
+      "sha256": "46e8cf5e6b2eebba785b3d518869c39ca1126d0f425c627bedfc96381790c582",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "bear1.png",
+      "width": 198,
+      "height": 324,
+      "sha256": "6ed01332d7150e855256c117aec2e49d80c29d654b45d075064c208bba66fa9c",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "bear2.png",
+      "width": 242,
+      "height": 317,
+      "sha256": "d9a900405205574a44d6bfcf5bd8ba34c7a5818fc8341a86ccc3ea4704e9acd7",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "bear3.png",
+      "width": 359,
+      "height": 410,
+      "sha256": "423812122dd5ce3255cecb06055550a26553d39618cfe34f6189b8d13e974db5",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "bear4.png",
+      "width": 203,
+      "height": 296,
+      "sha256": "5add95e67940864e82a1f7606f37b4c00203329957d481d9e01ec16190f229c8",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "bg1.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "c7689bebe6a464313e5af7774a5a1758e86229b3d4741b2a4df24d73806a29b8",
+      "hasAlpha": true,
+      "isOpaque": true
+    },
+    {
+      "file": "bg2.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "a9f04e342ab9ee5d86171cfb9d0c4a72aa9926c78a9d056bc3d33ba81de971bf",
+      "hasAlpha": true,
+      "isOpaque": true
+    },
+    {
+      "file": "calculator arrow.png",
+      "width": 45,
+      "height": 90,
+      "sha256": "98712df6aa9d47b0807cb9a3775ab9bd116edb25cbe6156c22ee3075923d02c9",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "calculator.png",
+      "width": 442,
+      "height": 302,
+      "sha256": "2a635461ad6483c646552c6c54ec5f9f2a80ca57e12124fd20b4711d3417221d",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "coloring arrow.png",
+      "width": 79,
+      "height": 116,
+      "sha256": "d193da8e1d86a9e75125267ee93b167298fb2b2622bd32031ea1fc20d17cc962",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "coloring.png",
+      "width": 513,
+      "height": 343,
+      "sha256": "1b57dbe50fbd35177deb9e3961ef8a322c63ae3794a94b73deafd06cc7dde6ff",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "confetti.png",
+      "width": 973,
+      "height": 565,
+      "sha256": "4de3aad1c30c264c4f9ea592f39c1644c4cc792caefac9f430ff51b547e14472",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "get bundle home button.png",
+      "width": 536,
+      "height": 160,
+      "sha256": "d16f5bbcc83a3155d10ba1c859460b2dc50315887b360d2f31f7492cd4465921",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "img1.png",
+      "width": 481,
+      "height": 424,
+      "sha256": "c6a801c6d36dc8a5af2cffb3bacae227c9b8c7ca4608ecb3ea1db875b8c4588a",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "img2.png",
+      "width": 481,
+      "height": 424,
+      "sha256": "f862e34ba8f66732695eb165c440edd58c1aaaa93ea708815f0e29005a495f12",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "img3.png",
+      "width": 481,
+      "height": 424,
+      "sha256": "f46b469bb781712d1043e21c5680a9729433740f266e8c3f1aa49e567cc0a48a",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "img4.png",
+      "width": 481,
+      "height": 424,
+      "sha256": "1af4fe409785e6f59b1d9c74a96eff0eb0fe771f3253a374eaa8125241c53917",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "img5.png",
+      "width": 481,
+      "height": 432,
+      "sha256": "fad8dd976afea2dab7b0d8392e7c5e25ea8913e7b9dc8fd1b20290c0463a3146",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "img6.png",
+      "width": 481,
+      "height": 449,
+      "sha256": "38342b8f72ce567301a77c7686f4f269e2b9afcf6f44789f9898617ebbef9857",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "img7.png",
+      "width": 481,
+      "height": 587,
+      "sha256": "3a3db75b63abd9aec3381f65bb7df092aff853562e42ed64adb6c0efff3e4ff9",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "jigsaw arrow.png",
+      "width": 55,
+      "height": 97,
+      "sha256": "d424fbe0ad1ca960f82f4cb5405252cbd00f6faee98c632330318c95aa5b121b",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "jigsaw.png",
+      "width": 524,
+      "height": 312,
+      "sha256": "9950d60d5e219b5b831e7cc0906aa2839e69382c99b6ca372781c09ff6a930fc",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "loading bar bg.png",
+      "width": 1675,
+      "height": 107,
+      "sha256": "f76f03594fdaf34efcba9e4eea861ee9884af2ba160f2633d65f96536cf3e720",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "loading bar fill.png",
+      "width": 1630,
+      "height": 74,
+      "sha256": "7531b6b8259e06f4868bbff7e8393fb6a740e34c2bd64447215341a4f34c1b97",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "loading bar handle.png",
+      "width": 181,
+      "height": 195,
+      "sha256": "59146504bb9c38f8175e13e366190c50e8355f702156df8d3fcfc604fd3f218a",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "maze arrow.png",
+      "width": 58,
+      "height": 161,
+      "sha256": "ff67086b5b6377a051a09800e0fb307e0fa5162e9804adb632711fb4a597a7cf",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "maze.png",
+      "width": 444,
+      "height": 292,
+      "sha256": "595db96d9244ddbf4546f6ce27228ed0597abff696f88138a8e8c132b5adcfc2",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "memory arrow.png",
+      "width": 60,
+      "height": 119,
+      "sha256": "fe8acefecc290e366d0a3c6227d2ca8a4b8792fc8d68e66ae5fbbf3cb478dc48",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "memory.png",
+      "width": 462,
+      "height": 301,
+      "sha256": "172b3bf36f1343e72bb97691bfd6166e6651b9f8658fd69d6d5a5e4fcea91396",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "offer.png",
+      "width": 199,
+      "height": 223,
+      "sha256": "8bdb6e67baca4be5576de9c69fde259b20301464a46ace2ce25a50011d0d6cc2",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "paper bg.png",
+      "width": 1667,
+      "height": 950,
+      "sha256": "cb5e12c81cc4f1814475e524964a6c46414ef546d905c346abdb7a6921f55cc5",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "title bg.png",
+      "width": 1238,
+      "height": 146,
+      "sha256": "1a90a80ee6b9dd5a1690be6d3ec9532b4a401e712ec8c9faa1779b28ad1aba27",
+      "hasAlpha": true,
+      "isOpaque": false
+    },
+    {
+      "file": "title.png",
+      "width": 1122,
+      "height": 77,
+      "sha256": "bf92acb1c7b534c4a9ec6b91eef4a7cd5825db03b6956818fcb2727b5c101d48",
+      "hasAlpha": true,
+      "isOpaque": false
+    }
+  ],
+  "installedFolder": "D:\\UnityProjects\\22_RM_Gacha\\Assets\\Scenes\\ui",
+  "nonImageFilesUnchanged": 76,
+  "tintableShapesUnchanged": 5,
+  "startSceneUnchanged": true,
+  "motionCodeUnchanged": true,
+  "unityPreviewVerified": true,
+  "unityValidationScope": "Isolated Unity 6000.0.64f1 editor: actual onboarding prefab, controller and sprites; selection gating, Next/Back, saved preferences, locked activities and single completion.",
+  "unityPlayModeTested": false,
+  "previewResolution": "1920x1080"
+}

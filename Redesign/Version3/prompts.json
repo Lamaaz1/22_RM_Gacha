@@ -1,0 +1,188 @@
+{
+  "mode": "Built-in ImageGen",
+  "theme": "Pearl, aqua, mint and peach; existing Gacha Nox identity",
+  "images": [
+    {
+      "file": "bg1.png",
+      "ref": "Redesign/masters/bg1.png",
+      "transparent": false,
+      "prompt": "Edit the reference into a new landscape 16:9 Gacha game background: luminous pale mint and sky blue dream galaxy, milky pearl aurora sweeping diagonally, soft peach pink clouds hugging bottom corners, delicate star trails and floating crystal stars mainly near edges. Quiet pale icy aqua central 65 percent for UI. Distinct from previous violet-pink galaxy. No characters, text, buttons or frames. Opaque full bleed.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-5ae78ae2-cd5d-473d-b88d-87c780a41774.png"
+    },
+    {
+      "file": "bg2.png",
+      "ref": "Redesign/masters/bg2.png",
+      "transparent": false,
+      "prompt": "Edit the reference into a new landscape 16:9 Gacha anime dream city: bright aqua blue-hour sky with pearl white star trails, mint glass futuristic towers, peach cherry blossoms and warm rose reflections on water. Keep tall foreground buildings at extreme edges, low distant skyline and central 65 percent quiet pale blue for UI. Add a subtle flowing aurora. Crisp illustrative Gacha game background. No text, people or UI. Opaque full bleed.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-aa375ddf-43b4-433e-8826-69f6f8c106df.png"
+    },
+    {
+      "file": "bear2.png",
+      "ref": "Redesign/masters/bear2.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Image 1 is the EDIT TARGET for an existing Gacha game UI. Make a fresh aqua/pearl edition in mint, sky blue, soft peach pink and tiny lilac accents, dark navy outlines. Keep recognisable character identity and overall silhouette/composition from reference. Polished clean anime chibi cel shading, simplify overly busy sparkles, elegant star/ribbon details. Keep lavender twin-tail girl, wink, cat-ear headphones, palette and stylus, crystal wings and exact standing pose. Redesign dress as pearl white and navy sailor dress, aqua neck ribbon, mint star hair ornaments, white high-top boots with navy details. Preserve lavender hair with icy blue tips. Whole figure, all feet and hair visible. True transparent background with clean cutout, remove all outer ambient glow. No text.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-ebc5c4c2-1c7d-44ca-9cf6-e4ff7b09213c.png"
+    },
+    {
+      "file": "bear3.png",
+      "ref": "Redesign/masters/bear3.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Image 1 is the EDIT TARGET for an existing Gacha game UI. Make a fresh aqua/pearl edition in mint, sky blue, soft peach pink and tiny lilac accents, dark navy outlines. Keep recognisable character identity and overall silhouette/composition from reference. Polished clean anime chibi cel shading, simplify overly busy sparkles, elegant star/ribbon details. Keep blue bob-haired DJ girl, cap, wink, headphones, star wand and dynamic pose. Fresh mint varsity jacket, pearl white cap with peach pink star patch, navy shorts, white mint high tops, peach headphone padding. Full character including feet, proportions and silhouette close to reference. True transparent background with clean cutout, no ambient halo, no written text.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-a007f6c7-2cb6-409b-a09e-e70ebbfcde45.png"
+    },
+    {
+      "file": "bear4.png",
+      "ref": "Redesign/masters/bear4.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Image 1 is the EDIT TARGET for an existing Gacha game UI. Make a fresh aqua/pearl edition in mint, sky blue, soft peach pink and tiny lilac accents, dark navy outlines. Keep recognisable character identity and overall silhouette/composition from reference. Polished clean anime chibi cel shading, simplify overly busy sparkles, elegant star/ribbon details. Keep pink twin-tail gothic girl with ribbons, tablet/stylus and heart handbag, exact standing pose. Fresh navy and pearl frilled dress with mint bows and delicate silver star charms, black boots with aqua details. Pink hair becomes warm blush pink with peach and icy tips. Entire figure visible, true transparent background, clean cutout without outer halo, no written text.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-0efbe583-c8ad-419a-ba5d-8e4b6e01f89d.png"
+    },
+    {
+      "file": "character-nox-bunny.png",
+      "ref": "Assets/Scenes/ui/Onboarding/character-nox-bunny.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Image 1 is the EDIT TARGET for an existing Gacha game UI. Make a fresh aqua/pearl edition in mint, sky blue, soft peach pink and tiny lilac accents, dark navy outlines. Keep recognisable character identity and overall silhouette/composition from reference. Polished clean anime chibi cel shading, simplify overly busy sparkles, elegant star/ribbon details. Keep pink waving bunny mascot, cyan ears, wings, exact pose. Fresh pearl white and deep navy coat with mint ribbon cuffs, peach heart buttons, navy hair bow with mint star center instead of plus. Warm pale pink fur. Full figure all ears and feet visible with same proportions. No sign or text. True transparent background, clean cutout without glow beyond silhouette.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-2aa93bf2-7b6a-4c5e-af06-39d4936fa97f.png"
+    },
+    {
+      "file": "back button icon.png",
+      "ref": "Redesign/masters/back button icon.png",
+      "prompt": "Use case: style-transfer. Attached image is the EDIT TARGET from an existing Gacha game. Fresh pearl aqua edition: dominant mint, sky blue, pearl white, soft peach pink accents, dark navy outlines, tiny star/ribbon ornaments. Preserve reference identity, pose, composition and full subject silhouette; polished crisp chibi anime cel shading. True transparent background, clean cutout, no ambient halo or floor. Keep bunny head with ears filling canvas. Pale blush pink fur, mint inner ears and eyes, navy bow with tiny mint star center replacing plus. Peach cheeks, tiny pearlescent star hair clip. No text.",
+      "transparent": true,
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-8c803b8e-b0c7-45b6-86f9-49869b5c7331.png"
+    },
+    {
+      "file": "loading bar handle.png",
+      "ref": "Redesign/masters/loading bar handle.png",
+      "prompt": "Use case: style-transfer. Attached image is the EDIT TARGET from an existing Gacha game. Fresh pearl aqua edition: dominant mint, sky blue, pearl white, soft peach pink accents, dark navy outlines, tiny star/ribbon ornaments. Preserve reference identity, pose, composition and full subject silhouette; polished crisp chibi anime cel shading. True transparent background, clean cutout, no ambient halo or floor. Keep floppy-eared pink bunny head with little wings. Pale blush pink fur, mint inner ears and eyes, navy bow with tiny mint star center, pearl white/mint wings and peach cheek highlights. Clear simple face. No text.",
+      "transparent": true,
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-654c66d1-844f-4bd1-95c9-eecc5fde78c1.png"
+    },
+    {
+      "file": "bear1.png",
+      "ref": "Redesign/masters/bear1.png",
+      "prompt": "Use case: style-transfer. Attached image is the EDIT TARGET from an existing Gacha game. Fresh pearl aqua edition: dominant mint, sky blue, pearl white, soft peach pink accents, dark navy outlines, tiny star/ribbon ornaments. Preserve reference identity, pose, composition and full subject silhouette; polished crisp chibi anime cel shading. True transparent background, clean cutout, no ambient halo or floor. Keep full-body pink bunny holding same placard and pose. Pearl white/navy coat with mint cuffs, navy bow with mint star center, peach heart buttons. Placard now pearl white with aqua/navy trim, exact bold text '30% OFF' on first line and 'ALL 5 GAMES' on second. Entire ears and boots visible.",
+      "transparent": true,
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-3d0a9b18-6000-4128-9c41-f11149d6c8dd.png"
+    },
+    {
+      "file": "calculator.png",
+      "ref": "Redesign/masters/calculator.png",
+      "prompt": "Use case: style-transfer. Attached image is the EDIT TARGET from an existing Gacha game. Fresh pearl aqua edition: dominant mint, sky blue, pearl white, soft peach pink accents, dark navy outlines, tiny star/ribbon ornaments. Preserve reference identity, pose, composition and full subject silhouette; polished crisp chibi anime cel shading. True transparent background, clean cutout, no ambient halo or floor. Keep bunny-eared pink-haired girl and large calculator. Fresh pearl/navy outfit with mint bow. Calculator pearl white with mint body trim, peach pink and sky blue keys, small mint star button; exact screen text '10 + 20 = 30'. Keep all elements visible. No title.",
+      "transparent": true,
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-4b69c1ca-753f-4e41-8c52-3d20b05930c3.png"
+    },
+    {
+      "file": "coloring.png",
+      "ref": "Redesign/masters/coloring.png",
+      "prompt": "Use case: style-transfer. Attached image is the EDIT TARGET from an existing Gacha game. Fresh pearl aqua edition: dominant mint, sky blue, pearl white, soft peach pink accents, dark navy outlines, tiny star/ribbon ornaments. Preserve reference identity, pose, composition and full subject silhouette; polished crisp chibi anime cel shading. True transparent background, clean cutout, no ambient halo or floor. Keep lavender twin-tail cat-headphone girl presenting coloring book. Pearl white/navy dress with mint neck ribbon, mint headphones, soft peach bows. Open book clean line art bunny, stars and castle. Art supplies aqua, mint, peach, pearl; full landscape composition. No text.",
+      "transparent": true,
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-fc6c16e9-9930-44ad-9548-d61fc8fb7e5c.png"
+    },
+    {
+      "file": "jigsaw.png",
+      "ref": "Redesign/masters/jigsaw.png",
+      "prompt": "Use case: style-transfer. Attached image is the EDIT TARGET from an existing Gacha game. Fresh pearl aqua edition: dominant mint, sky blue, pearl white, soft peach pink accents, dark navy outlines, tiny star/ribbon ornaments. Preserve reference identity, pose, composition and full subject silhouette; polished crisp chibi anime cel shading. True transparent background, clean cutout, no ambient halo or floor. Keep short blue-haired cap DJ girl beside interlocking jigsaw. Pearl white cap with peach star, mint jacket. Board now pearl/navy trim, mint city and aqua sunset in puzzle, peach and mint loose pieces; maintain same arrangement and puzzle readability. No text.",
+      "transparent": true,
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-86145ca9-c81c-46e5-a82f-f79523eb729d.png"
+    },
+    {
+      "file": "maze.png",
+      "ref": "Redesign/masters/maze.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Image 1 is the existing Gacha game UI EDIT TARGET. New pearl/aqua edition: mint green, sky blue, pearl white, soft peach pink accents, dark navy outlines, small star ornaments. Preserve the exact subjects, overall composition, readable silhouettes and polished chibi anime illustration style. Redesign maze with deep aqua walls and pearl mint paths, silver frame with peach ribbons, mint gemstone heart finish and tiny blush pink bunny. Preserve clear overhead maze silhouette. True transparent outside isolated board, no halo, no text.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-d716a55d-3a31-4009-92fb-58be8b3f443a.png"
+    },
+    {
+      "file": "memory.png",
+      "ref": "Redesign/masters/memory.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Image 1 is the existing Gacha game UI EDIT TARGET. New pearl/aqua edition: mint green, sky blue, pearl white, soft peach pink accents, dark navy outlines, small star ornaments. Preserve the exact subjects, overall composition, readable silhouettes and polished chibi anime illustration style. Keep pink twin-tail gothic girl sitting by 3x3 memory tray. Navy/pearl dress, mint bows. Pearl white and aqua tray, sky-blue card backs with silver crescents, matching peach hearts and mint stars. Entire artwork visible. True transparent background, no halo, no text.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-8e10d389-740a-492c-90f4-9df4e18cd7b3.png"
+    },
+    {
+      "file": "style-cute-pastel.png",
+      "ref": "Assets/Scenes/ui/Onboarding/style-cute-pastel.png",
+      "transparent": false,
+      "prompt": "Use case: style-transfer. Image 1 is the existing Gacha game UI EDIT TARGET. New pearl/aqua edition: mint green, sky blue, pearl white, soft peach pink accents, dark navy outlines, small star ornaments. Preserve the exact subjects, overall composition, readable silhouettes and polished chibi anime illustration style. Fresh coordinated cute outfit flat lay: mint bunny hoodie with pearl cuffs and peach ribbons, pearl blue pleated skirt, white and mint high top boots, navy/mint cat headphones. Replace surrounding hearts with a few pearl stars; very pale aqua soft background. Keep full outfit parts separated and visible. Opaque landscape 3:2, no text.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-49ad4ffc-7078-4ec9-bf40-7369ac7c0b96.png"
+    },
+    {
+      "file": "style-dark-gothic.png",
+      "ref": "Assets/Scenes/ui/Onboarding/style-dark-gothic.png",
+      "transparent": false,
+      "prompt": "Use case: style-transfer. Image 1 is the existing Gacha game UI EDIT TARGET. New pearl/aqua edition: mint green, sky blue, pearl white, soft peach pink accents, dark navy outlines, small star ornaments. Preserve the exact subjects, overall composition, readable silhouettes and polished chibi anime illustration style. Keep gothic style genuinely dark: midnight navy and black lace dress with mint ribbons and silver star chains, matching tall boots, bat handbag and crescent headphones. Background moody desaturated blue with cool silver moon, elegant strong contrast. Full outfit arrangement visible. Opaque landscape 3:2, no text.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-808b67b5-559d-4891-a280-f1b398a5dad0.png"
+    },
+    {
+      "file": "style-neon-pop.png",
+      "ref": "Assets/Scenes/ui/Onboarding/style-neon-pop.png",
+      "transparent": false,
+      "prompt": "Use case: style-transfer. Image 1 is the existing Gacha game UI EDIT TARGET. New pearl/aqua edition: mint green, sky blue, pearl white, soft peach pink accents, dark navy outlines, small star ornaments. Preserve the exact subjects, overall composition, readable silhouettes and polished chibi anime illustration style. Neon streetwear updated to electric aqua and navy varsity jacket with coral peach sleeves, mint tee, navy shorts, white mint cap, neon aqua headphones and bright mint/peach sneakers. Dark teal blue background with neon stars and music notes. Retain all outfit components. Opaque landscape 3:2, no text.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-dd141c5e-a665-4a95-8b5a-1cb7b15bea4e.png"
+    },
+    {
+      "file": "world-music-studio.png",
+      "ref": "Assets/Scenes/ui/Onboarding/world-music-studio.png",
+      "transparent": false,
+      "prompt": "Use case: style-transfer. Image 1 is the existing Gacha game UI EDIT TARGET. New pearl/aqua edition: mint green, sky blue, pearl white, soft peach pink accents, dark navy outlines, small star ornaments. Preserve the exact subjects, overall composition, readable silhouettes and polished chibi anime illustration style. Redesign recording studio with pearl white desk and mint DJ decks, navy speakers with aqua cones, blush pink comfy chair, mint/peach neon music notes, star-shaped light fixture, bright blue-hour city through wide windows. Same inviting layout but fresh mint and pearl dominant palette. Opaque landscape 3:2, no text or people.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-a72bf4cd-6837-40f5-87e1-c1560fc6e97f.png"
+    },
+    {
+      "file": "activity-dressing.png",
+      "ref": "Assets/Scenes/ui/Onboarding/activity-dressing.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Image 1 is the existing Gacha game UI EDIT TARGET. New pearl/aqua edition: mint green, sky blue, pearl white, soft peach pink accents, dark navy outlines, small star ornaments. Preserve the exact subjects, overall composition, readable silhouettes and polished chibi anime illustration style. Keep lavender twin-tail headphone girl presenting clothing rack. Pearl white/navy sailor dress with aqua neck ribbon and mint hairbows. Rack silver/aqua with two outfits: mint-pearl frilled dress and navy/peach street outfit; pearl mint boots and peach star handbag below. Same full landscape composition, simplified clear shapes. True transparent background, no ambient halo, no text.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-95c96f1e-4032-4237-b695-a99f7328c4cf.png"
+    },
+    {
+      "file": "img1.png",
+      "ref": "Assets/Scenes/ui/img1.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Attached image is the EXACT EDIT TARGET of frame 1 in an existing Gacha game sprite animation. Only update its art finish, decorative motifs and palette to a pearl aqua edition. Crucial: preserve original frame composition, character count, poses, exact box geometry and flap angles, relative object position and scale; no new objects. Box walls become pale MINT, lids/flaps become PEARL WHITE with subtle peach highlights, edge piping becomes SKY BLUE, outlines deep NAVY. Label remains pearl white with the EXACT words 'GACHA NOX' above 'BUNDLE'. Keep original hair identities and faces. Lavender girl's outfit pearl white/navy with mint ribbon; pink gothic girl's navy dress with mint bows; blue DJ's cap pearl white/mint with peach star and mint jacket; pink bunny navy bow with mint star and pearl/navy coat wherever present. Replace a few heart decorations with small stars. Clean cel shaded anime sprite, preserve simple geometry, no exterior glow, no shadows, entire background truly transparent. Match original image aspect ratio and transparent margins.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-e5172120-ed20-49a1-b1eb-41ee84998c43.png"
+    },
+    {
+      "file": "img2.png",
+      "ref": "Assets/Scenes/ui/img2.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Attached image is the EXACT EDIT TARGET of frame 2 in an existing Gacha game sprite animation. Only update its art finish, decorative motifs and palette to a pearl aqua edition. Crucial: preserve original frame composition, character count, poses, exact box geometry and flap angles, relative object position and scale; no new objects. Box walls become pale MINT, lids/flaps become PEARL WHITE with subtle peach highlights, edge piping becomes SKY BLUE, outlines deep NAVY. Label remains pearl white with the EXACT words 'GACHA NOX' above 'BUNDLE'. Keep original hair identities and faces. Lavender girl's outfit pearl white/navy with mint ribbon; pink gothic girl's navy dress with mint bows; blue DJ's cap pearl white/mint with peach star and mint jacket; pink bunny navy bow with mint star and pearl/navy coat wherever present. Replace a few heart decorations with small stars. Clean cel shaded anime sprite, preserve simple geometry, no exterior glow, no shadows, entire background truly transparent. Match original image aspect ratio and transparent margins.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-bd9ea40c-05d4-4d74-b596-6074e7cf2c93.png"
+    },
+    {
+      "file": "img3.png",
+      "ref": "Assets/Scenes/ui/img3.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Attached image is the EXACT EDIT TARGET of frame 3 in an existing Gacha game sprite animation. Only update its art finish, decorative motifs and palette to a pearl aqua edition. Crucial: preserve original frame composition, character count, poses, exact box geometry and flap angles, relative object position and scale; no new objects. Box walls become pale MINT, lids/flaps become PEARL WHITE with subtle peach highlights, edge piping becomes SKY BLUE, outlines deep NAVY. Label remains pearl white with the EXACT words 'GACHA NOX' above 'BUNDLE'. Keep original hair identities and faces. Lavender girl's outfit pearl white/navy with mint ribbon; pink gothic girl's navy dress with mint bows; blue DJ's cap pearl white/mint with peach star and mint jacket; pink bunny navy bow with mint star and pearl/navy coat wherever present. Replace a few heart decorations with small stars. Clean cel shaded anime sprite, preserve simple geometry, no exterior glow, no shadows, entire background truly transparent. Match original image aspect ratio and transparent margins.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-a4ed7f1f-0575-4cc7-9b47-e2f7652d9103.png"
+    },
+    {
+      "file": "img4.png",
+      "ref": "Assets/Scenes/ui/img4.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Attached image is the EXACT EDIT TARGET of frame 4 in an existing Gacha game sprite animation. Only update its art finish, decorative motifs and palette to a pearl aqua edition. Crucial: preserve original frame composition, character count, poses, exact box geometry and flap angles, relative object position and scale; no new objects. Box walls become pale MINT, lids/flaps become PEARL WHITE with subtle peach highlights, edge piping becomes SKY BLUE, outlines deep NAVY. Label remains pearl white with the EXACT words 'GACHA NOX' above 'BUNDLE'. Keep original hair identities and faces. Lavender girl's outfit pearl white/navy with mint ribbon; pink gothic girl's navy dress with mint bows; blue DJ's cap pearl white/mint with peach star and mint jacket; pink bunny navy bow with mint star and pearl/navy coat wherever present. Replace a few heart decorations with small stars. Clean cel shaded anime sprite, preserve simple geometry, no exterior glow, no shadows, entire background truly transparent. Match original image aspect ratio and transparent margins.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-69de3b04-a7f7-44ce-96a9-0fd60c5c804b.png"
+    },
+    {
+      "file": "img5.png",
+      "ref": "Assets/Scenes/ui/img5.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Attached image is the EXACT EDIT TARGET of frame 5 in an existing Gacha game sprite animation. Only update its art finish, decorative motifs and palette to a pearl aqua edition. Crucial: preserve original frame composition, character count, poses, exact box geometry and flap angles, relative object position and scale; no new objects. Box walls become pale MINT, lids/flaps become PEARL WHITE with subtle peach highlights, edge piping becomes SKY BLUE, outlines deep NAVY. Label remains pearl white with the EXACT words 'GACHA NOX' above 'BUNDLE'. Keep original hair identities and faces. Lavender girl's outfit pearl white/navy with mint ribbon; pink gothic girl's navy dress with mint bows; blue DJ's cap pearl white/mint with peach star and mint jacket; pink bunny navy bow with mint star and pearl/navy coat wherever present. Replace a few heart decorations with small stars. Clean cel shaded anime sprite, preserve simple geometry, no exterior glow, no shadows, entire background truly transparent. Match original image aspect ratio and transparent margins.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-ac04daba-2177-416e-8707-096dc86c2364.png"
+    },
+    {
+      "file": "img6.png",
+      "ref": "Assets/Scenes/ui/img6.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Attached image is the EXACT EDIT TARGET of frame 6 in an existing Gacha game sprite animation. Only update its art finish, decorative motifs and palette to a pearl aqua edition. Crucial: preserve original frame composition, character count, poses, exact box geometry and flap angles, relative object position and scale; no new objects. Box walls become pale MINT, lids/flaps become PEARL WHITE with subtle peach highlights, edge piping becomes SKY BLUE, outlines deep NAVY. Label remains pearl white with the EXACT words 'GACHA NOX' above 'BUNDLE'. Keep original hair identities and faces. Lavender girl's outfit pearl white/navy with mint ribbon; pink gothic girl's navy dress with mint bows; blue DJ's cap pearl white/mint with peach star and mint jacket; pink bunny navy bow with mint star and pearl/navy coat wherever present. Replace a few heart decorations with small stars. Clean cel shaded anime sprite, preserve simple geometry, no exterior glow, no shadows, entire background truly transparent. Match original image aspect ratio and transparent margins.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-4fe4c58d-b727-4d5f-8cfe-ba05f8e930b7.png"
+    },
+    {
+      "file": "img7.png",
+      "ref": "Assets/Scenes/ui/img7.png",
+      "transparent": true,
+      "prompt": "Use case: style-transfer. Attached image is the EXACT EDIT TARGET of frame 7 in an existing Gacha game sprite animation. Only update its art finish, decorative motifs and palette to a pearl aqua edition. Crucial: preserve original frame composition, character count, poses, exact box geometry and flap angles, relative object position and scale; no new objects. Box walls become pale MINT, lids/flaps become PEARL WHITE with subtle peach highlights, edge piping becomes SKY BLUE, outlines deep NAVY. Label remains pearl white with the EXACT words 'GACHA NOX' above 'BUNDLE' (for this finale banner preserve exact 'GACHA NOX' and 'BUNDLE UNLOCKED!'). Keep original hair identities and faces. Lavender girl's outfit pearl white/navy with mint ribbon; pink gothic girl's navy dress with mint bows; blue DJ's cap pearl white/mint with peach star and mint jacket; pink bunny navy bow with mint star and pearl/navy coat wherever present. Replace a few heart decorations with small stars. Clean cel shaded anime sprite, preserve simple geometry, no exterior glow, no shadows, entire background truly transparent. Match original image aspect ratio and transparent margins.",
+      "path": "C:\\Users\\desig\\.codex\\generated_images\\01a0f248-f466-7b61-b0c4-42dbaae7183c\\exec-7a220d52-cbb9-49e0-bd06-74a3d70b41b7.png"
+    }
+  ]
+}
