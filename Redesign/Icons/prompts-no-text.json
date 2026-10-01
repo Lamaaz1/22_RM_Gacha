@@ -1,0 +1,13 @@
+{
+  "generator": "Built-in ImageGen",
+  "prompts": [
+    {
+      "key": "nebula",
+      "prompt": "Use case: stylized-concept. Create a square mobile game icon for a Gacha Nebula version, NO TEXT anywhere. Attached image is the style and composition reference. Follow its authentic simple Gacha anime drawing style closely: crisp dark outlines, flat cel shading, large half-lidded eyes, small calm smiling mouth, human chibi girl head-and-shoulders filling nearly the entire frame, oversized star-decorated over-ear headphones, small crossed bandage on cheek. Draw a lavender-haired girl with deep violet eyes, black/violet star headphones with silver crescent accents, dark purple collared outfit. Background rich dark amethyst/midnight violet nebula with cyan glowing outlined stars, tiny musical notes and softly glowing dots. Strong face readability, uncluttered polished composition. Maintain simple Gacha character proportions and reference linework rather than fluffy animal mascot or glossy 3D illustration. Full bleed square, no rounded outer corners, no words, no letters, no logo, no watermark."
+    },
+    {
+      "key": "nox",
+      "prompt": "Use case: stylized-concept. Create a square mobile game icon for a Gacha Nox version, NO TEXT anywhere. Attached image is the style and composition reference. Follow its authentic simple Gacha anime drawing style closely: crisp dark outlines, flat cel shading, large half-lidded eyes, small calm smiling mouth, human chibi girl head-and-shoulders filling nearly the entire frame, oversized star-decorated over-ear headphones, small crossed bandage on cheek. Draw a pink/lavender-haired girl with cyan blue eyes, cyan headphones with pink star accents, pale blue and pink collared outfit. Background vibrant purple with pink and cyan neon glowing outlined stars, tiny musical notes and softly glowing dots. Strong face readability, uncluttered polished composition. Maintain simple Gacha character proportions and reference linework rather than fluffy animal mascot or glossy 3D illustration. Full bleed square, no rounded outer corners, no words, no letters, no logo, no watermark."
+    }
+  ]
+}

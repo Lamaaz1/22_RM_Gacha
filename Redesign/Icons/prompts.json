@@ -1,0 +1,15 @@
+{
+  "generator": "Built-in ImageGen",
+  "icons": [
+    {
+      "key": "nebula",
+      "ref": "D:/UnityProjects/22_RM_Gacha/Redesign/Nebula/masters/back-icon.png",
+      "prompt": "Create a finished square 1024x1024 mobile game app icon for GACHA NEBULA. Use the attached lilac chibi bunny as the exact character/style reference: lavender fluffy head, huge sparkling purple eyes, cyan celestial inner ears, dark purple bow with luminous star. Center large expressive bunny portrait filling upper two thirds, ears fully visible with safe margin. Rich midnight violet and amethyst nebula background with a few cyan stars and silver crescent, strong luminous silhouette, clean polished anime chibi game artwork. Bottom third contains beautifully drawn extremely readable thick bubble lettering in two lines: GACHA then NEBULA, lavender/silver with dark purple outline and cyan edge glow. Prioritize bold legibility at small icon size. Balanced uncluttered composition, full bleed opaque square, no rounded outer corners, no mockup, no extra text. Match reference mascot faithfully while composing a new premium game icon."
+    },
+    {
+      "key": "nox",
+      "ref": "D:/UnityProjects/22_RM_Gacha/Redesign/masters/back button icon.png",
+      "prompt": "Create a finished square 1024x1024 mobile game app icon for GACHA NOX. Use the attached pink chibi bunny as the exact character/style reference: pink fluffy head, huge sparkling magenta eyes, cyan inner ears, black bow with pink cross ornament. Center large expressive bunny portrait filling upper two thirds, ears fully visible with safe margin. Vibrant pink lavender and cyan dreamy neon background with a few hearts and stars, strong luminous silhouette, clean polished anime chibi game artwork. Bottom third contains beautifully drawn extremely readable thick bubble lettering in two lines: GACHA then NOX; GACHA candy pink, NOX sky blue, white edging with deep purple outline. Prioritize bold legibility at small icon size. Balanced uncluttered composition, full bleed opaque square, no rounded outer corners, no mockup, no extra text. Match reference mascot faithfully while composing a new premium game icon."
+    }
+  ]
+}
