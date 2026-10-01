@@ -50,6 +50,14 @@ public sealed class GachaOnboardingController : MonoBehaviour
     private int currentPage;
     private bool bound;
     private bool completed;
+    private CanvasGroup[] pageGroups;
+    private Vector3[] pagePositions;
+    private Vector3[][] cardScales;
+    private float entranceTime = -1f;
+    private float selectionTime = -1f;
+    private int entranceDirection = 1;
+    private Vector3 nextScale;
+    private bool motionReady;
     public int CurrentPage => currentPage;
     public bool IsComplete => completed;
     public int GetSelection(int page) => page >= 0 && page < selections.Length ? selections[page] : -1;
@@ -75,6 +83,7 @@ public sealed class GachaOnboardingController : MonoBehaviour
         }
         Refresh();
         FitToSafeArea();
+        AnimateEntrance(1);
     }
 
     private void BindButtons()
@@ -96,6 +105,7 @@ public sealed class GachaOnboardingController : MonoBehaviour
         if (completed || page != currentPage || page < 0 || page >= pages.Length || choice < 0 || choice >= pages[page].choices.Length || pages[page].choices[choice].locked) return;
         selections[page] = choice;
         Refresh();
+        if (Application.isPlaying && motionReady) selectionTime = Time.unscaledTime;
     }
 
     public void Previous()
@@ -103,6 +113,7 @@ public sealed class GachaOnboardingController : MonoBehaviour
         if (completed || currentPage == 0) return;
         currentPage--;
         Refresh();
+        AnimateEntrance(-1);
     }
 
     public void Next()
@@ -112,6 +123,7 @@ public sealed class GachaOnboardingController : MonoBehaviour
         {
             currentPage++;
             Refresh();
+            AnimateEntrance(1);
             return;
         }
         for (int p = 0; p < pages.Length; p++)
@@ -119,6 +131,7 @@ public sealed class GachaOnboardingController : MonoBehaviour
             if (HasAvailableSelection(p)) continue;
             currentPage = p;
             Refresh();
+            AnimateEntrance(-1);
             return;
         }
         for (int p = 0; p < pages.Length; p++)
@@ -181,7 +194,77 @@ public sealed class GachaOnboardingController : MonoBehaviour
     private void LateUpdate()
     {
         FitToSafeArea();
+        UpdateMotion();
     }
+
+    // Cache the authored layout once. Motion always starts from those values,
+    // including after rapid navigation or reopening a disabled panel.
+    private void AnimateEntrance(int direction)
+    {
+        if (!Application.isPlaying || !isActiveAndEnabled) return;
+        if (!motionReady)
+        {
+            pageGroups = new CanvasGroup[pages.Length];
+            pagePositions = new Vector3[pages.Length];
+            cardScales = new Vector3[pages.Length][];
+            for (int p = 0; p < pages.Length; p++)
+            {
+                var panel = pages[p].panel;
+                pageGroups[p] = panel.GetComponent<CanvasGroup>();
+                if (pageGroups[p] == null) pageGroups[p] = panel.AddComponent<CanvasGroup>();
+                pagePositions[p] = panel.transform.localPosition;
+                cardScales[p] = new Vector3[pages[p].choices.Length];
+                for (int c = 0; c < cardScales[p].Length; c++)
+                    cardScales[p][c] = pages[p].choices[c].button.transform.localScale;
+            }
+            nextScale = nextButton.transform.localScale;
+            motionReady = true;
+        }
+        ResetMotion();
+        entranceDirection = direction;
+        entranceTime = Time.unscaledTime;
+        UpdateMotion();
+    }
+
+    private void UpdateMotion()
+    {
+        if (!Application.isPlaying || !motionReady) return;
+        float elapsed = entranceTime < 0f ? 1f : Time.unscaledTime - entranceTime;
+        float progress = Mathf.Clamp01(elapsed / .34f);
+        float eased = 1f - Mathf.Pow(1f - progress, 3f);
+        pageGroups[currentPage].alpha = eased;
+        pages[currentPage].panel.transform.localPosition = pagePositions[currentPage]
+            + Vector3.right * (entranceDirection * 75f * (1f - eased));
+        float clickAge = selectionTime < 0f ? 1f : Time.unscaledTime - selectionTime;
+        float pulse = clickAge < .28f ? Mathf.Sin(clickAge / .28f * Mathf.PI) : 0f;
+        for (int c = 0; c < pages[currentPage].choices.Length; c++)
+        {
+            float t = Mathf.Clamp01((elapsed - c * .085f) / .42f);
+            // Pop in from zero, slightly overshoot, then settle at the authored size.
+            float remaining = t - 1f;
+            float scale = t <= 0f ? 0f : 1f + 2.45f * remaining * remaining * remaining
+                + 1.45f * remaining * remaining;
+            if (selections[currentPage] == c) scale += .035f * pulse;
+            pages[currentPage].choices[c].button.transform.localScale = cardScales[currentPage][c] * scale;
+        }
+        nextButton.transform.localScale = nextScale * (1f + .045f * pulse);
+    }
+
+    private void ResetMotion()
+    {
+        entranceTime = selectionTime = -1f;
+        if (!motionReady) return;
+        for (int p = 0; p < pages.Length; p++)
+        {
+            pageGroups[p].alpha = 1f;
+            pages[p].panel.transform.localPosition = pagePositions[p];
+            for (int c = 0; c < cardScales[p].Length; c++)
+                pages[p].choices[c].button.transform.localScale = cardScales[p][c];
+        }
+        nextButton.transform.localScale = nextScale;
+    }
+
+    private void OnDisable() { ResetMotion(); }
 
     public void FitToSafeArea()
     {
