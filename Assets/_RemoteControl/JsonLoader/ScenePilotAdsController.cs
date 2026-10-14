@@ -255,7 +255,6 @@ public sealed class ScenePilotAdsController : MonoBehaviour
     {
         RegisterLevelCompleted("level_end");
     }
-
     public bool ShowRewarded(string placementName = null)
     {
         if (!adsAllowed || rewardedAd == null || !rewardedReady || !PlacementAllowed(placementName))
