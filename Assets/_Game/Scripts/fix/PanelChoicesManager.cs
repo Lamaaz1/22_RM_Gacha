@@ -14,9 +14,11 @@ public class PanelChoicesManager : MonoBehaviour
     }
     public PanelChoices ActivePanel()
     {
-        return Screen.width > Screen.height
-            ? landscapePanel
-            : portraitPanel;
+        return landscapePanel;
+        //to add portrait choice;
+        //return Screen.width > Screen.height
+        //    ? landscapePanel
+        //    : portraitPanel;
     }
 
     public void ShowPanel(string t, List<ChildrenParts> parts)

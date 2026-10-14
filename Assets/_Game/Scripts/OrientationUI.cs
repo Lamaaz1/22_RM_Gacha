@@ -37,6 +37,8 @@ public class OrientationUI : MonoBehaviour
 
     void ApplyOrientation(bool isLandscape)
     {
+
+      /* add this ligne to stop orientation*/  isLandscape = true;
         UiMnager.instance.Init();
         portraitLayout.SetActive(!isLandscape);
         landscapeLayout.SetActive(isLandscape);
