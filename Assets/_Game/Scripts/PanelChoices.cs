@@ -137,14 +137,12 @@ public class PanelChoices : MonoBehaviour
 
     public void ChangeColor(Color a)
     {
-        Debug.Log(CharacterSelectedImg.sprite.name);
-        Debug.Log(CharacterSelectedImgPnl.sprite.name);
-        if (CharacterSelectedImg.sprite.name!="0")
+        if (CharacterSelectedImg != null && CharacterSelectedImg.sprite != null && CharacterSelectedImg.sprite.name != "0")
         {
             //SelectedImg.color = a;
             CharacterSelectedImg.color = a;
-            CharacterSelectedImgPnl.color = a;
-            CharacterIconImgPnl.color = a;
+            if (CharacterSelectedImgPnl != null) CharacterSelectedImgPnl.color = a;
+            if (CharacterIconImgPnl != null) CharacterIconImgPnl.color = a;
         }
       
 

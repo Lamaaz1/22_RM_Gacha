@@ -131,6 +131,7 @@ public class ChoicesPrefabs : MonoBehaviour
     public Image CharacterIconImgPnl;
     public void ChooseColor()
     {
+        DressUpScript.instance.ActualPart = PartNamee;
         string partt = PartNamee.ToString();
         PanelChoicesManager.Instance.ActivePanel().colorPicker.SelectedImg = ChoicesParent.image;
         DressUpScript.instance.ChangeColor(partt, out CharacterSelectedImg,out CharacterSelectedImgPnl,out CharacterIconImgPnl);

@@ -148,7 +148,7 @@ public class DressUpScript : MonoBehaviour
                
                     child.GetComponent<Image>().color = c;
                     child.GetComponent<Image>().sprite = s;
-             
+                    RestorePartColor(child.GetComponent<Image>(), s, PartName);
 
                 }
 
@@ -174,7 +174,7 @@ public class DressUpScript : MonoBehaviour
 
                 child.GetComponent<Image>().color = c;
                 child.GetComponent<Image>().sprite = s;
-               
+                RestorePartColor(child.GetComponent<Image>(), s, PartName);
 
             }
           
@@ -200,7 +200,7 @@ public class DressUpScript : MonoBehaviour
 
                 child.GetComponent<Image>().color = c;
                 child.GetComponent<Image>().sprite = s;
-
+                RestorePartColor(child.GetComponent<Image>(), s, PartName);
 
             }
 
@@ -227,10 +227,7 @@ public class DressUpScript : MonoBehaviour
                 child.GetComponent<Image>().color = c;
                 child.GetComponent<Image>().sprite = s;
                
-                if (ColorIndex != 11111)
-                {
-                    child.GetComponent<Image>().color = UiMnager.instance.colorPicker.ColoratItem(ColorIndex);
-                }
+                RestorePartColor(child.GetComponent<Image>(), s, PartName);
             }
 
         }
@@ -256,10 +253,7 @@ public class DressUpScript : MonoBehaviour
                 child.GetComponent<Image>().color = c;
                 child.GetComponent<Image>().sprite = s;
                 //Debug.Log(ColorIndex);
-                if (ColorIndex != 11111)
-                {
-                    child.GetComponent<Image>().color = UiMnager.instance.colorPicker.ColoratItem(ColorIndex);
-                }
+                RestorePartColor(child.GetComponent<Image>(), s, PartName);
 
             }
         }
@@ -285,15 +279,20 @@ public class DressUpScript : MonoBehaviour
                 child.GetComponent<Image>().sprite = s;
 
                 //Debug.Log(ColorIndex);
-                if (ColorIndex != 11111)
-                {
-                    child.GetComponent<Image>().color = UiMnager.instance.colorPicker.ColoratItem(ColorIndex);
-                }
+                RestorePartColor(child.GetComponent<Image>(), s, PartName);
             }
 
 
         }
     }
+    private void RestorePartColor(Image image, Sprite sprite, string partName)
+    {
+        if (sprite == null || sprite.name == "0" || SavePanel.instance == null) return;
+        if (Enum.TryParse(partName, out ChildrenParts part))
+            image.color = SavePanel.instance.LoadPartColor(ActivePlayerIndex, part,
+                UiMnager.instance != null ? UiMnager.instance.colorPicker : null, image.color);
+    }
+
     Image C;
     Image CI;
     Image CIC;

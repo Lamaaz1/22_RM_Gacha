@@ -34,10 +34,47 @@ public class SavePanel : MonoBehaviour
     }
     public void SaveColorPart(int Index, ChildrenParts PartName, int ColorIndex)
     {
+        PlayerPrefs.DeleteKey("Player" + Index + PartName.ToString() + "RGBA");
         PlayerPrefs.SetInt("Player" + Index + PartName.ToString()+"Color", ColorIndex);
         Debug.Log("saaave");
         Debug.Log("Player" + Index + PartName.ToString() + "Color=" + PlayerPrefs.GetInt("Player" + Index + PartName.ToString() + "Color"));
         //PlayerPrefs.SetString("Player"+Index+PartName.ToString()+"Color", Color);
+    }
+    [Serializable]
+    private class SavedPartColor
+    {
+        public Color rgba;
+    }
+
+    public void SaveColorPart(int playerIndex, ChildrenParts partName, Color color)
+    {
+        // Store all four float channels; the palette index remains a legacy fallback.
+        PlayerPrefs.SetString("Player" + playerIndex + partName.ToString() + "RGBA",
+            JsonUtility.ToJson(new SavedPartColor { rgba = color }));
+    }
+
+    public Color LoadPartColor(int playerIndex, ChildrenParts partName, ColorPicker palette, Color fallback)
+    {
+        string key = "Player" + playerIndex + partName.ToString();
+        if (PlayerPrefs.HasKey(key + "RGBA"))
+        {
+            try
+            {
+                SavedPartColor saved = JsonUtility.FromJson<SavedPartColor>(PlayerPrefs.GetString(key + "RGBA"));
+                if (saved != null) return saved.rgba;
+            }
+            catch (ArgumentException)
+            {
+                // A damaged custom save can still fall back to the original palette.
+            }
+        }
+        if (PlayerPrefs.HasKey(key + "Color") && palette != null)
+        {
+            int index = PlayerPrefs.GetInt(key + "Color");
+            if (palette.Colors != null && index >= 0 && index < palette.Colors.Count)
+                return palette.ColoratItem(index);
+        }
+        return fallback;
     }
     public string LoadCharacter(int PlayerIndex, ChildrenParts PartName , out string SpriteName)
     {
