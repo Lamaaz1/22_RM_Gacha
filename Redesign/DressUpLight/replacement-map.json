@@ -1,0 +1,527 @@
+[
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 3.png",
+    "asset": "category-hair",
+    "guid": "c593297cbf17cc343bf505e81dc061ae",
+    "border": 0,
+    "originalSize": [
+      156,
+      190
+    ],
+    "size": [
+      128,
+      156
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 3.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 4.png",
+    "asset": "category-props",
+    "guid": "30492f6b60de5bd498e2052fc683af14",
+    "border": 0,
+    "originalSize": [
+      156,
+      190
+    ],
+    "size": [
+      128,
+      156
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 4.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 5.png",
+    "asset": "category-pants",
+    "guid": "8382f2a559d7db846be05ced8fd8a6a5",
+    "border": 0,
+    "originalSize": [
+      156,
+      190
+    ],
+    "size": [
+      128,
+      156
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 5.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 6.png",
+    "asset": "category-hat",
+    "guid": "c79b43d5b738fa042a042bf238e860c7",
+    "border": 0,
+    "originalSize": [
+      156,
+      190
+    ],
+    "size": [
+      128,
+      156
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 6.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 7.png",
+    "asset": "category-clothes",
+    "guid": "1de589e4b6436334e8d3ae92cdb0c440",
+    "border": 0,
+    "originalSize": [
+      156,
+      190
+    ],
+    "size": [
+      128,
+      156
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 7.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 8.png",
+    "asset": "category-face",
+    "guid": "0f63231a19314d34f93f85121ab18d8a",
+    "border": 0,
+    "originalSize": [
+      156,
+      190
+    ],
+    "size": [
+      128,
+      156
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 8.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 10.png",
+    "asset": "arrow-next-button",
+    "guid": "20d0d430e1de77a4dbfeedc2584578e6",
+    "border": 0,
+    "originalSize": [
+      151,
+      151
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 10.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 11.png",
+    "asset": "arrow-previous-button",
+    "guid": "f7673d8a0cf5489448b64059edefb059",
+    "border": 0,
+    "originalSize": [
+      151,
+      151
+    ],
+    "size": [
+      96,
+      96
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 11.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 12.png",
+    "asset": "close-button",
+    "guid": "681f87dcec48c5a46a4c53fa7daa644d",
+    "border": 0,
+    "originalSize": [
+      70,
+      70
+    ],
+    "size": [
+      64,
+      64
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 12.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 15.png",
+    "asset": "icon-next",
+    "guid": "ecbaa758c91ebdd43af5fc8b4993375e",
+    "border": 0,
+    "originalSize": [
+      45,
+      65
+    ],
+    "size": [
+      64,
+      64
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 15.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 16.png",
+    "asset": "icon-previous",
+    "guid": "9eef1a5a5e26d5042bd8cf273653c2e3",
+    "border": 0,
+    "originalSize": [
+      45,
+      62
+    ],
+    "size": [
+      64,
+      64
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 16.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 58.png",
+    "asset": "icon-noads",
+    "guid": "1a81b349b2b79de478fda3d69047d9ce",
+    "border": 0,
+    "originalSize": [
+      121,
+      124
+    ],
+    "size": [
+      64,
+      64
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 58.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 59.png",
+    "asset": "nav-noads",
+    "guid": "5891d526fa4d28b47ae9bb3798d8f70e",
+    "border": 0,
+    "originalSize": [
+      325,
+      162
+    ],
+    "size": [
+      256,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 59.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/gacha club bouton (1).png",
+    "asset": "icon-color",
+    "guid": "6b1cab39953c2ae4eafcb38e14ae2ade",
+    "border": 0,
+    "originalSize": [
+      752,
+      776
+    ],
+    "size": [
+      64,
+      64
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__gacha club bouton (1).png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/Asset 22.png",
+    "asset": "nav-studio",
+    "guid": "026e9936e92831140a8eb4cf337c49ae",
+    "border": 0,
+    "originalSize": [
+      325,
+      162
+    ],
+    "size": [
+      256,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__Asset 22.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/Asset 23.png",
+    "asset": "nav-background",
+    "guid": "732f42d7f8f7bff469be519d46dfd9e4",
+    "border": 0,
+    "originalSize": [
+      325,
+      162
+    ],
+    "size": [
+      256,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__Asset 23.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/Asset 24.png",
+    "asset": "nav-view",
+    "guid": "49feda507512af54cb89992e88018fb0",
+    "border": 0,
+    "originalSize": [
+      325,
+      162
+    ],
+    "size": [
+      256,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__Asset 24.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/Asset 25.png",
+    "asset": "nav-settings",
+    "guid": "8fa8fa7b40706884b834bc96546695a3",
+    "border": 0,
+    "originalSize": [
+      325,
+      162
+    ],
+    "size": [
+      256,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__Asset 25.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/Asset 26.png",
+    "asset": "navigation",
+    "guid": "7436efea73b279848b34c90579ab9583",
+    "border": 28,
+    "originalSize": [
+      325,
+      162
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__Asset 26.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/Asset 27.png",
+    "asset": "panel",
+    "guid": "79eb10911b030b24c93725906fcbae53",
+    "border": 28,
+    "originalSize": [
+      325,
+      162
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__Asset 27.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/Asset 29.png",
+    "asset": "character-tile",
+    "guid": "bab0c6606d829394d8ad3dd2387f7be4",
+    "border": 28,
+    "originalSize": [
+      174,
+      174
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__Asset 29.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/Asset 30.png",
+    "asset": "panel",
+    "guid": "5c431045752f5b54189fa350ac3c2d56",
+    "border": 28,
+    "originalSize": [
+      506,
+      1108
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__Asset 30.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/Asset 31.png",
+    "asset": "navigation",
+    "guid": "8f4368065e7adf6478767d1b6778086e",
+    "border": 28,
+    "originalSize": [
+      2620,
+      287
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__Asset 31.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/cadre.png",
+    "asset": "character-outline",
+    "guid": "79bbab8874be88749b2488b6e041baef",
+    "border": 28,
+    "originalSize": [
+      173,
+      173
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__cadre.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/lock icon.png",
+    "asset": "icon-lock",
+    "guid": "b71c28270c3669d40b0ccafac09777cf",
+    "border": 0,
+    "originalSize": [
+      81,
+      105
+    ],
+    "size": [
+      64,
+      64
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__lock icon.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/check icon.png",
+    "asset": "icon-check",
+    "guid": "788e034696b472140a02d9b8fcba5e75",
+    "border": 0,
+    "originalSize": [
+      45,
+      34
+    ],
+    "size": [
+      64,
+      64
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__check icon.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/x icon.png",
+    "asset": "icon-close",
+    "guid": "ae9d9e566f4594044a19725fc0a37fac",
+    "border": 0,
+    "originalSize": [
+      37,
+      34
+    ],
+    "size": [
+      64,
+      64
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__x icon.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/screenshot bouton.png",
+    "asset": "nav-camera",
+    "guid": "d782fc5e52648294bb28c016cb530495",
+    "border": 0,
+    "originalSize": [
+      170,
+      151
+    ],
+    "size": [
+      256,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__screenshot bouton.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/gacha phone.png",
+    "asset": "phone-frame",
+    "guid": "4736f1def1349324b86073d8157c2678",
+    "border": 0,
+    "originalSize": [
+      495,
+      862
+    ],
+    "size": [
+      320,
+      576
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__gacha phone.png"
+  },
+  {
+    "file": "Assets/drive-download-20251022T085704Z-1-001/gacha phone ui.png",
+    "asset": "phone-frame",
+    "guid": "3470a33a91cbe574db735257a32873ee",
+    "border": 0,
+    "originalSize": [
+      495,
+      862
+    ],
+    "size": [
+      320,
+      576
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251022T085704Z-1-001__gacha phone ui.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 13.png",
+    "asset": "panel",
+    "guid": "76d716360f4128145a18a56f67a0fdac",
+    "border": 28,
+    "originalSize": [
+      1320,
+      972
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 13.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 14.png",
+    "asset": "panel",
+    "guid": "d0eb897085367eb44b68e78c044ba210",
+    "border": 28,
+    "originalSize": [
+      374,
+      243
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 14.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 2.png",
+    "asset": "panel",
+    "guid": "0e4e41643cea0ea468707f997c9e3da5",
+    "border": 28,
+    "originalSize": [
+      646,
+      420
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 2.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 20.png",
+    "asset": "panel",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "border": 28,
+    "originalSize": [
+      1320,
+      972
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 20.png"
+  },
+  {
+    "file": "Assets/drive-download-20251021T154352Z-1-001/Asset 21.png",
+    "asset": "panel",
+    "guid": "8d5ebdb15de287743b50c25a40060ce5",
+    "border": 28,
+    "originalSize": [
+      1320,
+      179
+    ],
+    "size": [
+      128,
+      128
+    ],
+    "backup": "Redesign/DressUpLight/originals/Assets__drive-download-20251021T154352Z-1-001__Asset 21.png"
+  }
+]

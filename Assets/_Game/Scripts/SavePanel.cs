@@ -71,7 +71,7 @@ public class SavePanel : MonoBehaviour
         if (PlayerPrefs.HasKey(key + "Color") && palette != null)
         {
             int index = PlayerPrefs.GetInt(key + "Color");
-            if (palette.Colors != null && index >= 0 && index < palette.Colors.Count)
+            if (palette.HasColorAtIndex(index))
                 return palette.ColoratItem(index);
         }
         return fallback;

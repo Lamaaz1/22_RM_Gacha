@@ -1,0 +1,1201 @@
+[
+  {
+    "file": "Assets\\_Game\\Prefabs\\ChangeBackground.prefab",
+    "component": "7203972427676063369",
+    "name": "ChangeBackground",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\CharacterButton.prefab",
+    "component": "4006062256992858740",
+    "name": "Image",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\cadre.png",
+    "guid": "79bbab8874be88749b2488b6e041baef",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\CharacterButton.prefab",
+    "component": "7005358286283942254",
+    "name": "Image (2)",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\lock icon.png",
+    "guid": "b71c28270c3669d40b0ccafac09777cf",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\CharacterButton.prefab",
+    "component": "143758512433012895",
+    "name": "CharacterButton",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 29.png",
+    "guid": "bab0c6606d829394d8ad3dd2387f7be4",
+    "spriteId": "21300000",
+    "color": "{r: 0, g: 0, b: 0, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\CharacterButton.prefab",
+    "component": "2428693131420751597",
+    "name": "Character",
+    "sprite": "Assets\\Resources\\caracter.png",
+    "guid": "b906ab8af40fcad48aaeeb86fdaa53f7",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\CharacterVdIcon.prefab",
+    "component": "6502678753962578685",
+    "name": "CharacterVdIcon",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 29.png",
+    "guid": "bab0c6606d829394d8ad3dd2387f7be4",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\ChoicePanel\\ChoicesP.prefab",
+    "component": "4715898731081435386",
+    "name": "Next",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 10.png",
+    "guid": "20d0d430e1de77a4dbfeedc2584578e6",
+    "spriteId": "21300000",
+    "color": "{r: 0, g: 0, b: 0, a: 0.70980394}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\ChoicePanel\\ChoicesP.prefab",
+    "component": "3864190155448629142",
+    "name": "previous",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 11.png",
+    "guid": "f7673d8a0cf5489448b64059edefb059",
+    "spriteId": "21300000",
+    "color": "{r: 0.03773582, g: 0.036845826, b: 0.036845826, a: 0.70980394}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\ChoicePanel\\ChoicesP.prefab",
+    "component": "7394087123971631141",
+    "name": "Center",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\ChoicePanel\\ChoicesP.prefab",
+    "component": "3831500032398231424",
+    "name": "Image",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 16.png",
+    "guid": "9eef1a5a5e26d5042bd8cf273653c2e3",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\ChoicePanel\\ChoicesP.prefab",
+    "component": "7132093757228698699",
+    "name": "Colors",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\color line.png",
+    "guid": "055f56ba1abe1b24a8e266f3497f3d3f",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\ChoicePanel\\ChoicesP.prefab",
+    "component": "5400629453488961415",
+    "name": "Up",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0.5529412}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\ChoicePanel\\ChoicesP.prefab",
+    "component": "344496753961133766",
+    "name": "ChoicesP",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 27.png",
+    "guid": "79eb10911b030b24c93725906fcbae53",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\ChoicePanel\\ChoicesP.prefab",
+    "component": "8805126794801106140",
+    "name": "Image",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 15.png",
+    "guid": "ecbaa758c91ebdd43af5fc8b4993375e",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\ChoicePanel\\ChoicesP.prefab",
+    "component": "701091014787320195",
+    "name": "ChOICE",
+    "sprite": "Assets\\Resources\\Sprites\\Eyes\\0.png",
+    "guid": "dfb1fc73e7c64a44cbbee033907c29ec",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\ColorButn.prefab",
+    "component": "2797116179568081480",
+    "name": "ColorButn",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\Parts.prefab",
+    "component": "2654761117065312300",
+    "name": "Parts",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\Permission.prefab",
+    "component": "2865001533134849",
+    "name": "Button (Legacy)",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 0, g: 0.7075472, b: 0.030521683, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\Permission.prefab",
+    "component": "7600774252360541314",
+    "name": "Button (Legacy) (1)",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 0.7735849, g: 0, b: 0, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\Permission.prefab",
+    "component": "1014102666319426076",
+    "name": "ScreenShotP",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 0, g: 0, b: 0, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\Player1.prefab",
+    "component": "307727461014468537",
+    "name": "Hand",
+    "sprite": "Assets\\Resources\\hand.png",
+    "guid": "1659dd2a7e607f14fb76ee5061949efc",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\Player1.prefab",
+    "component": "6863432183857369397",
+    "name": "0",
+    "sprite": "Assets\\Resources\\caracter.png",
+    "guid": "b906ab8af40fcad48aaeeb86fdaa53f7",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Background.prefab",
+    "component": "3730748566474277488",
+    "name": "Background",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Background.prefab",
+    "component": "6569102568582418741",
+    "name": "Players",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\LeftPanel.prefab",
+    "component": "5860167026316495627",
+    "name": "LeftPanel",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 30.png",
+    "guid": "5c431045752f5b54189fa350ac3c2d56",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\LeftPanel.prefab",
+    "component": "4243412049805977477",
+    "sprite": "Assets\\Resources\\caracter.png",
+    "guid": "b906ab8af40fcad48aaeeb86fdaa53f7",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Panel Choices.prefab",
+    "component": "1958078808861233103",
+    "name": "Next",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 10.png",
+    "guid": "20d0d430e1de77a4dbfeedc2584578e6",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Panel Choices.prefab",
+    "component": "3791733121040867688",
+    "name": "Viewport",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10917",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Panel Choices.prefab",
+    "component": "7935882318777162743",
+    "name": "Close But",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 12.png",
+    "guid": "681f87dcec48c5a46a4c53fa7daa644d",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Panel Choices.prefab",
+    "component": "2771119700842910674",
+    "name": "Prev",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 11.png",
+    "guid": "f7673d8a0cf5489448b64059edefb059",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Panel Choices.prefab",
+    "component": "220280934733603316",
+    "name": "Down",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Panel Choices.prefab",
+    "component": "553998714864311049",
+    "name": "Panel",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 21.png",
+    "guid": "8d5ebdb15de287743b50c25a40060ce5",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Panel Choices.prefab",
+    "component": "7769106504965079540",
+    "name": "Panel Choices",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Panel Choices.prefab",
+    "component": "4585721072702338659",
+    "name": "Scroll View",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 0, g: 0, b: 0, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Panel Choices.prefab",
+    "component": "7105670391473765065",
+    "name": "Button (Legacy)",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 12.png",
+    "guid": "681f87dcec48c5a46a4c53fa7daa644d",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Panel Choices.prefab",
+    "component": "4357400655613853990",
+    "name": "Up",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 21.png",
+    "guid": "8d5ebdb15de287743b50c25a40060ce5",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Panel Choices.prefab",
+    "component": "2590509805343930101",
+    "name": "Grid",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\Panel Choices.prefab",
+    "component": "6726503871173430852",
+    "name": "ColorPicker",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 0.70440245, g: 0.70440245, b: 0.70440245, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "622303164442400138",
+    "name": "Down",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "2696876087767021414",
+    "name": "ScreenShot",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 24.png",
+    "guid": "49feda507512af54cb89992e88018fb0",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "4690650811931043541",
+    "name": "NO",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\x icon.png",
+    "guid": "ae9d9e566f4594044a19725fc0a37fac",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "2243422244598414541",
+    "name": "AnimationPanel",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 31.png",
+    "guid": "8f4368065e7adf6478767d1b6778086e",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "1501090700945282436",
+    "name": "Image",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 29.png",
+    "guid": "bab0c6606d829394d8ad3dd2387f7be4",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "2533098914514618754",
+    "name": "Background",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 23.png",
+    "guid": "732f42d7f8f7bff469be519d46dfd9e4",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "304214035902882005",
+    "name": "Next",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 15.png",
+    "guid": "ecbaa758c91ebdd43af5fc8b4993375e",
+    "spriteId": "21300000",
+    "color": "{r: 0.5765073, g: 0.51174796, b: 0.8679245, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "8164851869268500246",
+    "name": "Panel",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 21.png",
+    "guid": "8d5ebdb15de287743b50c25a40060ce5",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "7468233814315482941",
+    "name": "Panel",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 21.png",
+    "guid": "8d5ebdb15de287743b50c25a40060ce5",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "8219561076459980586",
+    "name": "Settings",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 25.png",
+    "guid": "8fa8fa7b40706884b834bc96546695a3",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "6107092992020456919",
+    "name": "Viewport",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10917",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "4815457540088600978",
+    "name": "Off",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "7301154265852933225",
+    "name": "Scroll View",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "756424228953320623",
+    "name": "PlayPanel",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 26.png",
+    "guid": "7436efea73b279848b34c90579ab9583",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "5295597887186150513",
+    "name": "SeeView",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "8311184998155943419",
+    "name": "YES",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\check icon.png",
+    "guid": "788e034696b472140a02d9b8fcba5e75",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "511451786207627501",
+    "name": "Button",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "517066961536717215",
+    "name": "Prev",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 16.png",
+    "guid": "9eef1a5a5e26d5042bd8cf273653c2e3",
+    "spriteId": "21300000",
+    "color": "{r: 0.5803922, g: 0.5137255, b: 0.87058824, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "6303236705813651923",
+    "name": "Exit",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 23.png",
+    "guid": "732f42d7f8f7bff469be519d46dfd9e4",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "7879107932832684370",
+    "name": "Settings",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 31.png",
+    "guid": "8f4368065e7adf6478767d1b6778086e",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "8139536593737747460",
+    "name": "AdsBreak",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 27.png",
+    "guid": "79eb10911b030b24c93725906fcbae53",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "1518206200955113252",
+    "name": "Back",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 12.png",
+    "guid": "681f87dcec48c5a46a4c53fa7daa644d",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "5773555037191395622",
+    "name": "NoAds",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 22.png",
+    "guid": "026e9936e92831140a8eb4cf337c49ae",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "7680771955656057304",
+    "name": "Button",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "976844814728054249",
+    "name": "NO",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\x icon.png",
+    "guid": "ae9d9e566f4594044a19725fc0a37fac",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "9059727346365655840",
+    "name": "YES",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\check icon.png",
+    "guid": "788e034696b472140a02d9b8fcba5e75",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "379600978690658100",
+    "name": "BackGround",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "3622897386040368220",
+    "name": "Button (Legacy)",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 12.png",
+    "guid": "681f87dcec48c5a46a4c53fa7daa644d",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "1324697012138446926",
+    "name": "Button (Legacy)",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 12.png",
+    "guid": "681f87dcec48c5a46a4c53fa7daa644d",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "7341072746671934085",
+    "name": "Panel",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "8437247616045456370",
+    "name": "Panel",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "1895864987267736623",
+    "name": "Anumation",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 22.png",
+    "guid": "026e9936e92831140a8eb4cf337c49ae",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "906859594737558008",
+    "name": "Image",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 29.png",
+    "guid": "bab0c6606d829394d8ad3dd2387f7be4",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "4519300063153522393",
+    "name": "ScreenShotBTN",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\screenshot bouton.png",
+    "guid": "d782fc5e52648294bb28c016cb530495",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "5625003372587826798",
+    "name": "Grid",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
+    "component": "6267277888768536129",
+    "name": "SettingPanels",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Prefabs\\tst\\RightPanel.prefab",
+    "component": "7859020620853277771",
+    "name": "RightPanel",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\gacha phone.png",
+    "guid": "4736f1def1349324b86073d8157c2678",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\StartScene.unity",
+    "component": "1285195908",
+    "name": "Image",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\gacha club bouton (1).png",
+    "guid": "6b1cab39953c2ae4eafcb38e14ae2ade",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\StartScene.unity",
+    "component": "2089271664",
+    "name": "Panel",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "43078111",
+    "name": "NoAds",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 22.png",
+    "guid": "026e9936e92831140a8eb4cf337c49ae",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "77152586",
+    "name": "Panel Choices",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "138091681",
+    "name": "Panel",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 21.png",
+    "guid": "8d5ebdb15de287743b50c25a40060ce5",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "168889379",
+    "name": "Next",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 10.png",
+    "guid": "20d0d430e1de77a4dbfeedc2584578e6",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "208624084",
+    "name": "Prev",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 11.png",
+    "guid": "f7673d8a0cf5489448b64059edefb059",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "251684987",
+    "name": "Grid",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "339782828",
+    "name": "Panel",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "345087139",
+    "name": "Image",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 29.png",
+    "guid": "bab0c6606d829394d8ad3dd2387f7be4",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "389158882",
+    "name": "Background",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 23.png",
+    "guid": "732f42d7f8f7bff469be519d46dfd9e4",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "409062010",
+    "name": "Next",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 15.png",
+    "guid": "ecbaa758c91ebdd43af5fc8b4993375e",
+    "spriteId": "21300000",
+    "color": "{r: 0.5765073, g: 0.51174796, b: 0.8679245, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "451766635",
+    "name": "Settings",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 25.png",
+    "guid": "8fa8fa7b40706884b834bc96546695a3",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "465017600",
+    "name": "Prev",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 16.png",
+    "guid": "9eef1a5a5e26d5042bd8cf273653c2e3",
+    "spriteId": "21300000",
+    "color": "{r: 0.5803922, g: 0.5137255, b: 0.87058824, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "483835470",
+    "name": "LeftPanel",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 30.png",
+    "guid": "5c431045752f5b54189fa350ac3c2d56",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "495434985",
+    "name": "Panel",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 21.png",
+    "guid": "8d5ebdb15de287743b50c25a40060ce5",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "503189078",
+    "name": "Off",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "530795719",
+    "name": "Settings",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 31.png",
+    "guid": "8f4368065e7adf6478767d1b6778086e",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "546768201",
+    "name": "NO",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\x icon.png",
+    "guid": "ae9d9e566f4594044a19725fc0a37fac",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "551494934",
+    "name": "Image",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 29.png",
+    "guid": "bab0c6606d829394d8ad3dd2387f7be4",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "585003803",
+    "name": "Exit",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 23.png",
+    "guid": "732f42d7f8f7bff469be519d46dfd9e4",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "598013505",
+    "name": "Background",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "607327025",
+    "name": "NO",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\x icon.png",
+    "guid": "ae9d9e566f4594044a19725fc0a37fac",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "680580922",
+    "name": "Grid",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "702289280",
+    "name": "Viewport",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10917",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "716436561",
+    "name": "Down",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 0.24313727, g: 0.32941177, b: 0.49411768, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "738018906",
+    "name": "Close But",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 12.png",
+    "guid": "681f87dcec48c5a46a4c53fa7daa644d",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "763479775",
+    "name": "Panel",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 21.png",
+    "guid": "8d5ebdb15de287743b50c25a40060ce5",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "789106093",
+    "name": "YES",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\check icon.png",
+    "guid": "788e034696b472140a02d9b8fcba5e75",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "790985163",
+    "name": "AdsBreak",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 27.png",
+    "guid": "79eb10911b030b24c93725906fcbae53",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "803445003",
+    "name": "Panel",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "933702203",
+    "sprite": "Assets\\Resources\\caracter.png",
+    "guid": "b906ab8af40fcad48aaeeb86fdaa53f7",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "996654626",
+    "name": "SettingPanels",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "997700448",
+    "name": "Up",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 21.png",
+    "guid": "8d5ebdb15de287743b50c25a40060ce5",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1008108762",
+    "name": "Button",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1009788904",
+    "name": "Scroll View",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 0, g: 0, b: 0, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1040061312",
+    "name": "Players",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1065383715",
+    "name": "RightPanel",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\gacha phone.png",
+    "guid": "4736f1def1349324b86073d8157c2678",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1171795316",
+    "name": "Panel",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 0.12941177, g: 0.1764706, b: 0.33333334, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1243978237",
+    "name": "Scroll View",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1244552002",
+    "name": "ScreenShot",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 24.png",
+    "guid": "49feda507512af54cb89992e88018fb0",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1290480496",
+    "name": "Button (Legacy)",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 12.png",
+    "guid": "681f87dcec48c5a46a4c53fa7daa644d",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1292942904",
+    "name": "AnimationPanel",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 31.png",
+    "guid": "8f4368065e7adf6478767d1b6778086e",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1296033689",
+    "name": "YES",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\check icon.png",
+    "guid": "788e034696b472140a02d9b8fcba5e75",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1324306115",
+    "name": "Anumation",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 22.png",
+    "guid": "026e9936e92831140a8eb4cf337c49ae",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1324744644",
+    "name": "Down",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1331995795",
+    "name": "Viewport",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10917",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1407826324",
+    "name": "BackGround",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1447615154",
+    "name": "Back",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 12.png",
+    "guid": "681f87dcec48c5a46a4c53fa7daa644d",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1806464734",
+    "name": "Panel Choices Fnl",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 20.png",
+    "guid": "58b7bcd54a029da44b52eca37a92a0fd",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1843178236",
+    "name": "ScreenShotBTN",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\screenshot bouton.png",
+    "guid": "d782fc5e52648294bb28c016cb530495",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1843576045",
+    "name": "ColorPicker",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 0.70440245, g: 0.70440245, b: 0.70440245, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1844609181",
+    "name": "Manager",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1935745041",
+    "name": "PortraitLayout",
+    "sprite": "Assets\\drive-download-20251022T085704Z-1-001\\Asset 26.png",
+    "guid": "7436efea73b279848b34c90579ab9583",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "1966195783",
+    "name": "Players (1)",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "2017201356",
+    "name": "Button",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "2043930848",
+    "name": "Button (Legacy)",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 12.png",
+    "guid": "681f87dcec48c5a46a4c53fa7daa644d",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "2091736702",
+    "name": "SeeView",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 1, b: 1, a: 0}"
+  },
+  {
+    "file": "Assets\\_Game\\Scenes\\_Game.unity",
+    "component": "2134911946",
+    "name": "Button (Legacy)",
+    "sprite": "Assets\\drive-download-20251021T154352Z-1-001\\Asset 12.png",
+    "guid": "681f87dcec48c5a46a4c53fa7daa644d",
+    "spriteId": "21300000",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scripts\\ads\\Test.unity",
+    "component": "155554362",
+    "name": "Panel",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10907",
+    "color": "{r: 1, g: 0.8160377, b: 0.89361227, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scripts\\ads\\Test.unity",
+    "component": "337894245",
+    "name": "Banner",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scripts\\ads\\Test.unity",
+    "component": "489427295",
+    "name": "Intertitial",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  },
+  {
+    "file": "Assets\\_Game\\Scripts\\ads\\Test.unity",
+    "component": "1174197731",
+    "name": "Reward",
+    "guid": "0000000000000000f000000000000000",
+    "spriteId": "10905",
+    "color": "{r: 1, g: 1, b: 1, a: 1}"
+  }
+]

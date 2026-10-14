@@ -7,6 +7,11 @@ public class ColorPicker : MonoBehaviour
 {
     public Transform Content;
     public List<ColorBtn> Colors;
+    public List<Color> LegacyColors = new List<Color>();
+    public int PaletteCount => LegacyColors != null && LegacyColors.Count > 0 ? LegacyColors.Count : Colors != null ? Colors.Count : 0;
+    public bool HasColorAtIndex(int index) => index >= 0 && index < PaletteCount;
+    public bool InlineLayout;
+    public System.Action Closed;
     private RectTransform wheel, wheelCursor, valueCursor, alphaCursor;
     private Image preview;
     private Text hexLabel;
@@ -14,6 +19,11 @@ public class ColorPicker : MonoBehaviour
     private float hue, saturation, brightness = 1f, alpha = 1f;
 
     private void OnEnable()
+    {
+        InitializeView();
+    }
+
+    public void InitializeView()
     {
         if (wheel == null) BuildPicker();
         var manager = PanelChoicesManager.Instance;
@@ -26,6 +36,7 @@ public class ColorPicker : MonoBehaviour
     }
     public Color ColoratItem(int i)
     {
+        if (LegacyColors != null && i >= 0 && i < LegacyColors.Count) return LegacyColors[i];
         // Retain the palette references to restore old saved colors.
         return Colors != null && i >= 0 && i < Colors.Count && Colors[i] != null
             ? Colors[i].GetComponent<Image>().color : Color.white;
@@ -33,6 +44,12 @@ public class ColorPicker : MonoBehaviour
 
     private void BuildPicker()
     {
+        if (InlineLayout)
+        {
+            foreach (Transform child in transform) child.gameObject.SetActive(false);
+            var oldBackground = GetComponent<Image>();
+            if (oldBackground != null) oldBackground.enabled = false;
+        }
         if (Colors != null)
             for (int i = 0; i < Colors.Count; i++)
                 if (Colors[i] != null) Colors[i].i = i;
@@ -47,9 +64,9 @@ public class ColorPicker : MonoBehaviour
         }
         RectTransform body = Rect("Continuous Colors", transform, Vector2.zero, Vector2.one);
         body.offsetMin = new Vector2(18, 16);
-        body.offsetMax = new Vector2(-18, -112);
+        body.offsetMax = new Vector2(-18, InlineLayout ? -52 : -112);
         var background = body.gameObject.AddComponent<Image>();
-        background.color = new Color(0.08f, 0.09f, 0.15f);
+        background.color = new Color(0.953f, 0.933f, 1f);
 
         RectTransform area = Rect("Wheel Area", body, new Vector2(0.04f, 0.34f), new Vector2(0.96f, 0.98f));
         wheel = Rect("Hue Saturation Wheel", area, Vector2.zero, Vector2.one);
@@ -78,6 +95,13 @@ public class ColorPicker : MonoBehaviour
         preview = swatch.gameObject.AddComponent<Image>();
         preview.raycastTarget = false;
         hexLabel = Label("Color Code", body, new Vector2(0.24f, 0.01f), new Vector2(0.96f, 0.08f));
+        if (InlineLayout)
+        {
+            var title = Label("Inline Color Title", transform, new Vector2(.05f, .88f), new Vector2(.95f, 1f));
+            title.text = "Select Color";
+            title.alignment = TextAnchor.MiddleCenter;
+            title.fontStyle = FontStyle.Bold;
+        }
     }
 
     private RectTransform Strip(Transform parent, string name, float y, Texture2D texture, System.Action<Vector2> changed)
@@ -99,7 +123,7 @@ public class ColorPicker : MonoBehaviour
         label.resizeTextMinSize = 10;
         label.resizeTextMaxSize = 26;
         label.alignment = TextAnchor.MiddleLeft;
-        label.color = Color.white;
+        label.color = new Color(0.208f, 0.157f, 0.310f);
         label.raycastTarget = false;
         return label;
     }
@@ -230,6 +254,7 @@ public class ColorPicker : MonoBehaviour
     {
         // Flush once per selection session instead of writing to disk every drag frame.
         if (wheel != null) PlayerPrefs.Save();
+        Closed?.Invoke();
     }
 
     private void OnDestroy()

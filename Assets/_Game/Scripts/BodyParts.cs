@@ -17,6 +17,8 @@ public class BodyParts : MonoBehaviour
     Button mybtn;
     [SerializeField] Text mytext;
     [SerializeField] List<ChildrenParts> ChildresnP;
+    public string CategoryTitle => mytext != null ? mytext.text : gameObject.name;
+    public List<ChildrenParts> CategoryParts => ChildresnP;
    
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,12 @@ public class BodyParts : MonoBehaviour
 
     public void OnclickB()
     {
+        var customize = GetComponentInParent<LightCustomizePanel>();
+        if (customize != null)
+        {
+            customize.ShowCategory(this);
+            return;
+        }
         PanelChoicesManager.Instance.ShowPanel(mytext.text, ChildresnP);
     }
   

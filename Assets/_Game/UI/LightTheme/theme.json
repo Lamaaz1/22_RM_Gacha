@@ -1,0 +1,637 @@
+{
+  "name": "Gacha Dress-Up Light",
+  "palette": {
+    "background": "#F3EEFF",
+    "panel": "#F6F0FF",
+    "surface": "#EAE0FA",
+    "border": "#CBB9EE",
+    "violet": "#8B6BE8",
+    "pink": "#F0A6CA",
+    "mint": "#A8DCCB",
+    "ink": "#35284F",
+    "muted": "#84749F",
+    "white": "#FFFFFF"
+  },
+  "referenceResolution": [
+    1920,
+    1080
+  ],
+  "font": {
+    "family": "Unity LegacyRuntime / LiberationSans",
+    "color": "#35284F",
+    "headings": 38,
+    "labels": 25
+  },
+  "layout": {
+    "characterPanel": {
+      "anchors": [
+        0.01,
+        0.16,
+        0.19,
+        0.98
+      ]
+    },
+    "customizePanel": {
+      "anchors": [
+        0.71,
+        0.16,
+        0.99,
+        0.98
+      ]
+    },
+    "navigation": {
+      "anchors": [
+        0,
+        0,
+        1,
+        0.14
+      ]
+    }
+  },
+  "textures": {
+    "icons": 64,
+    "panels": 128,
+    "phone": [
+      320,
+      576
+    ],
+    "background": [
+      1024,
+      576
+    ],
+    "mipmaps": false,
+    "readable": false,
+    "android": "ASTC 6x6",
+    "nineSliceBorder": 28
+  },
+  "labels": [
+    "Characters",
+    "Dress Up",
+    "Customize",
+    "Face",
+    "Clothes",
+    "Hair",
+    "Hat",
+    "Pants",
+    "Props",
+    "Color",
+    "View",
+    "Studio",
+    "Background",
+    "Settings"
+  ],
+  "assets": [
+    {
+      "name": "panel",
+      "file": "Assets/_Game/UI/LightTheme/panel.png",
+      "width": 128,
+      "height": 128,
+      "border": 28,
+      "bytes": 1932
+    },
+    {
+      "name": "button",
+      "file": "Assets/_Game/UI/LightTheme/button.png",
+      "width": 128,
+      "height": 128,
+      "border": 28,
+      "bytes": 2202
+    },
+    {
+      "name": "button-selected",
+      "file": "Assets/_Game/UI/LightTheme/button-selected.png",
+      "width": 128,
+      "height": 128,
+      "border": 28,
+      "bytes": 2561
+    },
+    {
+      "name": "character-tile",
+      "file": "Assets/_Game/UI/LightTheme/character-tile.png",
+      "width": 128,
+      "height": 128,
+      "border": 28,
+      "bytes": 1661
+    },
+    {
+      "name": "character-tile-selected",
+      "file": "Assets/_Game/UI/LightTheme/character-tile-selected.png",
+      "width": 128,
+      "height": 128,
+      "border": 28,
+      "bytes": 2561
+    },
+    {
+      "name": "navigation",
+      "file": "Assets/_Game/UI/LightTheme/navigation.png",
+      "width": 128,
+      "height": 128,
+      "border": 28,
+      "bytes": 1932
+    },
+    {
+      "name": "wardrobe-tile",
+      "file": "Assets/_Game/UI/LightTheme/wardrobe-tile.png",
+      "width": 128,
+      "height": 128,
+      "border": 28,
+      "bytes": 2202
+    },
+    {
+      "name": "divider",
+      "file": "Assets/_Game/UI/LightTheme/divider.png",
+      "width": 128,
+      "height": 16,
+      "border": 0,
+      "bytes": 307
+    },
+    {
+      "name": "sparkle",
+      "file": "Assets/_Game/UI/LightTheme/sparkle.png",
+      "width": 32,
+      "height": 32,
+      "border": 0,
+      "bytes": 491
+    },
+    {
+      "name": "heart",
+      "file": "Assets/_Game/UI/LightTheme/heart.png",
+      "width": 32,
+      "height": 32,
+      "border": 0,
+      "bytes": 620
+    },
+    {
+      "name": "selection-dot",
+      "file": "Assets/_Game/UI/LightTheme/selection-dot.png",
+      "width": 32,
+      "height": 32,
+      "border": 0,
+      "bytes": 670
+    },
+    {
+      "name": "character-outline",
+      "file": "Assets/_Game/UI/LightTheme/character-outline.png",
+      "width": 128,
+      "height": 128,
+      "border": 28,
+      "bytes": 2138
+    },
+    {
+      "name": "page-dot",
+      "file": "Assets/_Game/UI/LightTheme/page-dot.png",
+      "width": 16,
+      "height": 16,
+      "border": 0,
+      "bytes": 241
+    },
+    {
+      "name": "avatar-silhouette",
+      "file": "Assets/_Game/UI/LightTheme/avatar-silhouette.png",
+      "width": 96,
+      "height": 96,
+      "border": 0,
+      "bytes": 1204
+    },
+    {
+      "name": "character-shadow",
+      "file": "Assets/_Game/UI/LightTheme/character-shadow.png",
+      "width": 128,
+      "height": 32,
+      "border": 0,
+      "bytes": 911
+    },
+    {
+      "name": "phone-frame",
+      "file": "Assets/_Game/UI/LightTheme/phone-frame.png",
+      "width": 320,
+      "height": 576,
+      "border": 0,
+      "bytes": 3267
+    },
+    {
+      "name": "title-plaque",
+      "file": "Assets/_Game/UI/LightTheme/title-plaque.png",
+      "width": 320,
+      "height": 80,
+      "border": 0,
+      "bytes": 1453
+    },
+    {
+      "name": "icon-face",
+      "file": "Assets/_Game/UI/LightTheme/icon-face.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1314
+    },
+    {
+      "name": "icon-clothes",
+      "file": "Assets/_Game/UI/LightTheme/icon-clothes.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1047
+    },
+    {
+      "name": "icon-hair",
+      "file": "Assets/_Game/UI/LightTheme/icon-hair.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1954
+    },
+    {
+      "name": "icon-hat",
+      "file": "Assets/_Game/UI/LightTheme/icon-hat.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1712
+    },
+    {
+      "name": "icon-pants",
+      "file": "Assets/_Game/UI/LightTheme/icon-pants.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1257
+    },
+    {
+      "name": "icon-props",
+      "file": "Assets/_Game/UI/LightTheme/icon-props.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1255
+    },
+    {
+      "name": "icon-view",
+      "file": "Assets/_Game/UI/LightTheme/icon-view.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1060
+    },
+    {
+      "name": "icon-studio",
+      "file": "Assets/_Game/UI/LightTheme/icon-studio.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 707
+    },
+    {
+      "name": "icon-background",
+      "file": "Assets/_Game/UI/LightTheme/icon-background.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1280
+    },
+    {
+      "name": "icon-settings",
+      "file": "Assets/_Game/UI/LightTheme/icon-settings.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 893
+    },
+    {
+      "name": "icon-lock",
+      "file": "Assets/_Game/UI/LightTheme/icon-lock.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 910
+    },
+    {
+      "name": "icon-close",
+      "file": "Assets/_Game/UI/LightTheme/icon-close.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 344
+    },
+    {
+      "name": "icon-check",
+      "file": "Assets/_Game/UI/LightTheme/icon-check.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 764
+    },
+    {
+      "name": "icon-next",
+      "file": "Assets/_Game/UI/LightTheme/icon-next.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 243
+    },
+    {
+      "name": "icon-previous",
+      "file": "Assets/_Game/UI/LightTheme/icon-previous.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 231
+    },
+    {
+      "name": "icon-undo",
+      "file": "Assets/_Game/UI/LightTheme/icon-undo.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1034
+    },
+    {
+      "name": "icon-redo",
+      "file": "Assets/_Game/UI/LightTheme/icon-redo.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1052
+    },
+    {
+      "name": "icon-camera",
+      "file": "Assets/_Game/UI/LightTheme/icon-camera.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 813
+    },
+    {
+      "name": "icon-wifi",
+      "file": "Assets/_Game/UI/LightTheme/icon-wifi.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1211
+    },
+    {
+      "name": "icon-battery",
+      "file": "Assets/_Game/UI/LightTheme/icon-battery.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 466
+    },
+    {
+      "name": "icon-noads",
+      "file": "Assets/_Game/UI/LightTheme/icon-noads.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1229
+    },
+    {
+      "name": "icon-color",
+      "file": "Assets/_Game/UI/LightTheme/icon-color.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1808
+    },
+    {
+      "name": "category-face",
+      "file": "Assets/_Game/UI/LightTheme/category-face.png",
+      "width": 128,
+      "height": 128,
+      "border": 0,
+      "bytes": 3302
+    },
+    {
+      "name": "category-clothes",
+      "file": "Assets/_Game/UI/LightTheme/category-clothes.png",
+      "width": 128,
+      "height": 128,
+      "border": 0,
+      "bytes": 3486
+    },
+    {
+      "name": "category-hair",
+      "file": "Assets/_Game/UI/LightTheme/category-hair.png",
+      "width": 128,
+      "height": 128,
+      "border": 0,
+      "bytes": 3658
+    },
+    {
+      "name": "category-hat",
+      "file": "Assets/_Game/UI/LightTheme/category-hat.png",
+      "width": 128,
+      "height": 128,
+      "border": 0,
+      "bytes": 3408
+    },
+    {
+      "name": "category-pants",
+      "file": "Assets/_Game/UI/LightTheme/category-pants.png",
+      "width": 128,
+      "height": 128,
+      "border": 0,
+      "bytes": 3448
+    },
+    {
+      "name": "category-props",
+      "file": "Assets/_Game/UI/LightTheme/category-props.png",
+      "width": 128,
+      "height": 128,
+      "border": 0,
+      "bytes": 3482
+    },
+    {
+      "name": "nav-view",
+      "file": "Assets/_Game/UI/LightTheme/nav-view.png",
+      "width": 320,
+      "height": 80,
+      "border": 0,
+      "bytes": 2929
+    },
+    {
+      "name": "nav-studio",
+      "file": "Assets/_Game/UI/LightTheme/nav-studio.png",
+      "width": 320,
+      "height": 80,
+      "border": 0,
+      "bytes": 2490
+    },
+    {
+      "name": "nav-background",
+      "file": "Assets/_Game/UI/LightTheme/nav-background.png",
+      "width": 320,
+      "height": 80,
+      "border": 0,
+      "bytes": 2582
+    },
+    {
+      "name": "nav-settings",
+      "file": "Assets/_Game/UI/LightTheme/nav-settings.png",
+      "width": 320,
+      "height": 80,
+      "border": 0,
+      "bytes": 2670
+    },
+    {
+      "name": "nav-camera",
+      "file": "Assets/_Game/UI/LightTheme/nav-camera.png",
+      "width": 256,
+      "height": 128,
+      "border": 0,
+      "bytes": 2913
+    },
+    {
+      "name": "nav-noads",
+      "file": "Assets/_Game/UI/LightTheme/nav-noads.png",
+      "width": 256,
+      "height": 128,
+      "border": 0,
+      "bytes": 2830
+    },
+    {
+      "name": "arrow-next-button",
+      "file": "Assets/_Game/UI/LightTheme/arrow-next-button.png",
+      "width": 96,
+      "height": 96,
+      "border": 0,
+      "bytes": 2215
+    },
+    {
+      "name": "arrow-previous-button",
+      "file": "Assets/_Game/UI/LightTheme/arrow-previous-button.png",
+      "width": 96,
+      "height": 96,
+      "border": 0,
+      "bytes": 2212
+    },
+    {
+      "name": "close-button",
+      "file": "Assets/_Game/UI/LightTheme/close-button.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1917
+    },
+    {
+      "name": "courtyard-background",
+      "file": "Assets/_Game/UI/LightTheme/courtyard-background.jpg",
+      "width": 1024,
+      "height": 576,
+      "border": 0,
+      "bytes": 76967
+    },
+    {
+      "name": "characters-panel",
+      "file": "Assets/_Game/UI/LightTheme/characters-panel.png",
+      "width": 128,
+      "height": 128,
+      "border": 28,
+      "bytes": 2273
+    },
+    {
+      "name": "locked-avatar",
+      "file": "Assets/_Game/UI/LightTheme/locked-avatar.png",
+      "width": 96,
+      "height": 112,
+      "border": 0,
+      "bytes": 1470
+    },
+    {
+      "name": "character-lock",
+      "file": "Assets/_Game/UI/LightTheme/character-lock.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1313
+    },
+    {
+      "name": "character-selection-badge",
+      "file": "Assets/_Game/UI/LightTheme/character-selection-badge.png",
+      "width": 32,
+      "height": 32,
+      "border": 0,
+      "bytes": 931
+    },
+    {
+      "name": "mask-face",
+      "file": "Assets/_Game/UI/LightTheme/mask-face.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1314
+    },
+    {
+      "name": "mask-clothes",
+      "file": "Assets/_Game/UI/LightTheme/mask-clothes.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1048
+    },
+    {
+      "name": "mask-hair",
+      "file": "Assets/_Game/UI/LightTheme/mask-hair.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1960
+    },
+    {
+      "name": "mask-hat",
+      "file": "Assets/_Game/UI/LightTheme/mask-hat.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1709
+    },
+    {
+      "name": "mask-pants",
+      "file": "Assets/_Game/UI/LightTheme/mask-pants.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1258
+    },
+    {
+      "name": "mask-props",
+      "file": "Assets/_Game/UI/LightTheme/mask-props.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 1255
+    },
+    {
+      "name": "mask-next",
+      "file": "Assets/_Game/UI/LightTheme/mask-next.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 243
+    },
+    {
+      "name": "mask-previous",
+      "file": "Assets/_Game/UI/LightTheme/mask-previous.png",
+      "width": 64,
+      "height": 64,
+      "border": 0,
+      "bytes": 231
+    },
+    {
+      "name": "mask-dot",
+      "file": "Assets/_Game/UI/LightTheme/mask-dot.png",
+      "width": 16,
+      "height": 16,
+      "border": 0,
+      "bytes": 241
+    },
+    {
+      "name": "mask-sparkle",
+      "file": "Assets/_Game/UI/LightTheme/mask-sparkle.png",
+      "width": 32,
+      "height": 32,
+      "border": 0,
+      "bytes": 492
+    }
+  ]
+}

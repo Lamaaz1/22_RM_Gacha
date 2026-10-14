@@ -1,0 +1,8 @@
+{
+  "tool": "Built-in ImageGen",
+  "reference": "reference.png",
+  "master": "background-master.png",
+  "gameAsset": "Assets/_Game/UI/LightTheme/courtyard-background.jpg",
+  "prompt": "Create a standalone 16:9 landscape environment background texture for a Unity cute anime dress-up game based on the pastel courtyard backdrop of the reference mockup. Output ONLY the scenery, covering the full image edge to edge. Remove all UI, panels, smartphone, buttons, text, icons, portraits, avatar, character, foreground shadow ellipse and any watermark. The center must remain empty and softly lit for a game character to stand there. Soft lavender and periwinkle sky, sparse tiny stars and dreamy clouds, pale cream/lilac terrace paving, graceful architectural arches framing the left and right edges, a delicate balcony in the midground, small pink flowers and muted mint leaves concentrated along edges. Match the soft polished anime 2D background illustration style and light lavender pink palette of the reference. Low visual clutter, medium detail only at edges, serene luminous mood. No people, no clothing, no lettering, no user interface. This is a clean reusable game BACKGROUND asset, not a screenshot.",
+  "uiAssets": "Recreated as editable SVG sources and small transparent PNGs; labels remain Unity Text where the existing hierarchy permits."
+}
