@@ -1,0 +1,95 @@
+{
+  "mode": "built-in image_gen",
+  "floorSafeArea": {
+    "x": [
+      0.2,
+      0.8
+    ],
+    "y": [
+      0.6,
+      1
+    ]
+  },
+  "assets": [
+    {
+      "id": 100,
+      "name": "moon-garden",
+      "file": "01-moon-garden.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-2e36137f-d88c-4e02-b0de-676b20dc5e45.png",
+      "prompt": "Use case: stylized-concept. Asset type: single landscape 16:9 background image for a 2D anime chibi gacha dress-up game, not a screenshot or UI. Polished clean anime game environment illustration, soft cel shading, clear shapes, charming pastel light, detailed but readable scenery, coherent perspective, no characters, animals, text, logos, borders or interface. Camera at chibi eye level facing a level ground plane. CRITICAL staging: bottom 42 percent is continuous empty walkable floor extending all the way to the bottom edge; center 60 percent width of this foreground must contain ONLY floor, absolutely no props, plants, furniture, pools, stairs, railings, patterns resembling objects or obstructions. Character feet will stand at x45%, y85%. Decorations confined to distant background above floor horizon or extreme left/right edges. Full bleed wide composition. Scene: An enchanted lavender moon garden courtyard at twilight, distant elegant arches and flowering wisteria along outer edges, luminous blue and pink sky, broad smooth pale lavender stone foreground, dreamy but balanced light.",
+      "bytes": 191284
+    },
+    {
+      "id": 101,
+      "name": "sakura-school",
+      "file": "02-sakura-school.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-dedd4bd6-eaee-48b8-8f03-e065d41cb007.png",
+      "prompt": "Use case: stylized-concept. Asset type: single landscape 16:9 background image for a 2D anime chibi gacha dress-up game, not a screenshot or UI. Polished clean anime game environment illustration, soft cel shading, clear shapes, charming pastel light, detailed but readable scenery, coherent perspective, no characters, animals, text, logos, borders or interface. Camera at chibi eye level facing a level ground plane. CRITICAL staging: bottom 42 percent is continuous empty walkable floor extending all the way to the bottom edge; center 60 percent width of this foreground must contain ONLY floor, absolutely no props, plants, furniture, pools, stairs, railings, patterns resembling objects or obstructions. Character feet will stand at x45%, y85%. Decorations confined to distant background above floor horizon or extreme left/right edges. Full bleed wide composition. Scene: A pink cherry blossom school courtyard in spring, school facade and sakura trees distant across upper half, soft blue sky, broad perfectly empty warm cream paving in foreground, gentle morning light.",
+      "bytes": 150299
+    },
+    {
+      "id": 102,
+      "name": "tropical-beach",
+      "file": "03-tropical-beach.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-2c26017f-21e5-472d-959c-b05ec1e2ca9d.png",
+      "prompt": "Use case: stylized-concept. Asset type: single landscape 16:9 background image for a 2D anime chibi gacha dress-up game, not a screenshot or UI. Polished clean anime game environment illustration, soft cel shading, clear shapes, charming pastel light, detailed but readable scenery, coherent perspective, no characters, animals, text, logos, borders or interface. Camera at chibi eye level facing a level ground plane. CRITICAL staging: bottom 42 percent is continuous empty walkable floor extending all the way to the bottom edge; center 60 percent width of this foreground must contain ONLY floor, absolutely no props, plants, furniture, pools, stairs, railings, patterns resembling objects or obstructions. Character feet will stand at x45%, y85%. Decorations confined to distant background above floor horizon or extreme left/right edges. Full bleed wide composition. Scene: A magical turquoise tropical beach, sea and distant islands across upper half, palm leaves framing only extreme upper corners, broad completely empty clean peach sand foreground, sunny soft light, no shells or rocks on sand.",
+      "bytes": 112658
+    },
+    {
+      "id": 103,
+      "name": "lavender-bedroom",
+      "file": "04-lavender-bedroom.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-52d8b698-9dfd-4c87-b71a-1515a67ccfc6.png",
+      "prompt": "Use case: stylized-concept. Asset type: single landscape 16:9 background image for a 2D anime chibi gacha dress-up game, not a screenshot or UI. Polished clean anime game environment illustration, soft cel shading, clear shapes, charming pastel light, detailed but readable scenery, coherent perspective, no characters, animals, text, logos, borders or interface. Camera at chibi eye level facing a level ground plane. CRITICAL staging: bottom 42 percent is continuous empty walkable floor extending all the way to the bottom edge; center 60 percent width of this foreground must contain ONLY floor, absolutely no props, plants, furniture, pools, stairs, railings, patterns resembling objects or obstructions. Character feet will stand at x45%, y85%. Decorations confined to distant background above floor horizon or extreme left/right edges. Full bleed wide composition. Scene: A cozy pastel bedroom dressing studio, lavender back wall with window and curtains, bed and vanity confined far left and far right distant wall, broad completely empty pale warm wood floor foreground, no rugs, no furniture crossing central space.",
+      "bytes": 116466
+    },
+    {
+      "id": 104,
+      "name": "mint-cafe",
+      "file": "05-mint-cafe.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-150a5131-eec2-41e9-9ca6-92763247aef3.png",
+      "prompt": "Use case: stylized-concept. Asset type: single landscape 16:9 background image for a 2D anime chibi gacha dress-up game, not a screenshot or UI. Polished clean anime game environment illustration, soft cel shading, clear shapes, charming pastel light, detailed but readable scenery, coherent perspective, no characters, animals, text, logos, borders or interface. Camera at chibi eye level facing a level ground plane. CRITICAL staging: bottom 42 percent is continuous empty walkable floor extending all the way to the bottom edge; center 60 percent width of this foreground must contain ONLY floor, absolutely no props, plants, furniture, pools, stairs, railings, patterns resembling objects or obstructions. Character feet will stand at x45%, y85%. Decorations confined to distant background above floor horizon or extreme left/right edges. Full bleed wide composition. Scene: A charming mint and peach cafe interior, cafe counter and pastry case along the far rear wall, chairs and small tables only far left and right against the wall, wide open empty honey oak floor in foreground, bright warm afternoon light.",
+      "bytes": 145211
+    },
+    {
+      "id": 105,
+      "name": "enchanted-forest",
+      "file": "06-enchanted-forest.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-fadd7ff5-c8b8-43c2-91d4-2d731e622d1d.png",
+      "prompt": "Use case: stylized-concept. Asset type: single landscape 16:9 background image for a 2D anime chibi gacha dress-up game, not a screenshot or UI. Polished clean anime game environment illustration, soft cel shading, clear shapes, charming pastel light, detailed but readable scenery, coherent perspective, no characters, animals, text, logos, borders or interface. Camera at chibi eye level facing a level ground plane. CRITICAL staging: bottom 42 percent is continuous empty walkable floor extending all the way to the bottom edge; center 60 percent width of this foreground must contain ONLY floor, absolutely no props, plants, furniture, pools, stairs, railings, patterns resembling objects or obstructions. Character feet will stand at x45%, y85%. Decorations confined to distant background above floor horizon or extreme left/right edges. Full bleed wide composition. Scene: A fantasy enchanted forest clearing, tall teal and lavender trees framing outer sides, distant glowing mushrooms and little stream only at far back, broad flat smooth empty moss-green earth foreground, no grass tufts or mushrooms in central foreground.",
+      "bytes": 178885
+    },
+    {
+      "id": 106,
+      "name": "sakura-shrine",
+      "file": "07-sakura-shrine.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-bd9e91a3-7390-42a1-9add-ea90c79b0cb1.png",
+      "prompt": "Use case: stylized-concept. Asset type: single landscape 16:9 background image for a 2D anime chibi gacha dress-up game, not a screenshot or UI. Polished clean anime game environment illustration, soft cel shading, clear shapes, charming pastel light, detailed but readable scenery, coherent perspective, no characters, animals, text, logos, borders or interface. Camera at chibi eye level facing a level ground plane. CRITICAL staging: bottom 42 percent is continuous empty walkable floor extending all the way to the bottom edge; center 60 percent width of this foreground must contain ONLY floor, absolutely no props, plants, furniture, pools, stairs, railings, patterns resembling objects or obstructions. Character feet will stand at x45%, y85%. Decorations confined to distant background above floor horizon or extreme left/right edges. Full bleed wide composition. Scene: A cherry blossom shrine courtyard, red torii gate distant at back center, pink flowering trees only around outer edges, blue spring sky, broad empty smooth pale grey stone paving foreground, no stairs or lanterns in foreground.",
+      "bytes": 173727
+    },
+    {
+      "id": 107,
+      "name": "city-rooftop",
+      "file": "08-city-rooftop.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-05a4c4cc-37e0-4b9a-b6b3-11d176a9f9d2.png",
+      "prompt": "Use case: stylized-concept. Asset type: single landscape 16:9 background image for a 2D anime chibi gacha dress-up game, not a screenshot or UI. Polished clean anime game environment illustration, soft cel shading, clear shapes, charming pastel light, detailed but readable scenery, coherent perspective, no characters, animals, text, logos, borders or interface. Camera at chibi eye level facing a level ground plane. CRITICAL staging: bottom 42 percent is continuous empty walkable floor extending all the way to the bottom edge; center 60 percent width of this foreground must contain ONLY floor, absolutely no props, plants, furniture, pools, stairs, railings, patterns resembling objects or obstructions. Character feet will stand at x45%, y85%. Decorations confined to distant background above floor horizon or extreme left/right edges. Full bleed wide composition. Scene: A dreamy rooftop terrace overlooking a pastel neon city at blue hour, glowing violet and cyan skyline beyond a distant low glass parapet in upper half, wide completely empty matte lavender tiled floor foreground, no furniture or plants in foreground.",
+      "bytes": 117734
+    },
+    {
+      "id": 108,
+      "name": "royal-ballroom",
+      "file": "09-royal-ballroom.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-d0adab21-4d21-473b-b8fe-e90f39c0f3c6.png",
+      "prompt": "Use case: stylized-concept. Asset type: single landscape 16:9 background image for a 2D anime chibi gacha dress-up game, not a screenshot or UI. Polished clean anime game environment illustration, soft cel shading, clear shapes, charming pastel light, detailed but readable scenery, coherent perspective, no characters, animals, text, logos, borders or interface. Camera at chibi eye level facing a level ground plane. CRITICAL staging: bottom 42 percent is continuous empty walkable floor extending all the way to the bottom edge; center 60 percent width of this foreground must contain ONLY floor, absolutely no props, plants, furniture, pools, stairs, railings, patterns resembling objects or obstructions. Character feet will stand at x45%, y85%. Decorations confined to distant background above floor horizon or extreme left/right edges. Full bleed wide composition. Scene: An elegant fairytale ballroom with high ivory arches, pale gold trim, lilac drapes and crystal chandeliers above, wide completely empty polished cream marble floor foreground, no furniture, no rugs, no stairs in foreground, soft pink daylight.",
+      "bytes": 145120
+    },
+    {
+      "id": 109,
+      "name": "star-stage",
+      "file": "10-star-stage.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-9a2bfa50-4e49-4c12-9133-9af65181fff0.png",
+      "prompt": "Use case: stylized-concept. Asset type: single landscape 16:9 background image for a 2D anime chibi gacha dress-up game, not a screenshot or UI. Polished clean anime game environment illustration, soft cel shading, clear shapes, charming pastel light, detailed but readable scenery, coherent perspective, no characters, animals, text, logos, borders or interface. Camera at chibi eye level facing a level ground plane. CRITICAL staging: bottom 42 percent is continuous empty walkable floor extending all the way to the bottom edge; center 60 percent width of this foreground must contain ONLY floor, absolutely no props, plants, furniture, pools, stairs, railings, patterns resembling objects or obstructions. Character feet will stand at x45%, y85%. Decorations confined to distant background above floor horizon or extreme left/right edges. Full bleed wide composition. Scene: A colorful anime music performance stage, distant back wall has abstract glowing star shapes and pastel cyan pink stage lights pointing up, rich violet curtains at far sides, broad completely empty smooth dark lavender stage floor foreground, no instruments, microphone stands, cables, people or raised platforms.",
+      "bytes": 118394
+    }
+  ]
+}

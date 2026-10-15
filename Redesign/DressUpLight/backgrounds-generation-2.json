@@ -1,0 +1,87 @@
+{
+  "mode": "built-in image_gen",
+  "reference": "backgrounds-reference-compact.png",
+  "composition": "Close scenery with floor in bottom 25–30%, clear small standing spot at x45% y85%.",
+  "assets": [
+    {
+      "id": 110,
+      "name": "cloud-pavilion",
+      "file": "11-cloud-pavilion.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-4e58f92c-d715-4c86-a60c-2f456270c923.png",
+      "prompt": "Use case: stylized-concept. Create ONE full-bleed 16:9 landscape 2D anime gacha dress-up game background, polished charming cel-shaded environment, pastel violet/pink/mint accents, clean linework, softly luminous light. Reference image is STYLE and COMPOSITION guidance only. Match its intimate scene framing: environment occupies upper 70-75%, with a modest foreground floor only bottom 25-30%; do NOT create a huge empty plaza or zoom out. Background architecture/objects relatively close and readable. Keep a small standing spot clear around x45% y85%: only floor there, no furniture or props crossing that spot. No characters, people, animals, text, watermarks, logos or UI. Single environment image, not a collage. Scene: A celestial garden pavilion above fluffy pink clouds, close ivory arches with lavender roses framing edges, distant floating islands and sparkling sky seen beyond a balustrade at y70%, shallow pale lilac mosaic terrace foreground.",
+      "bytes": 191658
+    },
+    {
+      "id": 111,
+      "name": "snow-village",
+      "file": "12-snow-village.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-e52b72af-0c01-4f4e-b9db-b0b924ce5ec9.png",
+      "prompt": "Use case: stylized-concept. Create ONE full-bleed 16:9 landscape 2D anime gacha dress-up game background, polished charming cel-shaded environment, pastel violet/pink/mint accents, clean linework, softly luminous light. Reference image is STYLE and COMPOSITION guidance only. Match its intimate scene framing: environment occupies upper 70-75%, with a modest foreground floor only bottom 25-30%; do NOT create a huge empty plaza or zoom out. Background architecture/objects relatively close and readable. Keep a small standing spot clear around x45% y85%: only floor there, no furniture or props crossing that spot. No characters, people, animals, text, watermarks, logos or UI. Single environment image, not a collage. Scene: A cozy winter village square at blue hour, nearby pastel timber houses with snowy rooftops, warm windows and fairy lights, fir branches at edges, small flat cleared snow-paved standing area in bottom quarter, magical softly falling snow, no snowman in foreground.",
+      "bytes": 202297
+    },
+    {
+      "id": 112,
+      "name": "greenhouse",
+      "file": "13-greenhouse.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-ad2de898-7bd8-47e9-acac-618a6cd7953a.png",
+      "prompt": "Use case: stylized-concept. Create ONE full-bleed 16:9 landscape 2D anime gacha dress-up game background, polished charming cel-shaded environment, pastel violet/pink/mint accents, clean linework, softly luminous light. Reference image is STYLE and COMPOSITION guidance only. Match its intimate scene framing: environment occupies upper 70-75%, with a modest foreground floor only bottom 25-30%; do NOT create a huge empty plaza or zoom out. Background architecture/objects relatively close and readable. Keep a small standing spot clear around x45% y85%: only floor there, no furniture or props crossing that spot. No characters, people, animals, text, watermarks, logos or UI. Single environment image, not a collage. Scene: An intimate glass conservatory with arched mint ironwork, lush ferns and pastel flowers on side shelves, a close glass back wall and garden view, slim ivory tiled foreground bottom quarter, plants surround the scene but central standing spot clear.",
+      "bytes": 242898
+    },
+    {
+      "id": 113,
+      "name": "library",
+      "file": "14-library.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-8b29e89e-6337-4b89-bb28-161bbbfaf1b2.png",
+      "prompt": "Use case: stylized-concept. Create ONE full-bleed 16:9 landscape 2D anime gacha dress-up game background, polished charming cel-shaded environment, pastel violet/pink/mint accents, clean linework, softly luminous light. Reference image is STYLE and COMPOSITION guidance only. Match its intimate scene framing: environment occupies upper 70-75%, with a modest foreground floor only bottom 25-30%; do NOT create a huge empty plaza or zoom out. Background architecture/objects relatively close and readable. Keep a small standing spot clear around x45% y85%: only floor there, no furniture or props crossing that spot. No characters, people, animals, text, watermarks, logos or UI. Single environment image, not a collage. Scene: An enchanting small library with close tall lilac bookshelves, rolling ladders at extreme sides, cozy central arched window and tiny hanging star ornaments, warm peach light, modest honey wood floor bottom quarter, no desks crossing standing spot.",
+      "bytes": 225890
+    },
+    {
+      "id": 114,
+      "name": "classroom",
+      "file": "15-classroom.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-23200dab-eb3b-4a26-a08b-8f77c5c12b92.png",
+      "prompt": "Use case: stylized-concept. Create ONE full-bleed 16:9 landscape 2D anime gacha dress-up game background, polished charming cel-shaded environment, pastel violet/pink/mint accents, clean linework, softly luminous light. Reference image is STYLE and COMPOSITION guidance only. Match its intimate scene framing: environment occupies upper 70-75%, with a modest foreground floor only bottom 25-30%; do NOT create a huge empty plaza or zoom out. Background architecture/objects relatively close and readable. Keep a small standing spot clear around x45% y85%: only floor there, no furniture or props crossing that spot. No characters, people, animals, text, watermarks, logos or UI. Single environment image, not a collage. Scene: A bright cozy anime classroom, close back wall with mint chalkboard WITHOUT WRITING, tall windows at left with cherry blossoms outside, desks confined at sides and back, modest warm wood floor in bottom quarter for standing, soft spring sunlight.",
+      "bytes": 170237
+    },
+    {
+      "id": 115,
+      "name": "aquarium",
+      "file": "16-aquarium.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-9b21cd06-3eaa-4375-94ff-ea45af9d73e0.png",
+      "prompt": "Use case: stylized-concept. Create ONE full-bleed 16:9 landscape 2D anime gacha dress-up game background, polished charming cel-shaded environment, pastel violet/pink/mint accents, clean linework, softly luminous light. Reference image is STYLE and COMPOSITION guidance only. Match its intimate scene framing: environment occupies upper 70-75%, with a modest foreground floor only bottom 25-30%; do NOT create a huge empty plaza or zoom out. Background architecture/objects relatively close and readable. Keep a small standing spot clear around x45% y85%: only floor there, no furniture or props crossing that spot. No characters, people, animals, text, watermarks, logos or UI. Single environment image, not a collage. Scene: A dreamy aquarium gallery, immense close curved glass tank fills upper three quarters with turquoise water, coral gardens and gentle light rays but NO fish or animals, lilac stone frame, modest smooth navy-to-lavender tiled walkway bottom quarter.",
+      "bytes": 192719
+    },
+    {
+      "id": 116,
+      "name": "flower-shop",
+      "file": "17-flower-shop.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-c3b80a94-c0c6-4ed1-8e80-65884e02325a.png",
+      "prompt": "Use case: stylized-concept. Create ONE full-bleed 16:9 landscape 2D anime gacha dress-up game background, polished charming cel-shaded environment, pastel violet/pink/mint accents, clean linework, softly luminous light. Reference image is STYLE and COMPOSITION guidance only. Match its intimate scene framing: environment occupies upper 70-75%, with a modest foreground floor only bottom 25-30%; do NOT create a huge empty plaza or zoom out. Background architecture/objects relatively close and readable. Keep a small standing spot clear around x45% y85%: only floor there, no furniture or props crossing that spot. No characters, people, animals, text, watermarks, logos or UI. Single environment image, not a collage. Scene: A charming pastel florist boutique with nearby mint door, arched shop window, bouquets arranged only along outer edges and rear counter, soft pink striped awning overhead, modest cream cobblestone foreground bottom quarter.",
+      "bytes": 216879
+    },
+    {
+      "id": 117,
+      "name": "rainy-street",
+      "file": "18-rainy-street.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-4e9cb573-e209-48f7-a7f8-7b538c55288d.png",
+      "prompt": "Use case: stylized-concept. Create ONE full-bleed 16:9 landscape 2D anime gacha dress-up game background, polished charming cel-shaded environment, pastel violet/pink/mint accents, clean linework, softly luminous light. Reference image is STYLE and COMPOSITION guidance only. Match its intimate scene framing: environment occupies upper 70-75%, with a modest foreground floor only bottom 25-30%; do NOT create a huge empty plaza or zoom out. Background architecture/objects relatively close and readable. Keep a small standing spot clear around x45% y85%: only floor there, no furniture or props crossing that spot. No characters, people, animals, text, watermarks, logos or UI. Single environment image, not a collage. Scene: A cozy anime city pedestrian street after rain at dusk, nearby pastel storefronts and warm glowing windows without lettering, lavender evening sky, lanterns above, shallow reflective lilac pavement bottom quarter, no vehicles or props in standing spot.",
+      "bytes": 250528
+    },
+    {
+      "id": 118,
+      "name": "candy-garden",
+      "file": "19-candy-garden.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-094ae960-c969-4de0-bc38-5776b57b7805.png",
+      "prompt": "Use case: stylized-concept. Create ONE full-bleed 16:9 landscape 2D anime gacha dress-up game background, polished charming cel-shaded environment, pastel violet/pink/mint accents, clean linework, softly luminous light. Reference image is STYLE and COMPOSITION guidance only. Match its intimate scene framing: environment occupies upper 70-75%, with a modest foreground floor only bottom 25-30%; do NOT create a huge empty plaza or zoom out. Background architecture/objects relatively close and readable. Keep a small standing spot clear around x45% y85%: only floor there, no furniture or props crossing that spot. No characters, people, animals, text, watermarks, logos or UI. Single environment image, not a collage. Scene: A whimsical pastel candy garden, nearby pink gazebo, candy-colored sculpted hedges and oversized rose-shaped decorations only in middle distance or sides, dreamy blue sky, shallow blush pink stone path bottom quarter, no candy props on standing spot.",
+      "bytes": 217458
+    },
+    {
+      "id": 119,
+      "name": "ocean-lounge",
+      "file": "20-ocean-lounge.jpg",
+      "source": "C:\\Users\\desig\\.codex\\generated_images\\01a13a3b-201d-7360-8894-00b2c8dc7a89\\exec-35f39baa-6ae2-4c8b-bfc4-3b29c0792bab.png",
+      "prompt": "Use case: stylized-concept. Create ONE full-bleed 16:9 landscape 2D anime gacha dress-up game background, polished charming cel-shaded environment, pastel violet/pink/mint accents, clean linework, softly luminous light. Reference image is STYLE and COMPOSITION guidance only. Match its intimate scene framing: environment occupies upper 70-75%, with a modest foreground floor only bottom 25-30%; do NOT create a huge empty plaza or zoom out. Background architecture/objects relatively close and readable. Keep a small standing spot clear around x45% y85%: only floor there, no furniture or props crossing that spot. No characters, people, animals, text, watermarks, logos or UI. Single environment image, not a collage. Scene: An intimate seaside resort lounge terrace, close ivory columns and billowing sheer lilac curtains, turquoise ocean framed beyond nearby railing at y70%, seating only at extreme sides, shallow pale polished wood floor bottom quarter, soft golden sunset.",
+      "bytes": 184133
+    }
+  ]
+}

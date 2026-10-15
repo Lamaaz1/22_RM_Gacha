@@ -71,6 +71,13 @@ public static class GachaLightThemeTools
         }
         var roots = scene.GetRootGameObjects();
         var manager = roots.SelectMany(r => r.GetComponentsInChildren<UiMnager>(true)).FirstOrDefault();
+        if (manager != null)
+        {
+            foreach (var item in manager.BackgroundsP.GetComponentsInChildren<BackgroundBtn>(true))
+                if (!manager.BackgrounButtons.Contains(item)) manager.BackgrounButtons.Add(item);
+            foreach (var item in manager.BackgroundsPLSCP.GetComponentsInChildren<BackgroundBtn>(true))
+                if (!manager.BackgrounButtonsLSCP.Contains(item)) manager.BackgrounButtonsLSCP.Add(item);
+        }
         var orientation = roots.SelectMany(r => r.GetComponentsInChildren<OrientationUI>(true)).FirstOrDefault();
         if (manager != null && orientation != null)
         {
@@ -127,6 +134,19 @@ public static class GachaLightThemeTools
 
     private static void ConfigureImports()
     {
+        const string backgroundsFolder = "Assets/_Game/Art/Backgrounds/EmptyFloor";
+        if (AssetDatabase.IsValidFolder(backgroundsFolder))
+            foreach (var guid in AssetDatabase.FindAssets("t:Texture2D", new[] { backgroundsFolder }))
+            {
+                var importer = (TextureImporter)AssetImporter.GetAtPath(AssetDatabase.GUIDToAssetPath(guid));
+                importer.textureType = TextureImporterType.Sprite; importer.spriteImportMode = SpriteImportMode.Single;
+                importer.mipmapEnabled = false; importer.isReadable = false; importer.maxTextureSize = 2048;
+                importer.npotScale = TextureImporterNPOTScale.None; importer.wrapMode = TextureWrapMode.Clamp;
+                importer.textureCompression = TextureImporterCompression.Compressed;
+                var platform = importer.GetPlatformTextureSettings("Android"); platform.name = "Android"; platform.overridden = true;
+                platform.maxTextureSize = 2048; platform.format = TextureImporterFormat.ASTC_6x6; importer.SetPlatformTextureSettings(platform);
+                importer.SaveAndReimport();
+            }
         foreach (string guid in AssetDatabase.FindAssets("t:Texture2D", new[] { Kit.TrimEnd('/'),
             "Assets/drive-download-20251021T154352Z-1-001", "Assets/drive-download-20251022T085704Z-1-001" }))
         {
@@ -287,7 +307,21 @@ public static class GachaLightThemeTools
         var gridRect = (RectTransform)grid; gridRect.anchorMin = new Vector2(.055f, .17f); gridRect.anchorMax = new Vector2(.945f, .785f); gridRect.offsetMin = gridRect.offsetMax = Vector2.zero;
         var gridImage = grid.GetComponent<Image>(); if (gridImage != null) gridImage.enabled = false;
         var controller = panel.GetComponent<LightBackgroundPanel>(); if (controller == null) controller = panel.gameObject.AddComponent<LightBackgroundPanel>();
-        controller.items = grid.GetComponentsInChildren<BackgroundBtn>(true).OrderBy(b => b.i).ToArray();
+        const string scenesFolder = "Assets/_Game/Art/Backgrounds/EmptyFloor";
+        var scenePaths = AssetDatabase.IsValidFolder(scenesFolder) ? AssetDatabase.FindAssets("t:Sprite", new[] { scenesFolder }).Select(AssetDatabase.GUIDToAssetPath).OrderBy(p => p, StringComparer.Ordinal).ToArray() : Array.Empty<string>();
+        for (int i = 0; i < scenePaths.Length; i++)
+        {
+            string itemName = "Light Scene " + Path.GetFileNameWithoutExtension(scenePaths[i]);
+            var existing = grid.Find(itemName);
+            var obj = existing != null ? existing.gameObject : new GameObject(itemName, typeof(RectTransform), typeof(CanvasRenderer), typeof(Image), typeof(Button), typeof(BackgroundBtn));
+            obj.transform.SetParent(grid, false); obj.layer = panel.gameObject.layer;
+            obj.GetComponent<Image>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(scenePaths[i]);
+            var item = obj.GetComponent<BackgroundBtn>(); item.i = 100 + i; item.btn = obj.GetComponent<Button>();
+        }
+        var allItems = grid.GetComponentsInChildren<BackgroundBtn>(true);
+        if (scenePaths.Length > 0)
+            foreach (var legacy in allItems.Where(b => !b.name.StartsWith("Light Scene "))) legacy.gameObject.SetActive(false);
+        controller.items = allItems.Where(b => scenePaths.Length == 0 || b.name.StartsWith("Light Scene ")).OrderBy(b => b.i).ToArray();
         controller.cards = new Image[controller.items.Length]; controller.badges = new GameObject[controller.items.Length];
         controller.normalCard = Sprite("button"); controller.selectedCard = Sprite("button-selected");
         for (int i = 0; i < controller.items.Length; i++)
@@ -718,10 +752,15 @@ public static class GachaLightThemeTools
         var originalPortrait = portraitBackground.sprite; var originalLandscape = landscapeBackground.sprite;
         try
         {
-            var sample = backgrounds.items[Math.Min(2, backgrounds.items.Length - 1)]; sample.OnclickM(); backgrounds.Refresh();
-            if (PlayerPrefs.GetInt("Background") != sample.i || portraitBackground.sprite != sample.GetComponent<Image>().sprite || landscapeBackground.sprite != sample.GetComponent<Image>().sprite)
-                throw new Exception("Background selection/save failed.");
-            if (!backgrounds.badges[Array.IndexOf(backgrounds.items, sample)].activeSelf) throw new Exception("Background selection marker failed.");
+            foreach (var sample in backgrounds.items)
+            {
+                sample.OnclickM(); backgrounds.Refresh();
+                if (PlayerPrefs.GetInt("Background") != sample.i || portraitBackground.sprite != sample.GetComponent<Image>().sprite || landscapeBackground.sprite != sample.GetComponent<Image>().sprite)
+                    throw new Exception("Background selection/save failed.");
+                if (!backgrounds.badges[Array.IndexOf(backgrounds.items, sample)].activeSelf) throw new Exception("Background selection marker failed.");
+                ui.LoadBackground();
+                if (landscapeBackground.sprite != sample.GetComponent<Image>().sprite) throw new Exception("Background reload failed: " + sample.i);
+            }
         }
         finally
         {
@@ -731,6 +770,13 @@ public static class GachaLightThemeTools
         Canvas.ForceUpdateCanvases(); camera.Render();
         texture.ReadPixels(new Rect(0, 0, 1280, 720), 0, 0); texture.Apply();
         File.WriteAllBytes("Redesign/DressUpLight/unity-backgrounds-preview.png", texture.EncodeToPNG());
+        if (backgrounds.PageCount > 1)
+        {
+            backgrounds.ChangePage(1);
+            Canvas.ForceUpdateCanvases(); camera.Render();
+            texture.ReadPixels(new Rect(0, 0, 1280, 720), 0, 0); texture.Apply();
+            File.WriteAllBytes("Redesign/DressUpLight/unity-backgrounds-page2-preview.png", texture.EncodeToPNG());
+        }
         Debug.Log("BACKGROUNDS_SELECTION_PAGING_OK");
         RenderTexture.active = null; camera.targetTexture = null;
         UnityEngine.Object.DestroyImmediate(texture); UnityEngine.Object.DestroyImmediate(rt);
