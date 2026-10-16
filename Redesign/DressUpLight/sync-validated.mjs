@@ -19,7 +19,7 @@ for(const entry of map) await fs.copyFile(path.join(snapshot,entry.file+'.meta')
 for(const file of await walk(snapshot+'/Assets/_Game/UI/LightTheme')){
  const relative=path.relative(snapshot,file);await fs.copyFile(file,relative);
 }
-for(const name of ['GachaDressUpLight.unitypackage','unity-preview.png','unity-color-preview.png','unity-settings-preview.png','unity-backgrounds-preview.png','unity-backgrounds-page2-preview.png','unity-hair-preview.png']){
+for(const name of ['GachaDressUpLight.unitypackage','unity-preview.png','unity-color-preview.png','unity-settings-preview.png','unity-backgrounds-preview.png','unity-backgrounds-page2-preview.png','unity-hair-preview.png','unity-face-preview.png']){
  try{await fs.copyFile(snapshot+'/Redesign/DressUpLight/'+name,root+'/'+name);}catch(error){if(error.code!=='ENOENT')throw error;}
 }
 const backgrounds='Assets/_Game/Art/Backgrounds/EmptyFloor';

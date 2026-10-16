@@ -440,9 +440,18 @@ public static class GachaLightThemeTools
         controller.normalCard = Sprite("button"); controller.selectedCard = Sprite("button-selected");
         Label(parent, "Light Theme Heading", "Customize", new Vector2(.18f, .875f), new Vector2(.82f, .95f), 36, Ink);
         for (int i = 0; i < 2; i++) Widget(parent, "Light Customize Sparkle " + i, new Vector2(i == 0 ? .12f : .82f, .895f), new Vector2(i == 0 ? .18f : .88f, .925f), "mask-sparkle").color = new Color(.73f, .60f, .91f);
-        Widget(parent, "Light Wardrobe Divider", new Vector2(.09f, .395f), new Vector2(.91f, .435f), "divider");
+        Widget(parent, "Light Wardrobe Divider", new Vector2(.09f, .395f), new Vector2(.91f, .435f), "divider").gameObject.SetActive(false);
         controller.partButton = Widget(parent, "Light Wardrobe Part", new Vector2(.085f, .392f), new Vector2(.40f, .438f), null, true).GetComponent<Button>();
         controller.partLabel = TextWidget(controller.partButton.transform, "Label", "Tops ›", Vector2.zero, Vector2.one, 17);
+        controller.partButton.gameObject.SetActive(false);
+        var tabs = Widget(parent, "Light Wardrobe Parts", new Vector2(.08f, .397f), new Vector2(.85f, .452f), null);
+        controller.partTabs = new Button[4]; controller.partTabLabels = new Text[4]; controller.partTabImages = new Image[4];
+        for (int i = 0; i < 4; i++)
+        {
+            var tab = Widget(tabs.transform, "Part Tab " + i, Vector2.zero, Vector2.one, "button", true);
+            controller.partTabs[i] = tab.GetComponent<Button>(); controller.partTabImages[i] = tab;
+            controller.partTabLabels[i] = TextWidget(tab.transform, "Label", "Part", new Vector2(.03f, .04f), new Vector2(.97f, .96f), 22);
+        }
         controller.clearButton = Widget(parent, "Light Clear Part", new Vector2(.865f, .395f), new Vector2(.935f, .435f), "icon-close", true).GetComponent<Button>();
         controller.itemButtons = new Button[3]; controller.itemImages = new Image[3]; controller.itemSelections = new GameObject[3];
         for (int i = 0; i < 3; i++)
@@ -719,6 +728,11 @@ public static class GachaLightThemeTools
         texture.ReadPixels(new Rect(0, 0, 1280, 720), 0, 0); texture.Apply();
         File.WriteAllBytes("Redesign/DressUpLight/unity-hair-preview.png", texture.EncodeToPNG());
         customize.PreparePreview();
+        customize.categories[0].GetComponent<Button>().onClick.Invoke();
+        Canvas.ForceUpdateCanvases(); camera.Render();
+        texture.ReadPixels(new Rect(0, 0, 1280, 720), 0, 0); texture.Apply();
+        File.WriteAllBytes("Redesign/DressUpLight/unity-face-preview.png", texture.EncodeToPNG());
+        customize.PreparePreview();
         customize.colorButton.onClick.Invoke();
         Canvas.ForceUpdateCanvases();
         camera.Render();
@@ -792,12 +806,27 @@ public static class GachaLightThemeTools
         var save = roots.SelectMany(r => r.GetComponentsInChildren<SavePanel>(true)).First();
         PanelChoicesManager.Instance = manager; SavePanel.instance = save; UiMnager.instance = ui;
         controller.InitializeForValidation();
+        var reachableParts = new HashSet<ChildrenParts>();
         foreach (BodyParts category in controller.categories)
         {
             category.SendMessage("Start");
             category.GetComponent<Button>().onClick.Invoke();
             if (controller.CurrentPart != category.CategoryParts[0]) throw new Exception("Category click targets another controller: " + category.name);
             if (controller.ItemCount == 0) throw new Exception("No items loaded for " + category.name);
+            for (int part = 0; part < category.CategoryParts.Count; part++)
+            {
+                if (!controller.partTabs[part].gameObject.activeSelf) throw new Exception("Hidden part tab: " + category.CategoryParts[part]);
+                controller.partTabs[part].onClick.Invoke();
+                if (controller.CurrentPart != category.CategoryParts[part] || controller.ItemCount == 0)
+                    throw new Exception("Part tab failed: " + category.CategoryParts[part]);
+                if (!IsActiveWithin(controller.partTabs[part].transform, controller.transform)) throw new Exception("Visible part row is not the bound row.");
+                for (int tab = 0; tab < category.CategoryParts.Count; tab++)
+                {
+                    string expected = category.CategoryParts[tab] == ChildrenParts.TShirts ? "Tops" : category.CategoryParts[tab] == ChildrenParts.Ear ? "Ears" : category.CategoryParts[tab] == ChildrenParts.HairInFront ? "Front hair" : category.CategoryParts[tab] == ChildrenParts.atTheBack ? "Back hair" : category.CategoryParts[tab].ToString();
+                    if (controller.partTabs[tab].GetComponentInChildren<Text>().text != expected) throw new Exception("Visible tab label is stale: " + expected);
+                }
+                reachableParts.Add(controller.CurrentPart);
+            }
             string expectedPath = "Sprites/" + controller.CurrentPart;
             foreach (var preview in controller.itemImages.Where(image => image.enabled))
                 if (!AssetDatabase.GetAssetPath(preview.sprite).Contains("/" + expectedPath + "/") && !AssetDatabase.GetAssetPath(preview.sprite).Contains("/" + expectedPath + "Icons/"))
@@ -807,6 +836,7 @@ public static class GachaLightThemeTools
             controller.ChangePage(100);
             if (controller.CurrentPage != (controller.ItemCount - 1) / 3) throw new Exception("Paging overflow.");
         }
+        if (reachableParts.Count != Enum.GetValues(typeof(ChildrenParts)).Length) throw new Exception("Some body parts are inaccessible.");
         controller.PreparePreview();
         string key = "Player0" + controller.CurrentPart;
         bool existed = PlayerPrefs.HasKey(key); string prior = PlayerPrefs.GetString(key);
@@ -822,12 +852,12 @@ public static class GachaLightThemeTools
             if (controller.categories.Any(category => category.gameObject.activeSelf) || controller.colorLabel.text != "Back") throw new Exception("The inline color view did not replace the wardrobe.");
             controller.colorButton.onClick.Invoke();
             if (manager.ActivePanel().colorPicker.gameObject.activeSelf || controller.categories.Any(category => !category.gameObject.activeSelf) || controller.colorLabel.text != "Color") throw new Exception("Back did not restore the wardrobe.");
-            foreach (string name in new[] { "Light Wardrobe Card 0", "Light Wardrobe Card 1", "Light Wardrobe Card 2", "Light Wardrobe Part" })
+            foreach (string name in new[] { "Light Wardrobe Card 0", "Light Wardrobe Card 1", "Light Wardrobe Card 2", "Light Wardrobe Parts" })
                 if (controller.transform.Cast<Transform>().Count(child => child.name == name && child.gameObject.activeSelf) != 1)
                     throw new Exception("Back reactivated duplicate wardrobe elements: " + name);
             controller.clearButton.onClick.Invoke();
             if (image.sprite.name != "0" || controller.colorButton.interactable) throw new Exception("Clearing a part did not disable color editing.");
-            controller.partButton.onClick.Invoke();
+            controller.partTabs[1].onClick.Invoke();
             if (controller.CurrentPart != ChildrenParts.Jackets) throw new Exception("The secondary clothes part is inaccessible.");
             Debug.Log("CUSTOMIZE_INTERACTIONS_OK: six categories, paging, applying/saving clothing, color target, clear, secondary part.");
         }

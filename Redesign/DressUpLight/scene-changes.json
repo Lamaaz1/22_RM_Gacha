@@ -2,13 +2,7 @@
   {
     "file": "Assets\\_Game\\Prefabs\\tst\\PlayPanel.prefab",
     "backup": "Redesign/DressUpLight/originals/Assets___Game__Prefabs__tst__PlayPanel.prefab",
-    "originalSHA256": "1e3465cd9560006e28ee221ebd173613511be191b4bf7c27e3c740d61320961c",
-    "newSHA256": "479d189aef5d1d4ef632625bef2ec36193330074b86983b70ec51b48c2bc1475"
-  },
-  {
-    "file": "Assets/_Game/Scenes/_Game.unity",
-    "backup": "Redesign/DressUpLight/originals/Assets___Game__Scenes___Game.unity",
-    "originalSHA256": "568638605e14307f1771414cd37a2aaa96165d8f16ecb5599c92eee95b6cbddd",
-    "newSHA256": "60e8a242e7d85f3a8311ce4841bf6ac7ce9e9baa271b9d36d2d504c0ca5f5be3"
+    "originalSHA256": "0e7cf488b1eae91ce682e37122a0ce3d29cf23a9aab41349928e8b2f8f8d02ed",
+    "newSHA256": "e3c2049370cf7846ca38aedc36e32ec871f262cf57b6b6756744abe253a087fb"
   }
 ]

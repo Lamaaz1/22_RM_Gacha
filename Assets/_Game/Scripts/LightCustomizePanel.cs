@@ -16,6 +16,9 @@ public sealed class LightCustomizePanel : MonoBehaviour
     public GameObject[] itemSelections;
     public Button previousButton, nextButton, colorButton, partButton, clearButton;
     public Text partLabel;
+    public Button[] partTabs;
+    public Text[] partTabLabels;
+    public Image[] partTabImages;
     public Image[] pageDots;
     public RectTransform colorHost;
     public Text colorLabel;
@@ -50,6 +53,7 @@ public sealed class LightCustomizePanel : MonoBehaviour
     {
         if (bound) return;
         bound = true;
+        ResolvePartTabs();
         for (int i = 0; i < itemButtons.Length; i++)
         {
             int slot = i;
@@ -58,8 +62,44 @@ public sealed class LightCustomizePanel : MonoBehaviour
         previousButton.onClick.AddListener(() => ChangePage(-1));
         nextButton.onClick.AddListener(() => ChangePage(1));
         partButton.onClick.AddListener(NextPart);
+        if (partTabs != null)
+            for (int i = 0; i < partTabs.Length; i++)
+            {
+                int index = i;
+                partTabs[i].onClick.AddListener(() => SelectPart(index));
+            }
         clearButton.onClick.AddListener(ClearPart);
         colorButton.onClick.AddListener(OpenColor);
+    }
+
+    private void ResolvePartTabs()
+    {
+        // Scene overrides can leave an older row beside the inherited prefab row.
+        Transform row = transform.Cast<Transform>().FirstOrDefault(t => t.name == "Light Wardrobe Parts" && t.gameObject.activeSelf)
+            ?? transform.Find("Light Wardrobe Parts");
+        if (row == null) return;
+        foreach (Transform sibling in transform)
+            if (sibling.name == row.name) sibling.gameObject.SetActive(sibling == row);
+        var buttons = new List<Button>();
+        var labels = new List<Text>();
+        var images = new List<Image>();
+        for (int i = 0; i < 4; i++)
+        {
+            Transform tab = row.Find("Part Tab " + i);
+            if (tab == null) continue;
+            foreach (Transform sibling in row)
+                if (sibling.name == tab.name) sibling.gameObject.SetActive(sibling == tab);
+            Transform label = tab.Find("Label");
+            if (label == null) continue;
+            foreach (Transform sibling in tab)
+                if (sibling.name == "Label") sibling.gameObject.SetActive(sibling == label);
+            buttons.Add(tab.GetComponent<Button>());
+            labels.Add(label.GetComponent<Text>());
+            images.Add(tab.GetComponent<Image>());
+        }
+        partTabs = buttons.ToArray(); partTabLabels = labels.ToArray(); partTabImages = images.ToArray();
+        wardrobeElements = transform.Cast<Transform>().Where(t => t.gameObject.activeSelf &&
+            (t.name.StartsWith("Light Wardrobe") || t.name == "Light Clear Part")).Select(t => t.gameObject).ToArray();
     }
 
     private void LateUpdate()
@@ -87,6 +127,14 @@ public sealed class LightCustomizePanel : MonoBehaviour
     {
         if (parts.Count < 2) return;
         partIndex = (partIndex + 1) % parts.Count;
+        LoadPart();
+    }
+
+    public void SelectPart(int index)
+    {
+        if (index < 0 || index >= parts.Count) return;
+        if (editingColor) CloseColorView();
+        partIndex = index;
         LoadPart();
     }
 
@@ -236,6 +284,21 @@ public sealed class LightCustomizePanel : MonoBehaviour
         colorButton.interactable = editingColor || current != null && current.sprite != null && current.sprite.name != "0";
         partButton.interactable = parts.Count > 1;
         partLabel.text = Friendly(CurrentPart) + (parts.Count > 1 ? "  ›" : "");
+        if (partTabs != null)
+            for (int i = 0; i < partTabs.Length; i++)
+            {
+                bool available = i < parts.Count;
+                partTabs[i].gameObject.SetActive(available);
+                if (!available) continue;
+                float width = 1f / Mathf.Min(parts.Count, partTabs.Length);
+                var tabRect = (RectTransform)partTabs[i].transform;
+                tabRect.anchorMin = new Vector2(i * width + .008f, 0);
+                tabRect.anchorMax = new Vector2((i + 1) * width - .008f, 1);
+                tabRect.offsetMin = tabRect.offsetMax = Vector2.zero;
+                partTabLabels[i].text = Friendly(parts[i]);
+                partTabLabels[i].color = i == partIndex ? Color.white : new Color(.208f, .157f, .31f);
+                partTabImages[i].sprite = i == partIndex ? selectedCard : normalCard;
+            }
         for (int i = 0; i < pageDots.Length; i++)
             pageDots[i].color = i == 1 ? new Color(.94f, .65f, .79f) : new Color(.70f, .59f, .89f, i == 0 && page == 0 || i == 2 && !nextButton.interactable ? .4f : 1f);
     }
@@ -247,6 +310,7 @@ public sealed class LightCustomizePanel : MonoBehaviour
             case ChildrenParts.TShirts: return "Tops";
             case ChildrenParts.HairInFront: return "Front hair";
             case ChildrenParts.atTheBack: return "Back hair";
+            case ChildrenParts.Ear: return "Ears";
             default: return part.ToString();
         }
     }
