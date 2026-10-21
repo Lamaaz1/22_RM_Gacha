@@ -274,10 +274,8 @@ public class DressUpScript : MonoBehaviour
                     c.a = 1;
                 }
 
-
                 child.GetComponent<Image>().color = c;
                 child.GetComponent<Image>().sprite = s;
-
                 //Debug.Log(ColorIndex);
                 RestorePartColor(child.GetComponent<Image>(), s, PartName);
             }
@@ -353,7 +351,7 @@ public class DressUpScript : MonoBehaviour
         //}
 
     }
-     public bool Lndscap;
+    public bool Lndscap;
     public void LandscapSwitch()
     {
         //if(!Lndscap)
