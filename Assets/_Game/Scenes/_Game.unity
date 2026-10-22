@@ -5620,6 +5620,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -128.95758
       objectReference: {fileID: 0}
+    - target: {fileID: 7956232798942307113, guid: f3371babc5d7c3644bfa771e342ddacf, type: 3}
+      propertyPath: disabledColorParts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956232798942307113, guid: f3371babc5d7c3644bfa771e342ddacf, type: 3}
+      propertyPath: 'disabledColorParts.Array.data[1]'
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956232798942307113, guid: f3371babc5d7c3644bfa771e342ddacf, type: 3}
+      propertyPath: 'disabledColorParts.Array.data[2]'
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7991134273565320510, guid: f3371babc5d7c3644bfa771e342ddacf, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -37891,6 +37903,7 @@ MonoBehaviour:
   - {fileID: 710774120}
   - {fileID: 1553439158}
   - {fileID: 378686347}
+  disabledColorParts: 00000000
 --- !u!1 &1070290896
 GameObject:
   m_ObjectHideFlags: 0

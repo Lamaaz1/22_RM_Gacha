@@ -25,6 +25,9 @@ public sealed class LightCustomizePanel : MonoBehaviour
     public Image colorIcon, colorChevron;
     public Sprite colorWheelIcon, backIcon;
     public GameObject[] wardrobeElements;
+    [Header("Color availability")]
+    [Tooltip("Parts where the Color button is disabled. Add or remove parts to control recoloring per section.")]
+    public List<ChildrenParts> disabledColorParts = new List<ChildrenParts> { ChildrenParts.Eyes };
     private bool editingColor;
     private readonly List<GameObject> visibleWardrobe = new List<GameObject>();
 
@@ -193,6 +196,7 @@ public sealed class LightCustomizePanel : MonoBehaviour
     public void OpenColor()
     {
         if (editingColor) { CloseColorView(); return; }
+        if (!CanColorCurrentPart()) return;
         var dress = DressUpScript.instance;
         var manager = PanelChoicesManager.Instance;
         var current = PartImage();
@@ -249,6 +253,11 @@ public sealed class LightCustomizePanel : MonoBehaviour
 
     private void OnDisable() { CloseColorView(); }
 
+    private bool CanColorCurrentPart()
+    {
+        return parts.Count > 0 && (disabledColorParts == null || !disabledColorParts.Contains(CurrentPart));
+    }
+
     private void RefreshCategories()
     {
         for (int i = 0; i < categories.Length; i++)
@@ -281,7 +290,7 @@ public sealed class LightCustomizePanel : MonoBehaviour
         previousButton.interactable = page > 0;
         nextButton.interactable = (page + 1) * 3 < items.Length;
         clearButton.interactable = noneSprite != null;
-        colorButton.interactable = editingColor || current != null && current.sprite != null && current.sprite.name != "0";
+        colorButton.interactable = editingColor || CanColorCurrentPart() && current != null && current.sprite != null && current.sprite.name != "0";
         partButton.interactable = parts.Count > 1;
         partLabel.text = Friendly(CurrentPart) + (parts.Count > 1 ? "  ›" : "");
         if (partTabs != null)
