@@ -131,6 +131,7 @@ public class DressUpScript : MonoBehaviour
     
     public void DressUp(Sprite s, string PartName )
     { 
+        if (s == null) return;
             foreach (Transform child in ActivdPlayer.transform)
             {
                 if (child.name == PartName)
@@ -209,6 +210,7 @@ public class DressUpScript : MonoBehaviour
     }
     public void DressUpp(Sprite s, string PartName)
     {
+        if (s == null) return;
         foreach (Transform child in ActivdPlayer.transform)
         {
             if (child.name == PartName)
@@ -296,6 +298,7 @@ public class DressUpScript : MonoBehaviour
     Image CIC;
     public void ChangeColor(string PartName,out Image CharacterPart,out Image CharacterPartPnl, out Image CharacterIconVd)
     {
+        C = CI = CIC = null;
               
         foreach (Transform child in ActivdPlayer.transform)
         {

@@ -10,7 +10,8 @@ public enum ChildrenParts
     HairInFront,atTheBack,Tail,
     Caps,Glasses,
     Skirts,Shoes,
-    Toys
+    Toys,
+    Body,Blush,Nose
 }
 public class BodyParts : MonoBehaviour
 {

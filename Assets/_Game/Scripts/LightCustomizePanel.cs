@@ -86,10 +86,10 @@ public sealed class LightCustomizePanel : MonoBehaviour
         var buttons = new List<Button>();
         var labels = new List<Text>();
         var images = new List<Image>();
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; ; i++)
         {
             Transform tab = row.Find("Part Tab " + i);
-            if (tab == null) continue;
+            if (tab == null) break;
             foreach (Transform sibling in row)
                 if (sibling.name == tab.name) sibling.gameObject.SetActive(sibling == tab);
             Transform label = tab.Find("Label");
@@ -293,16 +293,28 @@ public sealed class LightCustomizePanel : MonoBehaviour
         colorButton.interactable = editingColor || CanColorCurrentPart() && current != null && current.sprite != null && current.sprite.name != "0";
         partButton.interactable = parts.Count > 1;
         partLabel.text = Friendly(CurrentPart) + (parts.Count > 1 ? "  ›" : "");
+        if (partTabs != null && partTabs.Length > 0)
+        {
+            var row = (RectTransform)partTabs[0].transform.parent;
+            Vector2 min = row.anchorMin;
+            min.y = parts.Count > 4 ? .382f : .397f;
+            row.anchorMin = min;
+        }
         if (partTabs != null)
             for (int i = 0; i < partTabs.Length; i++)
             {
                 bool available = i < parts.Count;
                 partTabs[i].gameObject.SetActive(available);
                 if (!available) continue;
-                float width = 1f / Mathf.Min(parts.Count, partTabs.Length);
+                int count = Mathf.Min(parts.Count, partTabs.Length);
+                int columns = count > 4 ? Mathf.CeilToInt(count / 2f) : count;
+                int rows = Mathf.CeilToInt(count / (float)columns);
+                float width = 1f / columns;
+                float height = 1f / rows;
                 var tabRect = (RectTransform)partTabs[i].transform;
-                tabRect.anchorMin = new Vector2(i * width + .008f, 0);
-                tabRect.anchorMax = new Vector2((i + 1) * width - .008f, 1);
+                int column = i % columns, rowIndex = i / columns;
+                tabRect.anchorMin = new Vector2(column * width + .008f, 1f - (rowIndex + 1) * height + .02f);
+                tabRect.anchorMax = new Vector2((column + 1) * width - .008f, 1f - rowIndex * height - .02f);
                 tabRect.offsetMin = tabRect.offsetMax = Vector2.zero;
                 partTabLabels[i].text = Friendly(parts[i]);
                 partTabLabels[i].color = i == partIndex ? Color.white : new Color(.208f, .157f, .31f);

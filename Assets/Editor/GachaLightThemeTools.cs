@@ -426,6 +426,12 @@ public static class GachaLightThemeTools
             if (part == null) part = parts.FirstOrDefault(p => p.GetComponent<Image>() != null && p.GetComponent<Image>().sprite != null && p.GetComponent<Image>().sprite.name == "category-" + keys[i]);
             if (part == null) throw new Exception("Category button missing: " + partName);
             controller.categories[i] = part;
+            if (i == 0)
+            {
+                if (!part.CategoryParts.Contains(ChildrenParts.Body)) part.CategoryParts.Add(ChildrenParts.Body);
+                if (!part.CategoryParts.Contains(ChildrenParts.Blush)) part.CategoryParts.Add(ChildrenParts.Blush);
+                if (!part.CategoryParts.Contains(ChildrenParts.Nose)) part.CategoryParts.Add(ChildrenParts.Nose);
+            }
             var rect = (RectTransform)part.transform;
             float x = .085f + (i % 3) * .285f, top = i < 3 ? .845f : .645f;
             rect.anchorMin = new Vector2(x, top - .18f); rect.anchorMax = new Vector2(x + .25f, top);
@@ -445,8 +451,8 @@ public static class GachaLightThemeTools
         controller.partLabel = TextWidget(controller.partButton.transform, "Label", "Tops ›", Vector2.zero, Vector2.one, 17);
         controller.partButton.gameObject.SetActive(false);
         var tabs = Widget(parent, "Light Wardrobe Parts", new Vector2(.08f, .397f), new Vector2(.85f, .452f), null);
-        controller.partTabs = new Button[4]; controller.partTabLabels = new Text[4]; controller.partTabImages = new Image[4];
-        for (int i = 0; i < 4; i++)
+        controller.partTabs = new Button[7]; controller.partTabLabels = new Text[7]; controller.partTabImages = new Image[7];
+        for (int i = 0; i < 7; i++)
         {
             var tab = Widget(tabs.transform, "Part Tab " + i, Vector2.zero, Vector2.one, "button", true);
             controller.partTabs[i] = tab.GetComponent<Button>(); controller.partTabImages[i] = tab;
@@ -817,7 +823,8 @@ public static class GachaLightThemeTools
             {
                 if (!controller.partTabs[part].gameObject.activeSelf) throw new Exception("Hidden part tab: " + category.CategoryParts[part]);
                 controller.partTabs[part].onClick.Invoke();
-                if (controller.CurrentPart != category.CategoryParts[part] || controller.ItemCount == 0)
+                bool awaitingSprites = controller.CurrentPart == ChildrenParts.Body || controller.CurrentPart == ChildrenParts.Blush || controller.CurrentPart == ChildrenParts.Nose;
+                if (controller.CurrentPart != category.CategoryParts[part] || controller.ItemCount == 0 && !awaitingSprites)
                     throw new Exception("Part tab failed: " + category.CategoryParts[part]);
                 if (!IsActiveWithin(controller.partTabs[part].transform, controller.transform)) throw new Exception("Visible part row is not the bound row.");
                 for (int tab = 0; tab < category.CategoryParts.Count; tab++)
@@ -834,7 +841,7 @@ public static class GachaLightThemeTools
             controller.ChangePage(-100);
             if (controller.CurrentPage != 0) throw new Exception("Paging underflow.");
             controller.ChangePage(100);
-            if (controller.CurrentPage != (controller.ItemCount - 1) / 3) throw new Exception("Paging overflow.");
+            if (controller.CurrentPage != Math.Max(0, (controller.ItemCount - 1) / 3)) throw new Exception("Paging overflow.");
         }
         if (reachableParts.Count != Enum.GetValues(typeof(ChildrenParts)).Length) throw new Exception("Some body parts are inaccessible.");
         controller.PreparePreview();
