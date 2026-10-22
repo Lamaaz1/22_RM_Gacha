@@ -293,12 +293,22 @@ public sealed class LightCustomizePanel : MonoBehaviour
         colorButton.interactable = editingColor || CanColorCurrentPart() && current != null && current.sprite != null && current.sprite.name != "0";
         partButton.interactable = parts.Count > 1;
         partLabel.text = Friendly(CurrentPart) + (parts.Count > 1 ? "  ›" : "");
+        bool multipleRows = parts.Count > 4;
         if (partTabs != null && partTabs.Length > 0)
         {
             var row = (RectTransform)partTabs[0].transform.parent;
             Vector2 min = row.anchorMin;
-            min.y = parts.Count > 4 ? .382f : .397f;
+            min.y = multipleRows ? .345f : .397f;
             row.anchorMin = min;
+        }
+        for (int i = 0; i < itemButtons.Length; i++)
+        {
+            var card = (RectTransform)itemButtons[i].transform;
+            Vector2 min = card.anchorMin, max = card.anchorMax;
+            min.y = multipleRows ? .195f : .205f;
+            max.y = multipleRows ? .325f : .375f;
+            card.anchorMin = min;
+            card.anchorMax = max;
         }
         if (partTabs != null)
             for (int i = 0; i < partTabs.Length; i++)
@@ -313,10 +323,16 @@ public sealed class LightCustomizePanel : MonoBehaviour
                 float height = 1f / rows;
                 var tabRect = (RectTransform)partTabs[i].transform;
                 int column = i % columns, rowIndex = i / columns;
-                tabRect.anchorMin = new Vector2(column * width + .008f, 1f - (rowIndex + 1) * height + .02f);
-                tabRect.anchorMax = new Vector2((column + 1) * width - .008f, 1f - rowIndex * height - .02f);
+                int rowCount = Mathf.Min(columns, count - rowIndex * columns);
+                float rowOffset = (columns - rowCount) * width * .5f;
+                float gapY = rows > 1 ? .045f : .02f;
+                tabRect.anchorMin = new Vector2(rowOffset + column * width + .012f, 1f - (rowIndex + 1) * height + gapY);
+                tabRect.anchorMax = new Vector2(rowOffset + (column + 1) * width - .012f, 1f - rowIndex * height - gapY);
                 tabRect.offsetMin = tabRect.offsetMax = Vector2.zero;
                 partTabLabels[i].text = Friendly(parts[i]);
+                partTabLabels[i].resizeTextForBestFit = true;
+                partTabLabels[i].resizeTextMinSize = 14;
+                partTabLabels[i].resizeTextMaxSize = 22;
                 partTabLabels[i].color = i == partIndex ? Color.white : new Color(.208f, .157f, .31f);
                 partTabImages[i].sprite = i == partIndex ? selectedCard : normalCard;
             }
