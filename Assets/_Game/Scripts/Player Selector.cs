@@ -37,7 +37,9 @@ public class PlayerSelector : MonoBehaviour
     [SerializeField] Transform parentObject;
     public void SelectPlayerByIndex(int childIndex)
     {
-        if (childIndex >= 0 && childIndex < parentObject.childCount)
+        var dress = DressUpScript.instance;
+        if (dress == null || !dress.IsCharacterUnlocked(childIndex)) return;
+        if (parentObject != null && childIndex >= 0 && childIndex < parentObject.childCount)
         {
             parentObject.GetChild(childIndex).gameObject.SetActive(true);
             selectedPlayer = parentObject.GetChild(childIndex).gameObject;

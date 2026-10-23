@@ -47,9 +47,11 @@ public class CharacterButtonScrpt : MonoBehaviour
     public void Open()
     {
         Lock.SetActive(false);
+        if (DressUpScript.instance != null) DressUpScript.instance.RefreshCharacterLocks();
     }
     public void Close()
     {
         Lock.SetActive(true);
+        if (DressUpScript.instance != null) DressUpScript.instance.RefreshCharacterLocks();
     }
 }

@@ -191,7 +191,16 @@ public sealed class LightCustomizePanel : MonoBehaviour
         Refresh();
     }
 
-    private void ClearPart() { ApplyItem(noneSprite); }
+    private void ClearPart()
+    {
+        if (CurrentPart == ChildrenParts.Body)
+        {
+            if (DressUpScript.instance != null) DressUpScript.instance.ResetBodyToDefault();
+            Refresh();
+            return;
+        }
+        ApplyItem(noneSprite);
+    }
 
     public void OpenColor()
     {
@@ -289,7 +298,7 @@ public sealed class LightCustomizePanel : MonoBehaviour
         }
         previousButton.interactable = page > 0;
         nextButton.interactable = (page + 1) * 3 < items.Length;
-        clearButton.interactable = noneSprite != null;
+        clearButton.interactable = CurrentPart == ChildrenParts.Body ? items.Any(sprite => sprite.name == "1") : noneSprite != null;
         colorButton.interactable = editingColor || CanColorCurrentPart() && current != null && current.sprite != null && current.sprite.name != "0";
         partButton.interactable = parts.Count > 1;
         partLabel.text = Friendly(CurrentPart) + (parts.Count > 1 ? "  ›" : "");

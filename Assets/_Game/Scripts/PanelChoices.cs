@@ -65,6 +65,7 @@ public class PanelChoices : MonoBehaviour
         for (int i = startIndex; i < endIndex; i++)
         {
             GameObject PartObj = Instantiate(childPart, Grid);
+            SoundManager.BindButtons(PartObj);
 
             PartObj.GetComponent<ChoicesPrefabs>().Remplir(partsC[i]);
             Debug.Log(currentPage+ partsC[i].ToString());
@@ -93,6 +94,7 @@ public class PanelChoices : MonoBehaviour
         for (int i = startIndex; i < endIndex; i++)
         {
             GameObject PartObj = Instantiate(childPart, Grid);
+            SoundManager.BindButtons(PartObj);
 
             PartObj.GetComponent<ChoicesPrefabs>().Remplir(partsC[i]);
             Debug.Log(currentPage + partsC[i].ToString());
@@ -143,6 +145,8 @@ public class PanelChoices : MonoBehaviour
             CharacterSelectedImg.color = a;
             if (CharacterSelectedImgPnl != null) CharacterSelectedImgPnl.color = a;
             if (CharacterIconImgPnl != null) CharacterIconImgPnl.color = a;
+            if (DressUpScript.instance != null)
+                DressUpScript.instance.SyncCharacterPreviews(DressUpScript.instance.ActivePlayerIndex);
         }
       
 

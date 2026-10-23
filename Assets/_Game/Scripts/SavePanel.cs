@@ -27,6 +27,7 @@ public class SavePanel : MonoBehaviour
     }
     public void SaveCharacter(int Index, ChildrenParts PartName, string ItemName )
     {
+        if (PartName == ChildrenParts.Body && ItemName == "0") ItemName = "1";
         PlayerPrefs.SetString("Player"+Index+PartName.ToString(), ItemName );
         Debug.Log("saaave");
         Debug.Log("Player" + Index + PartName.ToString()+ PlayerPrefs.GetString("Player" + Index + PartName.ToString()));
@@ -75,6 +76,13 @@ public class SavePanel : MonoBehaviour
                 return palette.ColoratItem(index);
         }
         return fallback;
+    }
+
+    public void ClearPartColor(int playerIndex, ChildrenParts partName)
+    {
+        string key = "Player" + playerIndex + partName;
+        PlayerPrefs.DeleteKey(key + "RGBA");
+        PlayerPrefs.DeleteKey(key + "Color");
     }
     public string LoadCharacter(int PlayerIndex, ChildrenParts PartName , out string SpriteName)
     {

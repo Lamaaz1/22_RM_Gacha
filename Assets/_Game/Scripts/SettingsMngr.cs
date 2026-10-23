@@ -113,7 +113,9 @@ public class SettingsMngr : MonoBehaviour
             ActiveImgSLdscp.SetActive(false);
             DesactiveImgSLdscp.SetActive(true);
             PlayerPrefs.SetInt("Sound", 1);
-            ActiveS = false; return;
+            ActiveS = false;
+            SoundManager.RefreshSoundSetting();
+            return;
         }
         else
         {
@@ -137,8 +139,7 @@ public class SettingsMngr : MonoBehaviour
     }
     public void PlaySFX(AudioClip clip)
     {
-        if (ActiveS && clip != null)
-            sfxSource.PlayOneShot(clip);
+        SoundManager.PlayEffect(clip);
     }
     public void TakeScreenshot()
     {
@@ -148,7 +149,7 @@ public class SettingsMngr : MonoBehaviour
     public void OnecLICK()
     {
         // Your screenshot logic here...
-        PlaySFX(clickSound);
+        SoundManager.PlayClick();
     }
     // Update is called once per frame
     void Update()
