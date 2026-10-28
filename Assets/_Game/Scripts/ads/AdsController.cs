@@ -128,4 +128,5 @@ public class AdsController : MonoBehaviour
     {
         PlayerPrefs.SetInt("RemoveAds", 1);
     }
+   
 }
