@@ -40,7 +40,15 @@ public partial class RemoteContentController
         public bool enabled = true;
         // Normal sequence loading panels only. Missing legacy values use 5 seconds.
         public float durationSeconds = 5f;
+        // Optional platform destinations used only by the rate_us panel.
+        public RemoteStoreUrlsData storeUrls;
         public RemoteStaticElementData[] elements;
+    }
+    [Serializable]
+    public class RemoteStoreUrlsData
+    {
+        public string android;
+        public string ios;
     }
     [Serializable]
     public class RemoteStaticElementData
@@ -58,11 +66,16 @@ public partial class RemoteContentController
         public bool? raycastTarget;
         // Optional: none, interstitial or rewarded. Missing preserves legacy behavior (none).
         public string adAction;
+        // Optional HTTPS destination for supported game-promotion buttons.
+        public string url;
     }
 
     private bool staticStartupComplete;
     private bool staticSequenceStarted;
+    private bool staticNavigationReady;
     private bool staticSequenceFinished;
+
+    public bool IsStaticPanelSequenceFinished => staticSequenceFinished;
     private readonly HashSet<string> staticWarnings = new HashSet<string>();
     private readonly Dictionary<RemoteStaticPanel.Element, Sprite> staticOriginalSprites = new Dictionary<RemoteStaticPanel.Element, Sprite>();
     private readonly Dictionary<RemoteStaticPanel, RemoteStaticPanelData> deferredStaticPanels = new Dictionary<RemoteStaticPanel, RemoteStaticPanelData>();
@@ -188,6 +201,13 @@ public partial class RemoteContentController
             );
         }
 
+        // Late remote instances must not expose scene defaults during offline
+        // startup, a skipped flow, or when the active config does not include them.
+        if (IsStaticSequencePanelId(panel.panelId) &&
+            (waitingForInternet || staticSequenceFinished ||
+             (staticStartupComplete && StaticData(activeConfig, panel.panelId) == null)))
+            SetStaticPanelVisible(panel, false);
+
         // A late-created panel should not wait for the next network refresh.
         // Apply the already validated active config immediately.
         if (
@@ -215,6 +235,8 @@ public partial class RemoteContentController
                         panel,
                         data
                     );
+                    if (IsStaticSequencePanelId(panel.panelId) && !IsRemoteStaticPanelEligible(panel, data))
+                        SetStaticPanelVisible(panel, false);
                 }
             }
         }
@@ -364,7 +386,13 @@ public partial class RemoteContentController
                 continue;
             }
 
-            GameObject cloneObject = Instantiate(source.gameObject, source.transform.parent);
+            // Prevent OnEnable from running with the template ID or capturing a transient entrance state.
+            var staging = new GameObject("Inactive ScenePilot Clone");
+            staging.SetActive(false);
+            GameObject cloneObject = Instantiate(source.gameObject, staging.transform, false);
+            cloneObject.SetActive(false);
+            cloneObject.transform.SetParent(source.transform.parent, false);
+            Destroy(staging);
             cloneObject.name = data.id;
             RemoteStaticPanel clone = cloneObject.GetComponent<RemoteStaticPanel>();
             if (clone == null)
@@ -465,6 +493,7 @@ public partial class RemoteContentController
             if (string.Equals(StaticTemplateId(p.id), "loading", StringComparison.OrdinalIgnoreCase) &&
                 (p.durationSeconds < 0.1f || p.durationSeconds > 3600f))
             { error = p.id + ": durationSeconds must be between 0.1 and 3600."; return false; }
+            if (!ValidateStaticStoreUrls(p, out error)) return false;
             if (p.elements == null) continue;
             var keys = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             foreach (var e in p.elements)
@@ -474,6 +503,7 @@ public partial class RemoteContentController
                 if (e.overrideColor && (string.IsNullOrEmpty(e.color) || !Regex.IsMatch(e.color, "^#[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$") || !ColorUtility.TryParseHtmlString(e.color, out unused))) { error = p.id + "/" + e.key + ": use #RRGGBB or #RRGGBBAA."; return false; }
                 if (!ValidateStaticPresentation(e, out error)) { error = p.id + "/" + e.key + ": " + error; return false; }
                 if (!StaticAdActionValid(e.adAction)) { error = p.id + "/" + e.key + ": invalid adAction; use none, interstitial or rewarded."; return false; }
+                if (!ValidateStaticElementUrl(p.id, e, out error)) return false;
                 if (e.image == null) continue;
                 Uri uri;
                 if (!string.Equals(e.image.key, e.key, StringComparison.OrdinalIgnoreCase) || e.image.version < 1 || e.image.size < 0 || !Uri.TryCreate(e.image.url, UriKind.Absolute, out uri) || (uri.Scheme != "http" && uri.Scheme != "https")) { error = p.id + "/" + e.key + ": invalid image metadata."; return false; }
@@ -482,13 +512,147 @@ public partial class RemoteContentController
         }
         return true;
     }
+
+    private static bool ValidateStaticStoreUrls(RemoteStaticPanelData panel, out string error)
+    {
+        error = null;
+        if (panel == null || panel.storeUrls == null)
+            return true;
+
+        if (!string.Equals(StaticTemplateId(panel.id), "rate_us", StringComparison.OrdinalIgnoreCase))
+        {
+            error = panel.id + ": storeUrls is supported only by rate_us.";
+            return false;
+        }
+
+        if (!StaticHttpsUrlValid(panel.storeUrls.android) || !StaticHttpsUrlValid(panel.storeUrls.ios))
+        {
+            error = panel.id + ": storeUrls must be blank or absolute HTTPS URLs.";
+            return false;
+        }
+
+        return true;
+    }
+
+    private static bool ValidateStaticElementUrl(string panelId, RemoteStaticElementData element, out string error)
+    {
+        error = null;
+        if (element == null || string.IsNullOrWhiteSpace(element.url))
+            return true;
+
+        if (!StaticUrlActionAllowed(panelId, element.key))
+        {
+            error = panelId + "/" + element.key + ": URL actions are not supported on this element.";
+            return false;
+        }
+
+        if (!StaticHttpsUrlValid(element.url))
+        {
+            error = panelId + "/" + element.key + ": URL must be an absolute HTTPS URL.";
+            return false;
+        }
+
+        return true;
+    }
+
+    private static bool StaticHttpsUrlValid(string value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+            return true;
+
+        Uri uri;
+        return Uri.TryCreate(value.Trim(), UriKind.Absolute, out uri) &&
+               string.Equals(uri.Scheme, Uri.UriSchemeHttps, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static bool StaticUrlActionAllowed(string panelId, string elementKey)
+    {
+        string templateId = StaticTemplateId(panelId);
+        if (string.Equals(templateId, "more_games", StringComparison.OrdinalIgnoreCase))
+            return Regex.IsMatch(elementKey ?? string.Empty, "^game_[1-6]$", RegexOptions.IgnoreCase);
+        return string.Equals(templateId, "play_other_game", StringComparison.OrdinalIgnoreCase) &&
+               string.Equals(elementKey, "play_button", StringComparison.OrdinalIgnoreCase);
+    }
     private string StaticImagePath(string panel, RemoteImageData image)
     {
-        // Separate namespace; immutable URL/hash identity prevents overwriting older active assets.
+        // Static panels share immutable files by content/source identity. Panel id
+        // and element key intentionally do not participate, so two panels that
+        // reference the same background create one download job and one disk file.
+        string sha256 = image != null && !string.IsNullOrWhiteSpace(image.sha256)
+            ? image.sha256.Trim().ToLowerInvariant()
+            : string.Empty;
+
+        string identity = !string.IsNullOrEmpty(sha256)
+            ? "sha256|" + sha256 + "|" + image.size
+            : "source|" + (image.url ?? string.Empty).Trim() + "|" + image.size + "|v" + Mathf.Max(1, image.version);
+
+        string hash;
+        using (var sha = SHA256.Create())
+            hash = BitConverter.ToString(sha.ComputeHash(Encoding.UTF8.GetBytes(identity))).Replace("-", "").ToLowerInvariant();
+
+        return Path.Combine(CacheRoot, "shared_static_images", hash + ".img");
+    }
+
+    private string LegacyStaticImagePath(string panel, RemoteImageData image)
+    {
+        // Path used by earlier ScenePilot versions. Retained only so an existing
+        // valid download can be promoted into the shared cache without networking.
         string identity = image.url + "|" + image.sha256 + "|" + image.size;
         string hash;
-        using (var sha = SHA256.Create()) hash = BitConverter.ToString(sha.ComputeHash(Encoding.UTF8.GetBytes(identity))).Replace("-", "").ToLowerInvariant();
-        return Path.Combine(CacheRoot, "static_panels", panel.ToLowerInvariant(), image.key.ToLowerInvariant(), "v" + image.version + "_" + hash + ".img");
+        using (var sha = SHA256.Create())
+            hash = BitConverter.ToString(sha.ComputeHash(Encoding.UTF8.GetBytes(identity))).Replace("-", "").ToLowerInvariant();
+
+        return Path.Combine(
+            CacheRoot,
+            "static_panels",
+            panel.ToLowerInvariant(),
+            image.key.ToLowerInvariant(),
+            "v" + image.version + "_" + hash + ".img"
+        );
+    }
+
+    private string ResolveStaticImagePath(string panel, RemoteImageData image)
+    {
+        string sharedPath = StaticImagePath(panel, image);
+        if (IsCachedFileValid(sharedPath, image))
+            return sharedPath;
+
+        string legacyPath = LegacyStaticImagePath(panel, image);
+        if (!IsCachedFileValid(legacyPath, image))
+            return sharedPath;
+
+        string migrationTemp = sharedPath + ".migrate.part";
+        try
+        {
+            string folder = Path.GetDirectoryName(sharedPath);
+            if (!Directory.Exists(folder))
+                Directory.CreateDirectory(folder);
+
+            TryDeleteFile(migrationTemp);
+            File.Copy(legacyPath, migrationTemp, true);
+
+            string validationError;
+            if (ValidateFile(migrationTemp, image, out validationError) &&
+                PromoteTempFile(migrationTemp, sharedPath) &&
+                IsCachedFileValid(sharedPath, image))
+            {
+                return sharedPath;
+            }
+
+            TryDeleteFile(migrationTemp);
+        }
+        catch (Exception exception)
+        {
+            TryDeleteFile(migrationTemp);
+            StaticWarning(
+                panel + "/" + image.key +
+                ": could not migrate the legacy cached image; continuing to use it. " +
+                exception.Message
+            );
+        }
+
+        // Migration failure must never discard or hide an already-valid image.
+        return legacyPath;
     }
     private bool StaticImageConflict(RemoteStaticPanel owner, RemoteStaticPanel.Element element)
     {
@@ -512,8 +676,13 @@ public partial class RemoteContentController
         {
             var data = StaticElement(StaticData(config, p.panelId), e.key);
             if (!e.allowImage || e.targetImage == null || data == null || data.image == null || StaticImageConflict(p, e)) continue;
-            string path = StaticImagePath(p.panelId, data.image);
-            if (!paths.Add(path) || IsCachedFileValid(path, data.image)) continue;
+            string path = ResolveStaticImagePath(p.panelId, data.image);
+            if (IsCachedFileValid(path, data.image)) continue;
+
+            // ResolveStaticImagePath returns the shared path when no usable file
+            // exists. The shared path therefore makes this a content-level dedupe.
+            path = StaticImagePath(p.panelId, data.image);
+            if (!paths.Add(path)) continue;
             queue.Add(new DownloadJob { sliderId = "static:" + p.panelId, optionIndex = 0, image = data.image, finalPath = path, tempPath = path + ".part" });
         }
         return true;
@@ -527,7 +696,7 @@ public partial class RemoteContentController
         {
             var data = StaticElement(StaticData(config, p.panelId), e.key);
             if (!e.allowImage || e.targetImage == null || data == null || data.image == null || StaticImageConflict(p, e)) continue;
-            if (!IsCachedFileValid(StaticImagePath(p.panelId, data.image), data.image)) { error = p.panelId + "/" + e.key + ": missing or invalid cached file."; return false; }
+            if (!IsCachedFileValid(ResolveStaticImagePath(p.panelId, data.image), data.image)) { error = p.panelId + "/" + e.key + ": missing or invalid cached file."; return false; }
         }
         return true;
     }
@@ -551,7 +720,7 @@ public partial class RemoteContentController
             if (data == null)
             {
                 StaticLog("No JSON static panel matched scene panel '" + p.panelId + "'.");
-                ResetStaticAdInteractions(p);
+                ResetStaticInteractions(p);
                 continue;
             }
 
@@ -590,6 +759,8 @@ public partial class RemoteContentController
     {
         StaticLog("Applying panel '" + panel.panelId + "'.");
 
+        ConfigureRateUsStoreUrls(panel, data != null ? data.storeUrls : null);
+
         if (string.Equals(StaticTemplateId(data.id), "loading", StringComparison.OrdinalIgnoreCase))
         {
             RemoteStaticLoadingStep loadingStep = panel.GetComponent<RemoteStaticLoadingStep>();
@@ -602,6 +773,7 @@ public partial class RemoteContentController
             var value = StaticElement(data, e.key);
             bool conflict = StaticImageConflict(panel, e);
             ConfigureStaticAdInteraction(panel, e, value);
+            ConfigureStaticUrlInteraction(panel, e, value);
             if (value == null)
             {
                 StaticLog(panel.panelId + "/" + e.key + ": no matching JSON element; restoring local/default sprite.");
@@ -614,7 +786,7 @@ public partial class RemoteContentController
 
             if (!conflict && e.allowImage && e.targetImage != null && value.image != null)
             {
-                string path = StaticImagePath(panel.panelId, value.image);
+                string path = ResolveStaticImagePath(panel.panelId, value.image);
                 if (IsCachedFileValid(path, value.image) && TryLoadElementImage(e, path))
                 {
                     staticOwnedImages.Add(e);
@@ -659,10 +831,99 @@ public partial class RemoteContentController
                string.Equals(value, "rewarded", StringComparison.OrdinalIgnoreCase);
     }
 
-    private void ResetStaticAdInteractions(RemoteStaticPanel panel)
+    private void ResetStaticInteractions(RemoteStaticPanel panel)
     {
         foreach (RemoteStaticPanel.Element binding in ValidStaticElements(panel))
+        {
             ConfigureStaticAdInteraction(panel, binding, null);
+            ConfigureStaticUrlInteraction(panel, binding, null);
+        }
+        ConfigureRateUsStoreUrls(panel, null);
+    }
+
+    private void ConfigureRateUsStoreUrls(RemoteStaticPanel panel, RemoteStoreUrlsData storeUrls)
+    {
+        if (panel == null || !string.Equals(PanelTemplateId(panel), "rate_us", StringComparison.OrdinalIgnoreCase))
+            return;
+
+        RemoteRateUsPanel rateUs = panel.GetComponent<RemoteRateUsPanel>();
+        if (rateUs == null)
+            rateUs = panel.GetComponentInChildren<RemoteRateUsPanel>(true);
+
+        string androidUrl = storeUrls != null ? storeUrls.android : null;
+        string iosUrl = storeUrls != null ? storeUrls.ios : null;
+        if (rateUs == null)
+        {
+            if (!string.IsNullOrWhiteSpace(androidUrl) || !string.IsNullOrWhiteSpace(iosUrl))
+                StaticWarning(panel.panelId + ": storeUrls needs a RemoteRateUsPanel component on this panel or one of its children.");
+            return;
+        }
+
+        rateUs.ConfigureRemoteStoreUrls(androidUrl, iosUrl);
+        StaticLog(panel.panelId + ": platform store URLs updated; blank values keep the local fallback.");
+    }
+
+    private void ConfigureStaticUrlInteraction(
+        RemoteStaticPanel panel,
+        RemoteStaticPanel.Element binding,
+        RemoteStaticElementData value)
+    {
+        if (panel == null || binding == null)
+            return;
+
+        GameObject target = binding.targetObject != null
+            ? binding.targetObject
+            : binding.targetImage != null ? binding.targetImage.gameObject : null;
+        if (!binding.allowUrlAction)
+        {
+            RemoteStaticUrlInteraction disabled = target != null ? target.GetComponent<RemoteStaticUrlInteraction>() : null;
+            if (disabled != null)
+                disabled.Configure(panel.panelId, binding.key, null);
+            return;
+        }
+        string url = value != null ? value.url : null;
+        bool requestsUrl = !string.IsNullOrWhiteSpace(url);
+        bool supported = StaticUrlActionAllowed(panel.panelId, binding.key);
+
+        if (!supported)
+        {
+            RemoteStaticUrlInteraction stale = target != null ? target.GetComponent<RemoteStaticUrlInteraction>() : null;
+            if (stale != null)
+                stale.Configure(panel.panelId, binding.key, null);
+            if (requestsUrl)
+                StaticWarning(panel.panelId + "/" + binding.key + ": URL ignored because this is not a supported game-promotion action.");
+            return;
+        }
+
+        if (target == null)
+        {
+            if (requestsUrl)
+                StaticWarning(panel.panelId + "/" + binding.key + ": URL needs a Target Object or Target Image GameObject.");
+            return;
+        }
+
+        Button button = target.GetComponent<Button>();
+        RemoteStaticUrlInteraction interaction = target.GetComponent<RemoteStaticUrlInteraction>();
+        if (button == null && requestsUrl && target.GetComponent<Graphic>() != null)
+            button = target.AddComponent<Button>();
+
+        if (button == null)
+        {
+            if (interaction != null)
+                interaction.Configure(panel.panelId, binding.key, null);
+            if (requestsUrl)
+                StaticWarning(panel.panelId + "/" + binding.key + ": URL ignored because the bound object has no Button or UI Graphic component.");
+            return;
+        }
+
+        if (interaction == null && requestsUrl)
+            interaction = target.AddComponent<RemoteStaticUrlInteraction>();
+
+        if (interaction != null)
+        {
+            interaction.Configure(panel.panelId, binding.key, url);
+            StaticLog(panel.panelId + "/" + binding.key + ": URL action " + (requestsUrl ? "configured" : "cleared; local action preserved") + ".");
+        }
     }
 
     private void ConfigureStaticAdInteraction(
@@ -736,6 +997,7 @@ public partial class RemoteContentController
         DestroyElementRuntimeImage(element);
     }
 
+    [Obsolete]
     private void ApplyStaticPanelActivation(RemoteStaticPanel panel, RemoteStaticPanelData data)
     {
         if (panel == null || data == null || !panel.allowRemotePanelActivation)
@@ -810,15 +1072,115 @@ public partial class RemoteContentController
                     animator.PlayShowIfNeeded();
             }
         }
+        if (visible && panel.panelRoot != null && panel.panelRoot.activeInHierarchy &&
+            string.Equals(panel.panelId, "rate_us", StringComparison.OrdinalIgnoreCase))
+        {
+            RemoteRateUsPanel rateUs = panel.GetComponent<RemoteRateUsPanel>();
+            if (rateUs == null) rateUs = panel.GetComponentInChildren<RemoteRateUsPanel>(true);
+            if (rateUs != null) rateUs.PresentNativeReview();
+        }
         if (!visible && panel.runtimeGenerated && panel.gameObject.activeSelf)
             panel.gameObject.SetActive(false);
+    }
+
+    private void HideRemoteStaticSequencePanels()
+    {
+        foreach (var panel in ValidStaticPanels())
+            if (IsStaticSequencePanelId(panel.panelId)) SetStaticPanelVisible(panel, false);
+    }
+
+    private bool IsRemoteStaticPanelEligible(RemoteStaticPanel panel, RemoteStaticPanelData data)
+    {
+        if (panel == null || !panel.useRemoteContent || panel.panelRoot == null ||
+            data == null || !data.enabled || !IsStaticSequencePanelId(panel.panelId))
+            return false;
+
+        // A script-only review step has no UI to operate without its bridge.
+        if (string.Equals(panel.panelId, "rate_us", StringComparison.OrdinalIgnoreCase) &&
+            panel.GetComponent<RemoteRateUsPanel>() == null &&
+            panel.GetComponentInChildren<RemoteRateUsPanel>(true) == null)
+        {
+            StaticWarning(panel.panelId + ": native review bridge is missing; skipping this step.");
+            return false;
+        }
+
+        // A main menu with no visible Play control cannot advance the sequence.
+        if (string.Equals(PanelTemplateId(panel), "main_menu", StringComparison.OrdinalIgnoreCase))
+        {
+            var play = panel.elements?.Find(element =>
+                element != null && string.Equals(element.key, "play_button", StringComparison.OrdinalIgnoreCase));
+            if (play == null || play.targetObject == null || !play.targetObject.activeSelf ||
+                (play.targetImage != null && (!play.targetImage.enabled || play.targetImage.color.a <= 0f)))
+            {
+                StaticWarning(panel.panelId + ": Play control is hidden; skipping this step.");
+                return false;
+            }
+        }
+
+        // Match the downloader's keys, ownership exclusions and cache validation.
+        // Applied runtime objects also prove that valid bytes decoded as an image.
+        foreach (var element in ValidStaticElements(panel))
+        {
+            var value = StaticElement(data, element.key);
+            if (element.allowEnabled && value != null && value.overrideEnabled && !value.enabled) continue;
+            bool requiredArtwork = element.requireSpriteForPanel ||
+                (string.Equals(PanelTemplateId(panel), "card_selection", StringComparison.OrdinalIgnoreCase) &&
+                 Regex.IsMatch(element.key, "^card_[0-9]+$", RegexOptions.IgnoreCase)) ||
+                (string.Equals(PanelTemplateId(panel), "level_selection", StringComparison.OrdinalIgnoreCase) &&
+                 Regex.IsMatch(element.key, "^level_[0-9]+$", RegexOptions.IgnoreCase));
+            if (requiredArtwork && (element.targetImage == null || element.targetImage.sprite == null))
+            {
+                StaticWarning(panel.panelId + "/" + element.key + ": skipping panel; required artwork is empty.");
+                return false;
+            }
+            if (!element.allowImage || element.targetImage == null || value == null ||
+                value.image == null || StaticImageConflict(panel, element)) continue;
+            string path = ResolveStaticImagePath(panel.panelId, value.image);
+            if (!IsCachedFileValid(path, value.image) || element.runtimeSprite == null ||
+                element.runtimeTexture == null ||
+                !string.Equals(element.loadedPath, path, StringComparison.OrdinalIgnoreCase))
+            {
+                StaticWarning(panel.panelId + "/" + element.key + ": skipping panel; required remote image is missing or invalid.");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private bool HasEligibleRemoteStaticSequence(RemoteConfigData config)
+    {
+        if (config != null && config.enabled && config.staticPanels != null)
+            foreach (var data in config.staticPanels)
+                if (data != null && IsRemoteStaticPanelEligible(FindStaticPanelInstance(data.id), data)) return true;
+        return false;
+    }
+
+    private void FinishUnavailableRemoteStaticSequence(RemoteConfigData config)
+    {
+        if (!staticNavigationReady || waitingForInternet || HasEligibleRemoteStaticSequence(config)) return;
+
+        HideRemoteStaticSequencePanels();
+        staticSequenceStarted = true;
+        FinishStaticPanelSequence(null, "No eligible remote static panels; continuing to local gameplay.");
     }
 
     // Start from the first enabled panel in the cached server order. The
     // download_loading overlay is excluded by IsStaticSequencePanelId().
     private void StartStaticPanelSequence(RemoteConfigData config)
     {
-        if (config == null || config.staticPanels == null) return;
+        // Cached images may be incomplete or refer to the previous release.
+        // Do not select/skip a step until the download and visual commit finish.
+        if (!staticNavigationReady)
+        {
+            HideRemoteStaticSequencePanels();
+            return;
+        }
+
+        if (waitingForInternet || config == null || !config.enabled || config.staticPanels == null)
+        {
+            HideRemoteStaticSequencePanels();
+            return;
+        }
 
         EnsureStaticPanelInstances(config);
 
@@ -843,7 +1205,7 @@ public partial class RemoteContentController
                     continue;
 
                 RemoteStaticPanelData reachedData = StaticData(config, panel.panelId);
-                if (reachedData != null && reachedData.enabled)
+                if (IsRemoteStaticPanelEligible(panel, reachedData))
                 {
                     reached = panel;
                     break;
@@ -868,7 +1230,8 @@ public partial class RemoteContentController
         {
             if (data == null || !data.enabled || !IsStaticSequencePanelId(data.id)) continue;
             first = FindStaticPanelInstance(data.id);
-            if (first != null) break;
+            if (IsRemoteStaticPanelEligible(first, data)) break;
+            first = null;
         }
 
         foreach (RemoteStaticPanel panel in ValidStaticPanels())
@@ -921,6 +1284,9 @@ public partial class RemoteContentController
         if (!staticSequenceFinished)
         {
             staticSequenceFinished = true;
+            // Start the persistent review timer before any existing completion
+            // listener can synchronously load the next scene.
+            ScenePilotNativeReviewController.NotifyStaticSequenceFinished();
             if (onStaticSequenceFinished != null) onStaticSequenceFinished.Invoke();
         }
 
@@ -934,7 +1300,7 @@ public partial class RemoteContentController
     // Timers and navigation must use the visual root and the download state.
     private bool CanAdvanceStaticPanel(RemoteStaticPanel panel, bool ignoreBusyState)
     {
-        if (panel == null || !panel.isActiveAndEnabled ||
+        if (!staticNavigationReady || panel == null || !panel.isActiveAndEnabled ||
             panel.panelRoot == null || !panel.panelRoot.activeInHierarchy ||
             !IsStaticSequencePanelId(panel.panelId) || staticSequenceFinished)
             return false;
@@ -949,7 +1315,7 @@ public partial class RemoteContentController
             return false;
 
         RemoteStaticPanelData data = StaticData(activeConfig, panel.panelId);
-        return (activeConfig == null || activeConfig.enabled) && (data == null || data.enabled);
+        return !waitingForInternet && activeConfig != null && activeConfig.enabled && data != null && data.enabled;
     }
 
     public bool CanAdvanceStaticPanel(RemoteStaticPanel panel)
@@ -1011,6 +1377,7 @@ public partial class RemoteContentController
             if (next == null || !IsStaticSequencePanelId(next.panelId)) continue;
 
             ApplyStaticPanel(next, data);
+            if (!IsRemoteStaticPanelEligible(next, data)) continue;
             foreach (RemoteStaticPanel panel in ValidStaticPanels())
                 if (IsStaticSequencePanelId(panel.panelId)) SetStaticPanelVisible(panel, ReferenceEquals(panel, next));
             StaticLog("Navigation: " + current.panelId + " -> " + next.panelId + ".");
@@ -1181,7 +1548,7 @@ public partial class RemoteContentController
 
                 if (element.allowImage && element.targetImage != null && value.image != null)
                 {
-                    string expectedPath = StaticImagePath(panel.panelId, value.image);
+                    string expectedPath = ResolveStaticImagePath(panel.panelId, value.image);
 
                     if (!IsCachedFileValid(expectedPath, value.image))
                     {
@@ -1347,8 +1714,39 @@ public partial class RemoteContentController
     {
         if (!imageConflict && binding.allowImageProperties && binding.targetImage != null)
         {
-            if (value.preserveAspect.HasValue) binding.targetImage.preserveAspect = value.preserveAspect.Value;
+            Image image = binding.targetImage;
+            // Missing/null means Keep Unity setting: use the current Image value.
+            bool preserveAspect = value.preserveAspect ?? image.preserveAspect;
+            // Unity's borderless Sliced fallback ignores preserveAspect. Match
+            // the Inspector's sprite-change behavior, including local settings.
+            // Keep Filled progress bars and sprites with real borders unchanged.
+            if (preserveAspect && image.type == Image.Type.Sliced &&
+                image.sprite == binding.runtimeSprite && binding.runtimeSprite != null &&
+                !image.hasBorder)
+                image.type = Image.Type.Simple;
+
+            if (value.preserveAspect.HasValue)
+                image.preserveAspect = value.preserveAspect.Value;
             if (value.raycastTarget.HasValue) binding.targetImage.raycastTarget = value.raycastTarget.Value;
+            // Scene-authored loading templates may not have a loading-step
+            // component. Apply the fill geometry here as well for every clone.
+            if (string.Equals(binding.key, "fill", StringComparison.OrdinalIgnoreCase) &&
+                string.Equals(PanelTemplateId(panel), "loading", StringComparison.OrdinalIgnoreCase))
+            {
+                Slider slider = image.GetComponentInParent<Slider>(true);
+                if (slider != null && slider.fillRect == image.rectTransform)
+                {
+                    image.type = Image.Type.Filled;
+                    image.fillMethod = Image.FillMethod.Horizontal;
+                    image.fillOrigin = slider.direction == Slider.Direction.RightToLeft ? 1 : 0;
+                    image.fillAmount = slider.normalizedValue;
+                    RectTransform fillRect = image.rectTransform;
+                    fillRect.anchorMin = Vector2.zero;
+                    fillRect.anchorMax = Vector2.one;
+                    fillRect.offsetMin = new Vector2(0f, 22f);
+                    fillRect.offsetMax = new Vector2(-4f, -10f);
+                }
+            }
         }
         var text = binding.targetText;
         if (text != null)

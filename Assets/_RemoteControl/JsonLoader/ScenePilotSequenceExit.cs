@@ -5,6 +5,8 @@ using UnityEngine.Events;
 public sealed class ScenePilotSequenceExit : MonoBehaviour
 {
     public RemoteContentController controller;
+    [HideInInspector]
+    public ScenePilotNativeReviewController nativeReview;
 
     [Header("NORMAL SEQUENCE EXIT")]
     [Tooltip("Optional gameplay root enabled when the last normal static panel finishes.")]
@@ -21,12 +23,24 @@ public sealed class ScenePilotSequenceExit : MonoBehaviour
     private void Reset()
     {
         controller = GetComponent<RemoteContentController>();
+        nativeReview = GetComponent<ScenePilotNativeReviewController>();
     }
 
     private void Awake()
     {
         if (controller == null)
             controller = GetComponent<RemoteContentController>();
+
+        // Keep this runtime fallback so older prefabs automatically gain the
+        // native-review timer without requiring their serialized data to be rebuilt.
+        if (nativeReview == null)
+            nativeReview = ScenePilotNativeReviewController.instance;
+        if (nativeReview == null)
+        {
+            GameObject reviewHost = new GameObject("ScenePilot Native Review");
+            nativeReview = reviewHost.AddComponent<ScenePilotNativeReviewController>();
+        }
+        nativeReview.remoteContent = controller;
     }
 
     private void OnEnable()

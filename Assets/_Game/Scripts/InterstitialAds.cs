@@ -1,25 +1,27 @@
-
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InterstitialAds : MonoBehaviour
 {
-
     public Button mybnt;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    private void Start()
     {
         mybnt = GetComponent<Button>();
-
         if (mybnt != null)
-        {
-            mybnt.onClick.AddListener(() => { if (AdsController.Instance != null) { AdsController.Instance.ShowInterstitialAd(); } } );
-        }
+            mybnt.onClick.AddListener(ShowInterstitial);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        if (mybnt != null)
+            mybnt.onClick.RemoveListener(ShowInterstitial);
+    }
+
+    private void ShowInterstitial()
+    {
+        var ads = ScenePilotAdsController.instance;
+        if (ads != null)
+            ads.ShowInterstitial();
     }
 }

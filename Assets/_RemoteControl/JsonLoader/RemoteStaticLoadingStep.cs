@@ -7,6 +7,10 @@ public sealed class RemoteStaticLoadingStep : MonoBehaviour
 {
     public RemoteStaticPanel staticPanel;
     public Slider progressSlider;
+    [Min(0f), Tooltip("Space above the fill, in UI units.")]
+    public float fillVerticalPadding = 10f;
+    [Min(0f)] public float fillBottomPadding = 22f;
+    [Min(0f)] public float fillRightPadding = 4f;
 
     [Min(0f)]
     public float durationSeconds = 3f;
@@ -124,8 +128,32 @@ public sealed class RemoteStaticLoadingStep : MonoBehaviour
             return;
 
         progressSlider.normalizedValue = Mathf.Clamp01(normalizedValue);
+        ApplyFillPadding();
     }
 
+    private void ApplyFillPadding()
+    {
+        if (progressSlider == null || progressSlider.fillRect == null) return;
+        RectTransform rect = progressSlider.fillRect;
+        RectTransform area = rect.parent as RectTransform;
+        float top = Mathf.Max(0f, fillVerticalPadding);
+        float bottom = Mathf.Max(0f, fillBottomPadding);
+        float right = Mathf.Max(0f, fillRightPadding);
+        if (area != null)
+        {
+            if (area.rect.height > 0f && top + bottom > area.rect.height - 1f)
+            {
+                float factor = Mathf.Max(0f, area.rect.height - 1f) / Mathf.Max(0.01f, top + bottom);
+                top *= factor;
+                bottom *= factor;
+            }
+            if (area.rect.width > 0f) right = Mathf.Min(right, Mathf.Max(0f, area.rect.width - 1f));
+        }
+        rect.anchorMin = Vector2.zero;
+        rect.anchorMax = Vector2.one;
+        rect.offsetMin = new Vector2(0f, bottom);
+        rect.offsetMax = new Vector2(-right, -top);
+    }
     private void ResetLoading()
     {
         currentTime = 0f;
@@ -153,6 +181,22 @@ public sealed class RemoteStaticLoadingStep : MonoBehaviour
 
         if (progressSlider == null)
             progressSlider = GetComponentInChildren<Slider>(true);
+        // Filled makes Slider reveal the sprite via fillAmount instead of
+        // shrinking its rectangle and squeezing the artwork at low progress.
+        if (progressSlider != null && progressSlider.fillRect != null)
+        {
+            Image fill = progressSlider.fillRect.GetComponent<Image>();
+            if (fill != null)
+            {
+                fill.type = Image.Type.Filled;
+                fill.fillMethod = Image.FillMethod.Horizontal;
+                fill.fillOrigin = progressSlider.direction == Slider.Direction.RightToLeft ? 1 : 0;
+                fill.fillAmount = progressSlider.normalizedValue;
+                progressSlider.fillRect.anchorMin = Vector2.zero;
+                progressSlider.fillRect.anchorMax = Vector2.one;
+                ApplyFillPadding();
+            }
+        }
     }
 
     private bool IsLoadingPanel()

@@ -165,7 +165,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.makarovamaria.lumora
+    Android: com.makarovamaria.framevault
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -266,8 +266,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/desig/OneDrive/Desktop/Keystores/Gacha/test.keystore
-  AndroidKeyaliasName: user
+  AndroidKeystoreName: C:/Users/desig/OneDrive/Desktop/Keystores/Gacha/frameflow_studio.jks
+  AndroidKeyaliasName: 
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidEnableArm64MTE: 0
   AndroidBuildApkPerCpuArchitecture: 0
@@ -295,7 +295,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: e9745be0187524d4892168e226e6e7fa, type: 3}
+      m_Icon: {fileID: 2800000, guid: fe64824fbd43f7743a5de769ebe41f55, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

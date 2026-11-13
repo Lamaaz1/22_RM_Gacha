@@ -55,9 +55,9 @@ public sealed class ScenePilotAdsController : MonoBehaviour
     private string bannerPositionKey;
     private string interstitialUnitId;
     private string rewardedUnitId;
-    private float lastInterstitialRealtime = float.NegativeInfinity;
     private bool initRequested;
     private bool levelPlayEventsBound;
+    private bool staticPanelSequenceCompleted;
     private bool automaticInterstitialScheduled;
     private bool adBreakCountdownRunning;
     private float nextAutomaticInterstitialTime;
@@ -65,6 +65,122 @@ public sealed class ScenePilotAdsController : MonoBehaviour
     private float timeScaleBeforeAdBreak = 1f;
     private bool gamePausedForAdBreak;
 
+
+    // Retry state belongs to one ad object and is reset when that object changes.
+    private sealed class AdLoadState
+    {
+        public bool loading;
+        public bool showing;
+        public int failures;
+        public float retryAt;
+    }
+
+    private readonly AdLoadState interstitialState = new AdLoadState();
+    private readonly AdLoadState rewardedState = new AdLoadState();
+    private float nextReadinessCheck;
+    private bool appPaused;
+    public string LastInterstitialRejection { get; private set; }
+    public string LastRewardedRejection { get; private set; }
+
+    // If gameplay asks for an interstitial while it is still loading,
+    // remember the request and show it immediately once LevelPlay reports ready.
+    private bool pendingInterstitialShow;
+    private string pendingInterstitialPlacement;
+    // Optional gameplay-specific reward for the rewarded ad currently being shown.
+    // It is consumed only by LevelPlay's reward callback, never by ad close.
+    private Action pendingRewardCallback;
+
+    private void RecoverFullScreenAds()
+    {
+        if (!isActiveAndEnabled || appPaused || !adsAllowed || !sdkInitialized)
+            return;
+        RequestAdLoad(false);
+        RequestAdLoad(true);
+    }
+
+    private void OnApplicationPause(bool paused)
+    {
+        appPaused = paused;
+        if (!paused) RecoverFullScreenAds();
+    }
+
+    private void OnApplicationFocus(bool focused)
+    {
+        if (focused) RecoverFullScreenAds();
+    }
+
+    private bool FullScreenAdShowing => interstitialState.showing || rewardedState.showing;
+
+    public bool IsFullScreenExperienceActive => FullScreenAdShowing || adBreakCountdownRunning;
+
+    public void DeferAutomaticInterstitialAfterExternalBreak()
+    {
+        StopAdBreakCountdown();
+        ScheduleNextAutomaticInterstitial();
+    }
+
+    private void RequestAdLoad(bool rewarded)
+    {
+        AdLoadState state = rewarded ? rewardedState : interstitialState;
+        if (!isActiveAndEnabled || appPaused || !adsAllowed || !sdkInitialized ||
+            state.loading || state.showing || Time.realtimeSinceStartup < state.retryAt)
+            return;
+        if (rewarded ? rewardedAd == null : interstitialAd == null)
+            return;
+        bool ready = rewarded ? rewardedAd.IsAdReady() : interstitialAd.IsAdReady();
+        if (rewarded) rewardedReady = ready;
+        else interstitialReady = ready;
+        if (ready) return;
+
+        state.loading = true;
+        try
+        {
+            if (rewarded) rewardedAd.LoadAd();
+            else interstitialAd.LoadAd();
+        }
+        catch (Exception exception)
+        {
+            ScheduleAdRetry(rewarded, exception.Message);
+        }
+    }
+
+    private void ScheduleAdRetry(bool rewarded, string error)
+    {
+        AdLoadState state = rewarded ? rewardedState : interstitialState;
+        state.loading = false;
+        state.showing = false;
+        if (rewarded) rewardedReady = false;
+        else interstitialReady = false;
+        state.failures = Math.Min(state.failures + 1, 6);
+        float delay = Math.Min(60f, 2f * (float)Math.Pow(2, state.failures - 1));
+        state.retryAt = Time.realtimeSinceStartup + delay;
+        Debug.LogWarning("[ScenePilot/Ads] " + (rewarded ? "Rewarded" : "Interstitial") +
+            " failed: " + error + ". Retry in " + delay + " seconds.", this);
+    }
+
+    private static void ResetAdState(AdLoadState state)
+    {
+        state.loading = false;
+        state.showing = false;
+        state.failures = 0;
+        state.retryAt = 0f;
+    }
+
+    private string ShowRejection(bool rewarded, string placementName)
+    {
+        if (!isActiveAndEnabled || appPaused) return "manager inactive or app paused";
+        if (!adsAllowed) return "ads disabled by configuration";
+        if (!sdkInitialized) return "SDK not initialized";
+        if (rewarded ? rewardedAd == null : interstitialAd == null) return "ad unit disabled or missing";
+        if (FullScreenAdShowing) return "another fullscreen ad is opening or showing";
+        if (!PlacementAllowed(placementName)) return "placement disallowed by server";
+        if (!string.IsNullOrWhiteSpace(placementName) &&
+            (rewarded ? LevelPlayRewardedAd.IsPlacementCapped(placementName) :
+                        LevelPlayInterstitialAd.IsPlacementCapped(placementName))) return "SDK placement capped";
+        if (rewarded ? !IsRewardedReady() : !IsInterstitialReady())
+            return (rewarded ? rewardedState.loading : interstitialState.loading) ? "ad loading" : "ad not ready";
+        return null;
+    }
 
     public static ScenePilotAdsController instance;
     private void Reset()
@@ -91,7 +207,14 @@ public sealed class ScenePilotAdsController : MonoBehaviour
     {
         ResolveController();
         if (remoteContent != null)
+        {
             remoteContent.ConfigApplied += ApplyRemoteConfig;
+            remoteContent.onStaticSequenceFinished.AddListener(HandleStaticPanelSequenceFinished);
+            if (remoteContent.ActiveConfig != null)
+                ApplyRemoteConfig(remoteContent.ActiveConfig);
+            if (remoteContent.IsStaticPanelSequenceFinished)
+                HandleStaticPanelSequenceFinished();
+        }
     }
 
     private void Start()
@@ -103,10 +226,13 @@ public sealed class ScenePilotAdsController : MonoBehaviour
 
     private void OnDisable()
     {
+        StopAdBreakCountdown();
         if (remoteContent != null)
+        {
             remoteContent.ConfigApplied -= ApplyRemoteConfig;
+            remoteContent.onStaticSequenceFinished.RemoveListener(HandleStaticPanelSequenceFinished);
+        }
     }
-
     private void OnDestroy()
     {
         StopAdBreakCountdown();
@@ -118,6 +244,15 @@ public sealed class ScenePilotAdsController : MonoBehaviour
 
     private void Update()
     {
+        if (Time.realtimeSinceStartup >= nextReadinessCheck)
+        {
+            nextReadinessCheck = Time.realtimeSinceStartup + 1f;
+            RecoverFullScreenAds();
+        }
+        // Recover completion if this manager was enabled after the finish event.
+        if (!staticPanelSequenceCompleted && remoteContent != null && remoteContent.IsStaticPanelSequenceFinished)
+            HandleStaticPanelSequenceFinished();
+
         if (!CanRunAutomaticInterstitials())
             return;
 
@@ -220,15 +355,44 @@ public sealed class ScenePilotAdsController : MonoBehaviour
 
     public bool ShowInterstitial(string placementName = null)
     {
-        if (!CanShowInterstitial(placementName))
+        string reason = ShowRejection(false, placementName);
+        LastInterstitialRejection = reason;
+
+        if (reason != null)
         {
-            if (adsAllowed && interstitialAd != null && !interstitialReady)
-                interstitialAd.LoadAd();
+            Log("Interstitial request rejected (" + (placementName ?? "default") + "): " + reason);
+
+            // A button/request may arrive just before LevelPlay finishes loading.
+            // Keep that request instead of losing the click.
+            if (reason == "ad loading" || reason == "ad not ready")
+            {
+                pendingInterstitialShow = true;
+                pendingInterstitialPlacement = placementName;
+                RequestAdLoad(false);
+                Log("Interstitial request queued until the ad is ready.");
+            }
+
             return false;
         }
 
-        interstitialAd.ShowAd(placementName);
-        return true;
+        // We are about to satisfy any queued request.
+        pendingInterstitialShow = false;
+        pendingInterstitialPlacement = null;
+
+        // Claim the show before calling the SDK; callbacks may arrive later.
+        interstitialState.showing = true;
+        interstitialReady = false;
+        try
+        {
+            interstitialAd.ShowAd(placementName);
+            return true;
+        }
+        catch (Exception exception)
+        {
+            LastInterstitialRejection = "SDK show exception: " + exception.Message;
+            ScheduleAdRetry(false, exception.Message);
+            return false;
+        }
     }
 
     // Inspector/Button-friendly wrapper.
@@ -255,17 +419,32 @@ public sealed class ScenePilotAdsController : MonoBehaviour
     {
         RegisterLevelCompleted("level_end");
     }
+
     public bool ShowRewarded(string placementName = null)
     {
-        if (!adsAllowed || rewardedAd == null || !rewardedReady || !PlacementAllowed(placementName))
+        string reason = ShowRejection(true, placementName);
+        LastRewardedRejection = reason;
+        if (reason != null)
         {
-            if (adsAllowed && rewardedAd != null && !rewardedReady)
-                rewardedAd.LoadAd();
+            Log("Rewarded request rejected (" + (placementName ?? "default") + "): " + reason);
+            RequestAdLoad(true);
             return false;
         }
 
-        rewardedAd.ShowAd(placementName);
-        return true;
+        // Claim the show before calling the SDK; callbacks may arrive later.
+        rewardedState.showing = true;
+        rewardedReady = false;
+        try
+        {
+            rewardedAd.ShowAd(placementName);
+            return true;
+        }
+        catch (Exception exception)
+        {
+            LastRewardedRejection = "SDK show exception: " + exception.Message;
+            ScheduleAdRetry(true, exception.Message);
+            return false;
+        }
     }
 
     // Inspector/Button-friendly wrapper.
@@ -274,14 +453,50 @@ public sealed class ScenePilotAdsController : MonoBehaviour
         ShowRewarded();
     }
 
+    // Public preload hook used by gameplay reward panels.
+    public void LoadRewardedNow()
+    {
+        RequestAdLoad(true);
+    }
+
+    // Shows one rewarded ad and invokes this request's callback only after
+    // LevelPlay confirms that the player earned the reward.
+    public bool ShowRewardedFor(Action rewardCallback, string placementName = null)
+    {
+        if (rewardCallback == null)
+        {
+            LastRewardedRejection = "reward callback is missing";
+            return false;
+        }
+
+        if (pendingRewardCallback != null)
+        {
+            LastRewardedRejection = "another rewarded request is pending";
+            return false;
+        }
+
+        // Assign before ShowAd in case an SDK implementation invokes callbacks
+        // synchronously. Clear it again when the show request is rejected.
+        pendingRewardCallback = rewardCallback;
+        if (ShowRewarded(placementName))
+            return true;
+
+        pendingRewardCallback = null;
+        return false;
+    }
+
     public bool IsInterstitialReady()
     {
-        return adsAllowed && interstitialAd != null && interstitialReady && interstitialAd.IsAdReady();
+        interstitialReady = adsAllowed && sdkInitialized && interstitialAd != null &&
+            !interstitialState.loading && !FullScreenAdShowing && interstitialAd.IsAdReady();
+        return interstitialReady;
     }
 
     public bool IsRewardedReady()
     {
-        return adsAllowed && rewardedAd != null && rewardedReady && rewardedAd.IsAdReady();
+        rewardedReady = adsAllowed && sdkInitialized && rewardedAd != null &&
+            !rewardedState.loading && !FullScreenAdShowing && rewardedAd.IsAdReady();
+        return rewardedReady;
     }
 
     private RemoteContentController.RemoteAdsRulesData Rules =>
@@ -405,12 +620,13 @@ public sealed class ScenePilotAdsController : MonoBehaviour
         DestroyInterstitial();
         interstitialUnitId = data.adUnitId;
         interstitialAd = new LevelPlayInterstitialAd(interstitialUnitId);
-        interstitialAd.OnAdLoaded += HandleInterstitialLoaded;
-        interstitialAd.OnAdLoadFailed += HandleInterstitialLoadFailed;
-        interstitialAd.OnAdDisplayed += HandleInterstitialDisplayed;
-        interstitialAd.OnAdDisplayFailed += HandleInterstitialDisplayFailed;
-        interstitialAd.OnAdClosed += HandleInterstitialClosed;
-        interstitialAd.LoadAd();
+        var source = interstitialAd;
+        interstitialAd.OnAdLoaded += (info) => { if (ReferenceEquals(interstitialAd, source)) HandleInterstitialLoaded(info); };
+        interstitialAd.OnAdLoadFailed += (error) => { if (ReferenceEquals(interstitialAd, source)) HandleInterstitialLoadFailed(error); };
+        interstitialAd.OnAdDisplayed += (info) => { if (ReferenceEquals(interstitialAd, source)) HandleInterstitialDisplayed(info); };
+        interstitialAd.OnAdDisplayFailed += (info, error) => { if (ReferenceEquals(interstitialAd, source)) HandleInterstitialDisplayFailed(info, error); };
+        interstitialAd.OnAdClosed += (info) => { if (ReferenceEquals(interstitialAd, source)) HandleInterstitialClosed(info); };
+        RequestAdLoad(false);
     }
 
     private void BuildRewarded()
@@ -427,34 +643,34 @@ public sealed class ScenePilotAdsController : MonoBehaviour
         DestroyRewarded();
         rewardedUnitId = data.adUnitId;
         rewardedAd = new LevelPlayRewardedAd(rewardedUnitId);
-        rewardedAd.OnAdLoaded += HandleRewardedLoaded;
-        rewardedAd.OnAdLoadFailed += HandleRewardedLoadFailed;
-        rewardedAd.OnAdDisplayFailed += HandleRewardedDisplayFailed;
-        rewardedAd.OnAdRewarded += HandleRewardGranted;
-        rewardedAd.OnAdClosed += HandleRewardedClosed;
-        rewardedAd.LoadAd();
+        var source = rewardedAd;
+        rewardedAd.OnAdDisplayed += (info) => { if (ReferenceEquals(rewardedAd, source)) HandleRewardedDisplayed(info); };
+        rewardedAd.OnAdLoaded += (info) => { if (ReferenceEquals(rewardedAd, source)) HandleRewardedLoaded(info); };
+        rewardedAd.OnAdLoadFailed += (error) => { if (ReferenceEquals(rewardedAd, source)) HandleRewardedLoadFailed(error); };
+        rewardedAd.OnAdDisplayFailed += (info, error) => { if (ReferenceEquals(rewardedAd, source)) HandleRewardedDisplayFailed(info, error); };
+        rewardedAd.OnAdRewarded += (info, reward) => { if (ReferenceEquals(rewardedAd, source)) HandleRewardGranted(info, reward); };
+        rewardedAd.OnAdClosed += (info) => { if (ReferenceEquals(rewardedAd, source)) HandleRewardedClosed(info); };
+        RequestAdLoad(true);
     }
 
     private bool CanShowInterstitial(string placementName)
     {
-        if (!adsAllowed || interstitialAd == null || !interstitialReady || !interstitialAd.IsAdReady() || !PlacementAllowed(placementName))
-            return false;
-
-        RemoteContentController.RemoteAdsRulesData rules = Rules;
-        if (rules.maximumInterstitialsPerSession >= 0 && interstitialsThisSession >= rules.maximumInterstitialsPerSession)
-            return false;
-        return Time.realtimeSinceStartup - lastInterstitialRealtime >= Mathf.Max(0f, rules.minimumSecondsBetweenInterstitials);
+        // Automatic timing belongs to the scheduler, never to button requests.
+        return ShowRejection(false, placementName) == null;
     }
 
     private bool CanRunAutomaticInterstitials()
     {
         RemoteContentController.RemoteAdsRulesData rules = Rules;
-        return adsAllowed &&
+        return staticPanelSequenceCompleted &&
+               !ScenePilotNativeReviewController.IsBlockingAutomaticInterstitials &&
+               adsAllowed &&
+               isActiveAndEnabled &&
+               !appPaused &&
+               !FullScreenAdShowing &&
                sdkInitialized &&
                interstitialAd != null &&
-               rules.minimumSecondsBetweenInterstitials > 0f &&
-               (rules.maximumInterstitialsPerSession < 0 ||
-                interstitialsThisSession < rules.maximumInterstitialsPerSession);
+               rules.minimumSecondsBetweenInterstitials > 0f;
     }
 
     private string AutomaticInterstitialPlacement =>
@@ -462,8 +678,24 @@ public sealed class ScenePilotAdsController : MonoBehaviour
             ? null
             : automaticInterstitialPlacementName;
 
+    private void HandleStaticPanelSequenceFinished()
+    {
+        if (staticPanelSequenceCompleted)
+            return;
+
+        staticPanelSequenceCompleted = true;
+        ScheduleNextAutomaticInterstitial();
+        Log("Static panels finished; automatic ad-break timer may now start.");
+    }
+
     private void ScheduleNextAutomaticInterstitial()
     {
+        if (!staticPanelSequenceCompleted)
+        {
+            automaticInterstitialScheduled = false;
+            return;
+        }
+
         float interval = Mathf.Max(0f, Rules.minimumSecondsBetweenInterstitials);
         automaticInterstitialScheduled = interval > 0f;
         nextAutomaticInterstitialTime = Time.unscaledTime + interval;
@@ -563,6 +795,8 @@ public sealed class ScenePilotAdsController : MonoBehaviour
 
     private void DisableAdsImmediately()
     {
+        pendingInterstitialShow = false;
+        pendingInterstitialPlacement = null;
         automaticInterstitialScheduled = false;
         StopAdBreakCountdown();
         if (bannerAd != null)
@@ -592,20 +826,25 @@ public sealed class ScenePilotAdsController : MonoBehaviour
 
     private void DestroyInterstitial()
     {
-        if (interstitialAd != null)
-            interstitialAd.DestroyAd();
+        pendingInterstitialShow = false;
+        pendingInterstitialPlacement = null;
+        var old = interstitialAd;
         interstitialAd = null;
         interstitialUnitId = null;
         interstitialReady = false;
+        ResetAdState(interstitialState);
+        old?.DestroyAd();
     }
 
     private void DestroyRewarded()
     {
-        if (rewardedAd != null)
-            rewardedAd.DestroyAd();
+        pendingRewardCallback = null;
+        var old = rewardedAd;
         rewardedAd = null;
         rewardedUnitId = null;
         rewardedReady = false;
+        ResetAdState(rewardedState);
+        old?.DestroyAd();
     }
 
     private void HandleBannerLoaded(LevelPlayAdInfo info)
@@ -628,68 +867,111 @@ public sealed class ScenePilotAdsController : MonoBehaviour
 
     private void HandleInterstitialLoaded(LevelPlayAdInfo info)
     {
+        interstitialState.loading = false;
+        interstitialState.failures = 0;
+        interstitialState.retryAt = 0f;
         interstitialReady = true;
+        Log("Interstitial loaded.");
+
+        // If the player already requested an interstitial while it was loading,
+        // consume that request immediately now that the ad is ready.
+        if (pendingInterstitialShow)
+        {
+            string placement = pendingInterstitialPlacement;
+            pendingInterstitialShow = false;
+            pendingInterstitialPlacement = null;
+
+            Log("Showing queued interstitial now that it is ready.");
+            ShowInterstitial(placement);
+        }
     }
 
     private void HandleInterstitialLoadFailed(LevelPlayAdError error)
     {
-        interstitialReady = false;
-        Debug.LogWarning("[ScenePilot/Ads] Interstitial load failed: " + error, this);
+        ScheduleAdRetry(false, "load: " + error);
     }
 
     private void HandleInterstitialDisplayed(LevelPlayAdInfo info)
     {
         StopAdBreakCountdown();
         interstitialReady = false;
+        interstitialState.showing = true;
         interstitialsThisSession++;
-        lastInterstitialRealtime = Time.realtimeSinceStartup;
         ScheduleNextAutomaticInterstitial();
     }
 
     private void HandleInterstitialDisplayFailed(LevelPlayAdInfo info, LevelPlayAdError error)
     {
-        interstitialReady = false;
-        Debug.LogWarning("[ScenePilot/Ads] Interstitial display failed: " + error, this);
-        interstitialAd?.LoadAd();
+        ScheduleAdRetry(false, "display: " + error);
     }
 
     private void HandleInterstitialClosed(LevelPlayAdInfo info)
     {
+        interstitialState.showing = false;
+        interstitialReady = false;
+        RequestAdLoad(false);
+        // A gameplay listener must not prevent replacement loading.
         onInterstitialClosed?.Invoke();
-        if (adsAllowed)
-            interstitialAd?.LoadAd();
     }
 
     private void HandleRewardedLoaded(LevelPlayAdInfo info)
     {
+        rewardedState.loading = false;
+        rewardedState.failures = 0;
+        rewardedState.retryAt = 0f;
         rewardedReady = true;
+        Log("Rewarded loaded.");
     }
 
     private void HandleRewardedLoadFailed(LevelPlayAdError error)
     {
-        rewardedReady = false;
-        Debug.LogWarning("[ScenePilot/Ads] Rewarded load failed: " + error, this);
+        ScheduleAdRetry(true, "load: " + error);
     }
 
     private void HandleRewardedDisplayFailed(LevelPlayAdInfo info, LevelPlayAdError error)
     {
+        pendingRewardCallback = null;
+        ScheduleAdRetry(true, "display: " + error);
+    }
+
+    private void HandleRewardedDisplayed(LevelPlayAdInfo info)
+    {
+        rewardedState.showing = true;
         rewardedReady = false;
-        Debug.LogWarning("[ScenePilot/Ads] Rewarded display failed: " + error, this);
-        rewardedAd?.LoadAd();
+        StopAdBreakCountdown();
+        ScheduleNextAutomaticInterstitial();
     }
 
     private void HandleRewardGranted(LevelPlayAdInfo info, LevelPlayReward reward)
     {
+        Action callback = pendingRewardCallback;
+        pendingRewardCallback = null;
+
+        if (callback != null)
+        {
+            try
+            {
+                callback.Invoke();
+            }
+            catch (Exception exception)
+            {
+                Debug.LogException(exception, this);
+            }
+        }
+
         RemoteContentController.RemoteAdsRulesData rules = Rules;
         onRewardGranted?.Invoke(rules.rewardItemName ?? string.Empty, Mathf.Max(0, rules.rewardAmount));
     }
 
     private void HandleRewardedClosed(LevelPlayAdInfo info)
     {
+        // Closing without OnAdRewarded must never grant the gameplay reward.
+        pendingRewardCallback = null;
+        rewardedState.showing = false;
         rewardedReady = false;
+        RequestAdLoad(true);
+        // A gameplay listener must not prevent replacement loading.
         onRewardedClosed?.Invoke();
-        if (adsAllowed)
-            rewardedAd?.LoadAd();
     }
 
     private static LevelPlayBannerPosition ParseBannerPosition(string value)
@@ -714,3 +996,4 @@ public sealed class ScenePilotAdsController : MonoBehaviour
             Debug.Log("[ScenePilot/Ads] " + message, this);
     }
 }
+

@@ -23,7 +23,8 @@ public partial class RemoteContentController : MonoBehaviour
         Downloading,
         Ready,
         OfflineReady,
-        Failed
+        Failed,
+        NoInternet
     }
 
 
@@ -231,6 +232,14 @@ public partial class RemoteContentController : MonoBehaviour
 
     public bool exponentialBackoff = true;
 
+    [Header("CONNECTIVITY CHECK")]
+    [Tooltip("Independent HTTPS endpoints expected to return HTTP 204. Checked only after network failure; one success proves connectivity.")]
+    public string[] connectivityCheckUrls = {
+        "https://www.gstatic.com/generate_204",
+        "https://cp.cloudflare.com/generate_204"
+    };
+    [Min(1)] public int connectivityCheckTimeoutSeconds = 3;
+
 
     // =========================================================
     // VISUAL COMMIT - INSPECTOR
@@ -335,6 +344,9 @@ public partial class RemoteContentController : MonoBehaviour
     // =========================================================
 
     private RemoteConfigData activeConfig;
+    [SerializeField] private bool continueWithoutInternet;
+    private bool waitingForInternet;
+    private bool configServerResponded;
 
 
     // =========================================================
@@ -416,10 +428,16 @@ public partial class RemoteContentController : MonoBehaviour
             );
         }
 
+        // Decide before applying cached panels or showing progress on the first frame.
+        waitingForInternet = downloadOnStart && !HasInternetConnection();
+        if (waitingForInternet) SetDownloadUIState(false, true);
+
         // Read/apply the last known-good config in Awake, not only Start.
         // This is intentionally repeated in Start to win over other Start()
         // methods that may reset Image.sprite to their serialized defaults.
+        staticNavigationReady = !downloadOnStart;
         LoadActiveConfig();
+        if (waitingForInternet && !continueWithoutInternet) ShowNoInternet();
     }
 
 
@@ -500,12 +518,7 @@ public partial class RemoteContentController : MonoBehaviour
         }
 
 
-        SetDownloadUIState(
-            true,
-            false
-        );
-
-
+        // Sync checks connectivity before enabling progress, including repeated offline retries.
         StartCoroutine(
             SyncRemoteContent()
         );
@@ -545,6 +558,7 @@ public partial class RemoteContentController : MonoBehaviour
         else
         {
             ApplyInspectorFallbacks();
+            HideRemoteStaticSequencePanels();
 
             state =
                 RemoteContentState.Idle;
@@ -568,6 +582,13 @@ public partial class RemoteContentController : MonoBehaviour
             yield break;
 
 
+        if (!HasInternetConnection())
+        {
+            ShowNoInternet();
+            yield break;
+        }
+
+        waitingForInternet = false;
         isBusy = true;
 
 
@@ -586,13 +607,9 @@ public partial class RemoteContentController : MonoBehaviour
         }
 
 
-        // Checking / downloading:
-        // progress = ON
-        // retry = OFF
-        SetDownloadUIState(
-            true,
-            false
-        );
+        // Checking stays covered without progress, including retries on Wi-Fi
+        // whose router has no upstream internet. Reveal progress only after a valid config.
+        SetDownloadUIState(false, false);
 
 
         SetStatus(
@@ -632,6 +649,7 @@ public partial class RemoteContentController : MonoBehaviour
         string json = null;
 
         string configError = null;
+        configServerResponded = false;
 
 
         yield return StartCoroutine(
@@ -657,7 +675,7 @@ public partial class RemoteContentController : MonoBehaviour
             )
         )
         {
-            FinishWithFailure(
+            yield return StartCoroutine(FinishNetworkFailure(
                 "Could not download config: " +
                 (
                     string.IsNullOrEmpty(
@@ -665,8 +683,8 @@ public partial class RemoteContentController : MonoBehaviour
                     )
                         ? "Unknown error"
                         : configError
-                )
-            );
+                ), configServerResponded
+            ));
 
 
             isBusy = false;
@@ -703,6 +721,8 @@ public partial class RemoteContentController : MonoBehaviour
             yield break;
         }
 
+
+        SetDownloadUIState(true, false);
 
         // A valid global OFF response is a control signal, not a new active
         // content version. Handle it before writing/promoting pending JSON so
@@ -848,10 +868,10 @@ public partial class RemoteContentController : MonoBehaviour
 
         if (anyFailed)
         {
-            FinishWithFailure(
+            yield return StartCoroutine(FinishNetworkFailure(
                 failedFiles +
                 " file(s) failed to download."
-            );
+            ));
 
 
             isBusy = false;
@@ -1174,6 +1194,10 @@ public partial class RemoteContentController : MonoBehaviour
         isBusy = false;
 
 
+        // Only committed content can choose the first navigation step.
+        staticNavigationReady = true;
+        StartStaticPanelSequence(activeConfig);
+
         if (loadingParent != null)
         {
             loadingParent.SetActive(
@@ -1182,6 +1206,7 @@ public partial class RemoteContentController : MonoBehaviour
         }
 
 
+        FinishUnavailableRemoteStaticSequence(activeConfig);
         FinishSequenceWhenDownloadLoadingIsOnlyEnabledPanel(
             activeConfig
         );
@@ -1303,6 +1328,9 @@ public partial class RemoteContentController : MonoBehaviour
 
                 yield return request.SendWebRequest();
 
+                // An HTTP error response proves that a server was reached.
+                // Do not label a real 404/503 as offline if independent probes are blocked.
+                if (request.responseCode >= 400) configServerResponded = true;
 
                 if (
                     request.result ==
@@ -2815,6 +2843,7 @@ public partial class RemoteContentController : MonoBehaviour
 
     private void FinishRemoteConfigDisabled()
     {
+        staticNavigationReady = true;
         if (useLocalContentWhenRemoteConfigDisabled)
         {
             if (activeConfig != null && activeConfig.enabled)
@@ -3859,9 +3888,83 @@ public partial class RemoteContentController : MonoBehaviour
     // FAILURE
     // =========================================================
 
+    private bool HasInternetConnection()
+    {
+        // Reachability detects an offline device; request failures while reachable
+        // still follow the server/config fallback path below.
+        return Application.internetReachability != NetworkReachability.NotReachable;
+    }
+
+    private IEnumerator CheckInternetConnection(Action<bool> completed)
+    {
+        if (!HasInternetConnection()) { completed(false); yield break; }
+        // Empty settings explicitly retain reachability-only behavior.
+        if (connectivityCheckUrls == null || connectivityCheckUrls.Length == 0)
+        { completed(true); yield break; }
+
+        foreach (string url in connectivityCheckUrls)
+        {
+            if (!Uri.TryCreate(url, UriKind.Absolute, out Uri endpoint) || endpoint.Scheme != "https")
+                continue;
+            using (UnityWebRequest request = UnityWebRequest.Get(url))
+            {
+                request.timeout = Mathf.Max(1, connectivityCheckTimeoutSeconds);
+                request.redirectLimit = 0; // A captive portal redirect is not connectivity proof.
+                yield return request.SendWebRequest();
+                if (request.result == UnityWebRequest.Result.Success && request.responseCode == 204)
+                { completed(true); yield break; }
+            }
+        }
+        completed(false);
+    }
+
+    private IEnumerator FinishNetworkFailure(string message, bool serverResponded = false)
+    {
+        if (serverResponded && HasInternetConnection())
+        {
+            FinishWithFailure(message);
+            yield break;
+        }
+        SetDownloadUIState(false, false);
+        SetStatus("Checking internet connection...");
+        bool connected = false;
+        yield return StartCoroutine(CheckInternetConnection(result => connected = result));
+        if (!connected) { ShowNoInternet(); yield break; }
+        FinishWithFailure(message);
+    }
+
+    private void ShowNoInternet()
+    {
+        if (continueWithoutInternet)
+        {
+            waitingForInternet = false;
+            isBusy = false;
+            SetDownloadUIState(false, false);
+            HideRemoteStaticSequencePanels();
+            FinishStaticPanelSequence(null, "Offline; continuing to the local guide.");
+            return;
+        }
+
+        waitingForInternet = true;
+        isBusy = false;
+        state = RemoteContentState.NoInternet;
+        SetDownloadUIState(false, true);
+        if (loadingParent != null) loadingParent.SetActive(true);
+        SetStatus("No Internet Connection\nCheck your connection and press Retry.");
+    }
+
     public void FinishWithFailure(
         string message)
     {
+        if (!HasInternetConnection())
+        {
+            ShowNoInternet();
+            return;
+        }
+
+        waitingForInternet = false;
+        // Reload only the validated last active JSON, never pending_config.
+        if (activeConfig == null) activeConfig = LoadConfigFromFile(ActiveConfigPath);
         Debug.LogWarning(
             "[RemoteContent] " +
             message
@@ -3872,6 +3975,7 @@ public partial class RemoteContentController : MonoBehaviour
         // USE LAST WORKING CACHE IF AVAILABLE
         // =====================================================
 
+        staticNavigationReady = true;
         if (activeConfig != null)
         {
             ApplyConfig(
@@ -3890,7 +3994,7 @@ public partial class RemoteContentController : MonoBehaviour
         }
 
         // =====================================================
-        // OTHERWISE USE UNITY FALLBACK CONTENT
+        // PRESERVE LOCAL GAMEPLAY AND SKIP REMOTE PANELS WITHOUT A CONFIG
         // =====================================================
 
         else
@@ -3904,7 +4008,7 @@ public partial class RemoteContentController : MonoBehaviour
 
             SetStatus(
                 message +
-                "\nUsing built-in content."
+                "\nNo saved remote config. Continuing without remote panels."
             );
         }
 
@@ -3933,9 +4037,12 @@ public partial class RemoteContentController : MonoBehaviour
         // controller's coroutine, so callers may never reach their cleanup.
         isBusy = false;
 
-        // Don't block the game.
+        // An unavailable remote sequence must release its cover regardless of
+        // optional server-failure UI settings, so local gameplay is usable.
+        bool skipRemoteFlow = !HasEligibleRemoteStaticSequence(activeConfig);
+        if (skipRemoteFlow) SetDownloadUIState(false, false);
         if (
-            hideLoadingPanelOnFailure &&
+            (hideLoadingPanelOnFailure || skipRemoteFlow) &&
             loadingParent != null
         )
         {
@@ -3943,6 +4050,8 @@ public partial class RemoteContentController : MonoBehaviour
                 false
             );
         }
+
+        FinishUnavailableRemoteStaticSequence(activeConfig);
     }
 
 

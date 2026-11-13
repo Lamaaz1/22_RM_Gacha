@@ -30,7 +30,7 @@ public class CharacterButtonScrpt : MonoBehaviour
         }
         else
         {
-            AdsController.Instance.ShowRewardedInterstitialAd(Unlock);
+            ScenePilotAdsController.instance?.ShowRewardedFor(Unlock);
         }  
     }
   

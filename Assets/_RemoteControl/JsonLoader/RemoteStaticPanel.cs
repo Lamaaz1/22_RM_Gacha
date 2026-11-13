@@ -37,10 +37,14 @@ public class RemoteStaticPanel : MonoBehaviour
         public bool allowText = true;
         public bool allowImageProperties = true;
         public bool allowImage = true;
+        [Tooltip("Skip this panel when this element has no sprite. Card/level selection item keys require artwork automatically; enable here for other essential images. Plain-color UI can leave this off.")]
+        public bool requireSpriteForPanel;
         public bool allowColor = true;
         public bool allowEnabled = true;
         [Tooltip("Allow this element's Button or Toggle to request the website-configured ad action.")]
         public bool allowAdAction = true;
+        [Tooltip("Allow supported More Games / Play Other Game buttons to open the website-configured HTTPS URL.")]
+        public bool allowUrlAction = true;
     }
 
     private RemoteContentController registeredController;
@@ -104,6 +108,10 @@ public class RemoteStaticPanel : MonoBehaviour
             Element next = elements.Find(item => item != null && string.Equals(item.key, "next_button", StringComparison.OrdinalIgnoreCase));
             if (next == null && (string.Equals(panelId, "main_menu", StringComparison.OrdinalIgnoreCase) || panelId.StartsWith("main_menu_", StringComparison.OrdinalIgnoreCase)))
                 next = elements.Find(item => item != null && string.Equals(item.key, "play_button", StringComparison.OrdinalIgnoreCase));
+            string templateId = string.IsNullOrEmpty(panelTemplateId) ? panelId : panelTemplateId;
+            if (next == null && (string.Equals(templateId, "more_games", StringComparison.OrdinalIgnoreCase) ||
+                                 string.Equals(templateId, "play_other_game", StringComparison.OrdinalIgnoreCase)))
+                next = elements.Find(item => item != null && string.Equals(item.key, "close_button", StringComparison.OrdinalIgnoreCase));
             if (next != null && next.targetObject != null)
             {
                 nextButton = next.targetObject.GetComponent<Button>();
@@ -155,6 +163,10 @@ public class RemoteStaticPanel : MonoBehaviour
                 keys = new[] { "bg", "title", "play_button", "back_button", "settings_button", "coins", "remove_ads", "rate_us", "extra_button" }; break;
             case "rate_us":
                 keys = new[] { "bg", "panel", "title", "message", "star_1", "star_2", "star_3", "star_4", "star_5", "later_button", "rate_button", "close_button" }; break;
+            case "more_games":
+                keys = new[] { "bg", "panel", "title", "game_1", "game_2", "game_3", "game_4", "game_5", "game_6", "close_button" }; break;
+            case "play_other_game":
+                keys = new[] { "bg", "panel", "game_image", "play_button", "close_button" }; break;
             default: Debug.LogWarning("Choose a standard panel ID first.", this); return;
         }
         foreach (string key in keys)
