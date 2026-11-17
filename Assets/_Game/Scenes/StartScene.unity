@@ -856,7 +856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1044341670602601731, guid: be105f25c9ce4c1eb273264de331ef07, type: 3}
       propertyPath: configUrl
-      value: https://scenepilot.rmgamestudio.com/content/com.makarovamaria.framevault/remote_config.json
+      value: https://scenepilot.rmgamestudio.com/content/com.makarovamaria.lensforge/remote_config.json
       objectReference: {fileID: 0}
     - target: {fileID: 3023751754543228779, guid: be105f25c9ce4c1eb273264de331ef07, type: 3}
       propertyPath: m_Sprite

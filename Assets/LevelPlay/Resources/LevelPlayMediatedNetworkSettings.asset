@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LevelPlayMediatedNetworkSettings
   m_EditorClassIdentifier: 
   EnableAdmob: 1
-  AdmobAndroidAppId: ca-app-pub-1296604477715220~4746786564
+  AdmobAndroidAppId: ca-app-pub-1296604477715220~1261736075
   AdmobIOSAppId: 
